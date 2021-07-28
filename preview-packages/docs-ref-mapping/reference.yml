@@ -3,6 +3,14 @@
   landingPageType: Root
   expanded: false
   items:
+  - name: Network
+    uid: azure.nodejs.sdk.landingpage.services.network.pre
+    items:
+    - name: Management
+      uid: azure.nodejs.sdk.landingPage.services.Network.Management.pre
+      landingPageType: Service
+      children:
+      - '@azure/arm-network'
   - name: Other
     uid: azure.nodejs.sdk.landingpage.services.other.pre
     landingPageType: Service
