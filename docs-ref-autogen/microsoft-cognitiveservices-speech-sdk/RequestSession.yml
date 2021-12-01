@@ -102,6 +102,20 @@ properties:
       return:
         type: boolean
         description: ''
+  - name: numConnectionAttempts
+    uid: >-
+      microsoft-cognitiveservices-speech-sdk.RequestSession.numConnectionAttempts
+    package: microsoft-cognitiveservices-speech-sdk
+    summary: ''
+    fullName: numConnectionAttempts
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: number numConnectionAttempts
+      return:
+        type: number
+        description: ''
   - name: onPreConnectionStart
     uid: microsoft-cognitiveservices-speech-sdk.RequestSession.onPreConnectionStart
     package: microsoft-cognitiveservices-speech-sdk
@@ -128,6 +142,19 @@ properties:
     isDeprecated: false
     syntax:
       content: 'onServiceTurnStartResponse: () => void'
+      return:
+        type: () =&gt; void
+        description: ''
+  - name: onSpeechContext
+    uid: microsoft-cognitiveservices-speech-sdk.RequestSession.onSpeechContext
+    package: microsoft-cognitiveservices-speech-sdk
+    summary: ''
+    fullName: onSpeechContext
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'onSpeechContext: () => void'
       return:
         type: () =&gt; void
         description: ''
@@ -327,6 +354,15 @@ methods:
         - id: offset
           type: number
           description: ''
+  - name: onRetryConnection()
+    uid: microsoft-cognitiveservices-speech-sdk.RequestSession.onRetryConnection
+    package: microsoft-cognitiveservices-speech-sdk
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function onRetryConnection()
   - name: onServiceRecognized(number)
     uid: microsoft-cognitiveservices-speech-sdk.RequestSession.onServiceRecognized
     package: microsoft-cognitiveservices-speech-sdk

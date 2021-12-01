@@ -42,9 +42,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'results?: undefined | string'
+      content: 'results?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: timestamp
     uid: '@azure/batch.AutoScaleRun.timestamp'

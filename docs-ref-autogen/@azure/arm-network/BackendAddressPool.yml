@@ -56,6 +56,24 @@ properties:
       return:
         type: undefined | string
         description: ''
+  - name: inboundNatRules
+    uid: '@azure/arm-network.BackendAddressPool.inboundNatRules'
+    package: '@azure/arm-network'
+    summary: >-
+      An array of references to inbound NAT rules that use this backend address
+      pool.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: inboundNatRules
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'inboundNatRules?: SubResource[]'
+      return:
+        type: '<xref uid="@azure/arm-network.SubResource" />[]'
+        description: ''
   - name: loadBalancerBackendAddresses
     uid: '@azure/arm-network.BackendAddressPool.loadBalancerBackendAddresses'
     package: '@azure/arm-network'
@@ -171,6 +189,19 @@ properties:
       content: 'provisioningState?: ProvisioningState'
       return:
         type: <xref uid="@azure/arm-network.ProvisioningState" />
+        description: ''
+  - name: tunnelInterfaces
+    uid: '@azure/arm-network.BackendAddressPool.tunnelInterfaces'
+    package: '@azure/arm-network'
+    summary: An array of gateway load balancer tunnel interfaces.
+    fullName: tunnelInterfaces
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'tunnelInterfaces?: GatewayLoadBalancerTunnelInterface[]'
+      return:
+        type: '<xref uid="@azure/arm-network.GatewayLoadBalancerTunnelInterface" />[]'
         description: ''
   - name: type
     uid: '@azure/arm-network.BackendAddressPool.type'

@@ -6,6 +6,7 @@ type: package
 classes:
   - '@azure/ms-rest-js.BrowserFetchHttpClient'
   - '@azure/ms-rest-js.ApiKeyCredentials'
+  - '@azure/ms-rest-js.AzureIdentityCredentialAdapter'
   - '@azure/ms-rest-js.BasicAuthenticationCredentials'
   - '@azure/ms-rest-js.DomainCredentials'
   - '@azure/ms-rest-js.TokenCredentials'
@@ -40,6 +41,7 @@ classes:
 interfaces:
   - '@azure/ms-rest-js.ApiKeyCredentialOptions'
   - '@azure/ms-rest-js.ServiceClientCredentials'
+  - '@azure/ms-rest-js.TokenResponse'
   - '@azure/ms-rest-js.HttpClient'
   - '@azure/ms-rest-js.HttpHeader'
   - '@azure/ms-rest-js.HttpHeadersLike'
@@ -56,8 +58,12 @@ interfaces:
   - '@azure/ms-rest-js.DeserializationContentTypes'
   - '@azure/ms-rest-js.RetryData'
   - '@azure/ms-rest-js.RetryError'
+  - '@azure/ms-rest-js.RedirectOptions'
   - '@azure/ms-rest-js.RequestPolicy'
   - '@azure/ms-rest-js.RequestPolicyOptionsLike'
+  - '@azure/ms-rest-js.ThrottlingRetryOptions'
+  - '@azure/ms-rest-js.HttpsOverHttpsOptions'
+  - '@azure/ms-rest-js.HttpsProxyOptions'
   - '@azure/ms-rest-js.BaseMapper'
   - '@azure/ms-rest-js.CompositeMapper'
   - '@azure/ms-rest-js.CompositeMapperType'
@@ -82,10 +88,12 @@ interfaces:
   - '@azure/ms-rest-js.WebResourceLike'
 typeAliases:
   - '@azure/ms-rest-js.Authenticator'
+  - '@azure/ms-rest-js.CommonRequestInfo'
+  - '@azure/ms-rest-js.CommonRequestInit'
+  - '@azure/ms-rest-js.CommonResponse'
   - '@azure/ms-rest-js.RawHttpHeaders'
   - '@azure/ms-rest-js.ParameterPath'
   - '@azure/ms-rest-js.RequestPolicyFactory'
-  - '@azure/ms-rest-js.ResponseHandler'
   - '@azure/ms-rest-js.TelemetryInfo'
   - '@azure/ms-rest-js.ProxyAgent'
   - '@azure/ms-rest-js.Mapper'
@@ -359,6 +367,34 @@ functions:
       return:
         type: <xref uid="@azure/ms-rest-js.RequestPolicyFactory" />
         description: ''
+  - name: getEnvironmentValue(string)
+    uid: '@azure/ms-rest-js.getEnvironmentValue'
+    package: '@azure/ms-rest-js'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getEnvironmentValue(name: string)'
+      parameters:
+        - id: name
+          type: string
+          description: ''
+      return:
+        type: string | undefined
+        description: ''
+  - name: loadNoProxy()
+    uid: '@azure/ms-rest-js.loadNoProxy'
+    package: '@azure/ms-rest-js'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function loadNoProxy()
+      return:
+        type: 'string[]'
+        description: ''
   - name: redirectPolicy(number)
     uid: '@azure/ms-rest-js.redirectPolicy'
     package: '@azure/ms-rest-js'
@@ -434,7 +470,7 @@ functions:
       return:
         type: <xref uid="@azure/ms-rest-js.RequestPolicyFactory" />
         description: ''
-  - name: throttlingRetryPolicy()
+  - name: throttlingRetryPolicy(number)
     uid: '@azure/ms-rest-js.throttlingRetryPolicy'
     package: '@azure/ms-rest-js'
     summary: ''
@@ -442,7 +478,11 @@ functions:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function throttlingRetryPolicy()
+      content: 'function throttlingRetryPolicy(maxRetries?: number)'
+      parameters:
+        - id: maxRetries
+          type: number
+          description: ''
       return:
         type: <xref uid="@azure/ms-rest-js.RequestPolicyFactory" />
         description: ''
@@ -517,7 +557,7 @@ functions:
           type: boolean
           description: ''
         - id: tunnelOptions
-          type: HttpsOverHttpsOptions
+          type: <xref uid="@azure/ms-rest-js.HttpsOverHttpsOptions" />
           description: ''
       return:
         type: Agent | Agent

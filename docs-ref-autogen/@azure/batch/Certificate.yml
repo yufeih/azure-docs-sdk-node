@@ -74,9 +74,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'publicData?: undefined | string'
+      content: 'publicData?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: state
     uid: '@azure/batch.Certificate.state'
@@ -119,9 +119,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'thumbprint?: undefined | string'
+      content: 'thumbprint?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: thumbprintAlgorithm
     uid: '@azure/batch.Certificate.thumbprintAlgorithm'
@@ -132,9 +132,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'thumbprintAlgorithm?: undefined | string'
+      content: 'thumbprintAlgorithm?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: url
     uid: '@azure/batch.Certificate.url'
@@ -145,7 +145,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'url?: undefined | string'
+      content: 'url?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''

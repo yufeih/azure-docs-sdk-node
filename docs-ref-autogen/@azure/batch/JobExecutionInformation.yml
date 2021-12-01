@@ -51,9 +51,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'poolId?: undefined | string'
+      content: 'poolId?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: schedulingError
     uid: '@azure/batch.JobExecutionInformation.schedulingError'
@@ -120,7 +120,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'terminateReason?: undefined | string'
+      content: 'terminateReason?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''

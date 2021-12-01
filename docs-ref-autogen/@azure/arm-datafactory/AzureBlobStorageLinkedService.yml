@@ -22,6 +22,26 @@ properties:
       return:
         type: <xref uid="@azure/arm-datafactory.AzureKeyVaultSecretReference" />
         description: ''
+  - name: accountKind
+    uid: '@azure/arm-datafactory.AzureBlobStorageLinkedService.accountKind'
+    package: '@azure/arm-datafactory'
+    summary: >-
+      Specify the kind of your storage account. Allowed values are: Storage
+      (general purpose v1),
+
+      StorageV2 (general purpose v2), BlobStorage, or BlockBlobStorage. Type:
+      string (or Expression
+
+      with resultType string).
+    fullName: accountKind
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'accountKind?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''
   - name: annotations
     uid: '@azure/arm-datafactory.AzureBlobStorageLinkedService.annotations'
     package: '@azure/arm-datafactory'
@@ -84,6 +104,19 @@ properties:
       content: 'connectVia?: IntegrationRuntimeReference'
       return:
         type: <xref uid="@azure/arm-datafactory.IntegrationRuntimeReference" />
+        description: ''
+  - name: credential
+    uid: '@azure/arm-datafactory.AzureBlobStorageLinkedService.credential'
+    package: '@azure/arm-datafactory'
+    summary: The credential reference containing authentication information.
+    fullName: credential
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'credential?: CredentialReference'
+      return:
+        type: <xref uid="@azure/arm-datafactory.CredentialReference" />
         description: ''
   - name: description
     uid: '@azure/arm-datafactory.AzureBlobStorageLinkedService.description'

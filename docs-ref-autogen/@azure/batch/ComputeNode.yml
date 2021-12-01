@@ -26,9 +26,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'affinityId?: undefined | string'
+      content: 'affinityId?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: allocationTime
     uid: '@azure/batch.ComputeNode.allocationTime'
@@ -126,9 +126,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'id?: undefined | string'
+      content: 'id?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: ipAddress
     uid: '@azure/batch.ComputeNode.ipAddress'
@@ -149,9 +149,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'ipAddress?: undefined | string'
+      content: 'ipAddress?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: isDedicated
     uid: '@azure/batch.ComputeNode.isDedicated'
@@ -166,9 +166,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'isDedicated?: undefined | false | true'
+      content: 'isDedicated?: boolean'
       return:
-        type: undefined | false | true
+        type: boolean
         description: ''
   - name: lastBootTime
     uid: '@azure/batch.ComputeNode.lastBootTime'
@@ -235,9 +235,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'runningTasksCount?: undefined | number'
+      content: 'runningTasksCount?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''
   - name: runningTaskSlotsCount
     uid: '@azure/batch.ComputeNode.runningTaskSlotsCount'
@@ -255,9 +255,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'runningTaskSlotsCount?: undefined | number'
+      content: 'runningTaskSlotsCount?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''
   - name: schedulingState
     uid: '@azure/batch.ComputeNode.schedulingState'
@@ -356,9 +356,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'totalTasksRun?: undefined | number'
+      content: 'totalTasksRun?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''
   - name: totalTasksSucceeded
     uid: '@azure/batch.ComputeNode.totalTasksSucceeded'
@@ -376,9 +376,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'totalTasksSucceeded?: undefined | number'
+      content: 'totalTasksSucceeded?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''
   - name: url
     uid: '@azure/batch.ComputeNode.url'
@@ -389,9 +389,22 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'url?: undefined | string'
+      content: 'url?: string'
       return:
-        type: undefined | string
+        type: string
+        description: ''
+  - name: virtualMachineInfo
+    uid: '@azure/batch.ComputeNode.virtualMachineInfo'
+    package: '@azure/batch'
+    summary: Info about the current state of the virtual machine.
+    fullName: virtualMachineInfo
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'virtualMachineInfo?: VirtualMachineInfo'
+      return:
+        type: <xref uid="@azure/batch.VirtualMachineInfo" />
         description: ''
   - name: vmSize
     uid: '@azure/batch.ComputeNode.vmSize'
@@ -409,7 +422,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'vmSize?: undefined | string'
+      content: 'vmSize?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''

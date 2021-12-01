@@ -1,0 +1,28 @@
+### YamlMime:TSType
+name: ComputeNodeIdentityReference
+uid: '@azure/batch.ComputeNodeIdentityReference'
+package: '@azure/batch'
+summary: >-
+  The reference to a user assigned identity associated with the Batch pool which
+  a compute node
+
+  will use.
+fullName: ComputeNodeIdentityReference
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: resourceId
+    uid: '@azure/batch.ComputeNodeIdentityReference.resourceId'
+    package: '@azure/batch'
+    summary: The ARM resource id of the user assigned identity.
+    fullName: resourceId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'resourceId?: string'
+      return:
+        type: string
+        description: ''

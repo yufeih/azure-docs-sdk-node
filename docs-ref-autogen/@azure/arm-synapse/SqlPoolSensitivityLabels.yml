@@ -45,7 +45,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: workspaceName
           type: string
-          description: The name of the workspace
+          description: The name of the workspace.
         - id: sqlPoolName
           type: string
           description: SQL pool name
@@ -90,7 +90,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: workspaceName
           type: string
-          description: The name of the workspace
+          description: The name of the workspace.
         - id: sqlPoolName
           type: string
           description: SQL pool name
@@ -136,7 +136,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: workspaceName
           type: string
-          description: The name of the workspace
+          description: The name of the workspace.
         - id: sqlPoolName
           type: string
           description: SQL pool name
@@ -178,7 +178,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: workspaceName
           type: string
-          description: The name of the workspace
+          description: The name of the workspace.
         - id: sqlPoolName
           type: string
           description: SQL pool name
@@ -217,7 +217,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: workspaceName
           type: string
-          description: The name of the workspace
+          description: The name of the workspace.
         - id: sqlPoolName
           type: string
           description: SQL pool name
@@ -257,7 +257,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: workspaceName
           type: string
-          description: The name of the workspace
+          description: The name of the workspace.
         - id: sqlPoolName
           type: string
           description: SQL pool name
@@ -294,7 +294,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: workspaceName
           type: string
-          description: The name of the workspace
+          description: The name of the workspace.
         - id: sqlPoolName
           type: string
           description: SQL pool name
@@ -334,7 +334,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: workspaceName
           type: string
-          description: The name of the workspace
+          description: The name of the workspace.
         - id: sqlPoolName
           type: string
           description: SQL pool name
@@ -374,7 +374,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: workspaceName
           type: string
-          description: The name of the workspace
+          description: The name of the workspace.
         - id: sqlPoolName
           type: string
           description: SQL pool name
@@ -415,7 +415,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: workspaceName
           type: string
-          description: The name of the workspace
+          description: The name of the workspace.
         - id: sqlPoolName
           type: string
           description: SQL pool name
@@ -455,7 +455,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: workspaceName
           type: string
-          description: The name of the workspace
+          description: The name of the workspace.
         - id: sqlPoolName
           type: string
           description: SQL pool name
@@ -495,7 +495,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: workspaceName
           type: string
-          description: The name of the workspace
+          description: The name of the workspace.
         - id: sqlPoolName
           type: string
           description: SQL pool name
@@ -533,7 +533,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: workspaceName
           type: string
-          description: The name of the workspace
+          description: The name of the workspace.
         - id: sqlPoolName
           type: string
           description: SQL pool name
@@ -581,7 +581,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: workspaceName
           type: string
-          description: The name of the workspace
+          description: The name of the workspace.
         - id: sqlPoolName
           type: string
           description: SQL pool name
@@ -629,7 +629,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: workspaceName
           type: string
-          description: The name of the workspace
+          description: The name of the workspace.
         - id: sqlPoolName
           type: string
           description: SQL pool name
@@ -673,7 +673,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: workspaceName
           type: string
-          description: The name of the workspace
+          description: The name of the workspace.
         - id: sqlPoolName
           type: string
           description: SQL pool name
@@ -707,7 +707,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: workspaceName
           type: string
-          description: The name of the workspace
+          description: The name of the workspace.
         - id: sqlPoolName
           type: string
           description: SQL pool name
@@ -739,7 +739,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: workspaceName
           type: string
-          description: The name of the workspace
+          description: The name of the workspace.
         - id: sqlPoolName
           type: string
           description: SQL pool name
@@ -855,7 +855,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: workspaceName
           type: string
-          description: The name of the workspace
+          description: The name of the workspace.
         - id: sqlPoolName
           type: string
           description: SQL pool name
@@ -890,7 +890,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: workspaceName
           type: string
-          description: The name of the workspace
+          description: The name of the workspace.
         - id: sqlPoolName
           type: string
           description: SQL pool name
@@ -922,7 +922,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: workspaceName
           type: string
-          description: The name of the workspace
+          description: The name of the workspace.
         - id: sqlPoolName
           type: string
           description: SQL pool name
@@ -1017,5 +1017,103 @@ methods:
           type: >-
             ServiceCallback&lt;<xref
             uid="@azure/arm-synapse.SensitivityLabelListResult" />&gt;
+          description: |
+            The callback
+  - name: >-
+      update(string, string, string, SensitivityLabelUpdateList,
+      msRest.RequestOptionsBase)
+    uid: '@azure/arm-synapse.SqlPoolSensitivityLabels.update'
+    package: '@azure/arm-synapse'
+    summary: Update sensitivity labels of a given SQL Pool using an operations batch.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function update(resourceGroupName: string, workspaceName: string,
+        sqlPoolName: string, parameters: SensitivityLabelUpdateList, options?:
+        msRest.RequestOptionsBase)
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: workspaceName
+          type: string
+          description: The name of the workspace.
+        - id: sqlPoolName
+          type: string
+          description: SQL pool name
+        - id: parameters
+          type: <xref uid="@azure/arm-synapse.SensitivityLabelUpdateList" />
+          description: ''
+        - id: options
+          type: <xref uid="msRest.RequestOptionsBase" />
+          description: ''
+      return:
+        type: Promise&lt;RestResponse&gt;
+        description: Promise<msRest.RestResponse>
+  - name: >-
+      update(string, string, string, SensitivityLabelUpdateList,
+      RequestOptionsBase, ServiceCallback<void>)
+    uid: '@azure/arm-synapse.SqlPoolSensitivityLabels.update_2'
+    package: '@azure/arm-synapse'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function update(resourceGroupName: string, workspaceName: string,
+        sqlPoolName: string, parameters: SensitivityLabelUpdateList, options:
+        RequestOptionsBase, callback: ServiceCallback<void>)
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: workspaceName
+          type: string
+          description: The name of the workspace.
+        - id: sqlPoolName
+          type: string
+          description: SQL pool name
+        - id: parameters
+          type: <xref uid="@azure/arm-synapse.SensitivityLabelUpdateList" />
+          description: ''
+        - id: options
+          type: RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type: ServiceCallback&lt;void&gt;
+          description: |
+            The callback
+  - name: >-
+      update(string, string, string, SensitivityLabelUpdateList,
+      ServiceCallback<void>)
+    uid: '@azure/arm-synapse.SqlPoolSensitivityLabels.update_1'
+    package: '@azure/arm-synapse'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function update(resourceGroupName: string, workspaceName: string,
+        sqlPoolName: string, parameters: SensitivityLabelUpdateList, callback:
+        ServiceCallback<void>)
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: workspaceName
+          type: string
+          description: The name of the workspace.
+        - id: sqlPoolName
+          type: string
+          description: SQL pool name
+        - id: parameters
+          type: <xref uid="@azure/arm-synapse.SensitivityLabelUpdateList" />
+          description: ''
+        - id: callback
+          type: ServiceCallback&lt;void&gt;
           description: |
             The callback

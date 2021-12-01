@@ -22,9 +22,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'clientRequestId?: undefined | string'
+      content: 'clientRequestId?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: ocpDate
     uid: '@azure/batch.CertificateGetOptions.ocpDate'
@@ -54,9 +54,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'returnClientRequestId?: undefined | false | true'
+      content: 'returnClientRequestId?: boolean'
       return:
-        type: undefined | false | true
+        type: boolean
         description: ''
   - name: select
     uid: '@azure/batch.CertificateGetOptions.select'
@@ -67,9 +67,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'select?: undefined | string'
+      content: 'select?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: timeout
     uid: '@azure/batch.CertificateGetOptions.timeout'
@@ -84,7 +84,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'timeout?: undefined | number'
+      content: 'timeout?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''

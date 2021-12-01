@@ -31,9 +31,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'jobId?: undefined | string'
+      content: 'jobId?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: subtaskId
     uid: '@azure/batch.TaskInformation.subtaskId'
@@ -44,9 +44,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'subtaskId?: undefined | number'
+      content: 'subtaskId?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''
   - name: taskId
     uid: '@azure/batch.TaskInformation.taskId'
@@ -57,9 +57,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'taskId?: undefined | string'
+      content: 'taskId?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: taskState
     uid: '@azure/batch.TaskInformation.taskState'
@@ -87,7 +87,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'taskUrl?: undefined | string'
+      content: 'taskUrl?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''

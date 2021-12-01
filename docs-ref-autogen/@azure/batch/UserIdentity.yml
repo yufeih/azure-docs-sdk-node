@@ -39,7 +39,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'userName?: undefined | string'
+      content: 'userName?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''

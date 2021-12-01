@@ -33,9 +33,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'customHeaders?: undefined | [key: string]: string'
+      content: 'customHeaders?: [key: string]: string'
       return:
-        type: 'undefined | [key: string]: string'
+        type: '[key: string]\: string'
         description: ''
   - name: fileListFromTaskNextOptions
     uid: >-
@@ -60,11 +60,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: >-
-        onDownloadProgress?: undefined | (progress: TransferProgressEvent) =>
-        void
+      content: 'onDownloadProgress?: (progress: TransferProgressEvent) => void'
       return:
-        type: 'undefined | (progress: TransferProgressEvent) =&gt; void'
+        type: '(progress: TransferProgressEvent) =&gt; void'
         description: ''
   - name: onUploadProgress
     uid: '@azure/batch.FileListFromTaskNextOptionalParams.onUploadProgress'
@@ -75,9 +73,26 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'onUploadProgress?: undefined | (progress: TransferProgressEvent) => void'
+      content: 'onUploadProgress?: (progress: TransferProgressEvent) => void'
       return:
-        type: 'undefined | (progress: TransferProgressEvent) =&gt; void'
+        type: '(progress: TransferProgressEvent) =&gt; void'
+        description: ''
+  - name: recursive
+    uid: '@azure/batch.FileListFromTaskNextOptionalParams.recursive'
+    package: '@azure/batch'
+    summary: >-
+      Whether to list children of the Task directory. This parameter can be used
+      in combination with
+
+      the filter parameter to list specific type of files.
+    fullName: recursive
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'recursive?: boolean'
+      return:
+        type: boolean
         description: ''
   - name: timeout
     uid: '@azure/batch.FileListFromTaskNextOptionalParams.timeout'
@@ -90,8 +105,8 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'timeout?: undefined | number'
+      content: 'timeout?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''
 extends: RequestOptionsBase

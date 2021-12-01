@@ -9,6 +9,114 @@ isPreview: false
 isDeprecated: false
 type: interface
 properties:
+  - name: autoCreateTopicWithFirstSubscription
+    uid: '@azure/arm-eventgrid.Domain.autoCreateTopicWithFirstSubscription'
+    package: '@azure/arm-eventgrid'
+    summary: >-
+      This Boolean is used to specify the creation mechanism for 'all' the Event
+      Grid Domain Topics
+
+      associated with this Event Grid Domain resource.
+
+      In this context, creation of domain topic can be auto-managed (when true)
+      or self-managed
+
+      (when false). The default value for this property is true.
+
+      When this property is null or set to true, Event Grid is responsible of
+      automatically creating
+
+      the domain topic when the first event subscription is
+
+      created at the scope of the domain topic. If this property is set to
+      false, then creating the
+
+      first event subscription will require creating a domain topic
+
+      by the user. The self-management mode can be used if the user wants full
+      control of when the
+
+      domain topic is created, while auto-managed mode provides the
+
+      flexibility to perform less operations and manage fewer resources by the
+      user. Also, note that
+
+      in auto-managed creation mode, user is allowed to create the
+
+      domain topic on demand if needed. Default value: true.
+    fullName: autoCreateTopicWithFirstSubscription
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'autoCreateTopicWithFirstSubscription?: undefined | false | true'
+      return:
+        type: undefined | false | true
+        description: ''
+  - name: autoDeleteTopicWithLastSubscription
+    uid: '@azure/arm-eventgrid.Domain.autoDeleteTopicWithLastSubscription'
+    package: '@azure/arm-eventgrid'
+    summary: >-
+      This Boolean is used to specify the deletion mechanism for 'all' the Event
+      Grid Domain Topics
+
+      associated with this Event Grid Domain resource.
+
+      In this context, deletion of domain topic can be auto-managed (when true)
+      or self-managed
+
+      (when false). The default value for this property is true.
+
+      When this property is set to true, Event Grid is responsible of
+      automatically deleting the
+
+      domain topic when the last event subscription at the scope
+
+      of the domain topic is deleted. If this property is set to false, then the
+      user needs to
+
+      manually delete the domain topic when it is no longer needed
+
+      (e.g., when last event subscription is deleted and the resource needs to
+      be cleaned up). The
+
+      self-management mode can be used if the user wants full
+
+      control of when the domain topic needs to be deleted, while auto-managed
+      mode provides the
+
+      flexibility to perform less operations and manage fewer
+
+      resources by the user. Default value: true.
+    fullName: autoDeleteTopicWithLastSubscription
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'autoDeleteTopicWithLastSubscription?: undefined | false | true'
+      return:
+        type: undefined | false | true
+        description: ''
+  - name: disableLocalAuth
+    uid: '@azure/arm-eventgrid.Domain.disableLocalAuth'
+    package: '@azure/arm-eventgrid'
+    summary: >-
+      This boolean is used to enable or disable local auth. Default value is
+      false. When the
+
+      property is set to true, only AAD token will be used to authenticate if
+      user is allowed to
+
+      publish to the domain. Default value: false.
+    fullName: disableLocalAuth
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'disableLocalAuth?: undefined | false | true'
+      return:
+        type: undefined | false | true
+        description: ''
   - name: endpoint
     uid: '@azure/arm-eventgrid.Domain.endpoint'
     package: '@azure/arm-eventgrid'
@@ -42,6 +150,19 @@ properties:
       content: 'id?: undefined | string'
       return:
         type: undefined | string
+        description: ''
+  - name: identity
+    uid: '@azure/arm-eventgrid.Domain.identity'
+    package: '@azure/arm-eventgrid'
+    summary: Identity information for the Event Grid Domain resource.
+    fullName: identity
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'identity?: IdentityInfo'
+      return:
+        type: <xref uid="@azure/arm-eventgrid.IdentityInfo" />
         description: ''
   - name: inboundIpRules
     uid: '@azure/arm-eventgrid.Domain.inboundIpRules'
@@ -144,7 +265,11 @@ properties:
   - name: privateEndpointConnections
     uid: '@azure/arm-eventgrid.Domain.privateEndpointConnections'
     package: '@azure/arm-eventgrid'
-    summary: List of private endpoint connections.
+    summary: >-
+      List of private endpoint connections.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: privateEndpointConnections
     remarks: ''
     isPreview: false
@@ -158,10 +283,10 @@ properties:
     uid: '@azure/arm-eventgrid.Domain.provisioningState'
     package: '@azure/arm-eventgrid'
     summary: >-
-      Provisioning state of the domain. Possible values include: 'Creating',
-      'Updating', 'Deleting',
+      Provisioning state of the Event Grid Domain Resource. Possible values
+      include: 'Creating',
 
-      'Succeeded', 'Canceled', 'Failed'
+      'Updating', 'Deleting', 'Succeeded', 'Canceled', 'Failed'
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -185,7 +310,8 @@ properties:
 
       cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.DomainProperties.InboundIpRules"
 
-      />. Possible values include: 'Enabled', 'Disabled'
+      />. Possible values include: 'Enabled', 'Disabled'. Default value:
+      'Enabled'.
     fullName: publicNetworkAccess
     remarks: ''
     isPreview: false
@@ -194,6 +320,23 @@ properties:
       content: 'publicNetworkAccess?: PublicNetworkAccess'
       return:
         type: <xref uid="@azure/arm-eventgrid.PublicNetworkAccess" />
+        description: ''
+  - name: systemData
+    uid: '@azure/arm-eventgrid.Domain.systemData'
+    package: '@azure/arm-eventgrid'
+    summary: >-
+      The system metadata relating to Domain resource.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: systemData
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'systemData?: SystemData'
+      return:
+        type: <xref uid="@azure/arm-eventgrid.SystemData" />
         description: ''
   - name: tags
     uid: '@azure/arm-eventgrid.Domain.tags'

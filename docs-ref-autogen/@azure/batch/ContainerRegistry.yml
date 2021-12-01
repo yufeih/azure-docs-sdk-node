@@ -9,6 +9,23 @@ isPreview: false
 isDeprecated: false
 type: interface
 properties:
+  - name: identityReference
+    uid: '@azure/batch.ContainerRegistry.identityReference'
+    package: '@azure/batch'
+    summary: >-
+      The reference to the user assigned identity to use to access an Azure
+      Container Registry
+
+      instead of username and password.
+    fullName: identityReference
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'identityReference?: ComputeNodeIdentityReference'
+      return:
+        type: <xref uid="@azure/batch.ComputeNodeIdentityReference" />
+        description: ''
   - name: password
     uid: '@azure/batch.ContainerRegistry.password'
     package: '@azure/batch'
@@ -18,7 +35,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'password: string'
+      content: 'password?: string'
       return:
         type: string
         description: ''
@@ -31,9 +48,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'registryServer?: undefined | string'
+      content: 'registryServer?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: userName
     uid: '@azure/batch.ContainerRegistry.userName'
@@ -44,7 +61,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'userName: string'
+      content: 'userName?: string'
       return:
         type: string
         description: ''

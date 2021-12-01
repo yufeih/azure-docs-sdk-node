@@ -52,9 +52,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'nodeId?: undefined | string'
+      content: 'nodeId?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: nodeUrl
     uid: '@azure/batch.JobPreparationAndReleaseTaskExecutionInformation.nodeUrl'
@@ -65,9 +65,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'nodeUrl?: undefined | string'
+      content: 'nodeUrl?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: poolId
     uid: '@azure/batch.JobPreparationAndReleaseTaskExecutionInformation.poolId'
@@ -78,7 +78,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'poolId?: undefined | string'
+      content: 'poolId?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''

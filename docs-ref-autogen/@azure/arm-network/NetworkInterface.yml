@@ -169,6 +169,23 @@ properties:
       return:
         type: undefined | string
         description: ''
+  - name: migrationPhase
+    uid: '@azure/arm-network.NetworkInterface.migrationPhase'
+    package: '@azure/arm-network'
+    summary: >-
+      Migration phase of Network Interface resource. Possible values include:
+      'None', 'Prepare',
+
+      'Commit', 'Abort', 'Committed'
+    fullName: migrationPhase
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'migrationPhase?: NetworkInterfaceMigrationPhase'
+      return:
+        type: <xref uid="@azure/arm-network.NetworkInterfaceMigrationPhase" />
+        description: ''
   - name: name
     uid: '@azure/arm-network.NetworkInterface.name'
     package: '@azure/arm-network'
@@ -198,6 +215,21 @@ properties:
       content: 'networkSecurityGroup?: NetworkSecurityGroup'
       return:
         type: <xref uid="@azure/arm-network.NetworkSecurityGroup" />
+        description: ''
+  - name: nicType
+    uid: '@azure/arm-network.NetworkInterface.nicType'
+    package: '@azure/arm-network'
+    summary: >-
+      Type of Network Interface resource. Possible values include: 'Standard',
+      'Elastic'
+    fullName: nicType
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'nicType?: NetworkInterfaceNicType'
+      return:
+        type: <xref uid="@azure/arm-network.NetworkInterfaceNicType" />
         description: ''
   - name: primary
     uid: '@azure/arm-network.NetworkInterface.primary'
@@ -233,6 +265,19 @@ properties:
       content: 'privateEndpoint?: PrivateEndpoint'
       return:
         type: <xref uid="@azure/arm-network.PrivateEndpoint" />
+        description: ''
+  - name: privateLinkService
+    uid: '@azure/arm-network.NetworkInterface.privateLinkService'
+    package: '@azure/arm-network'
+    summary: Privatelinkservice of the network interface resource.
+    fullName: privateLinkService
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'privateLinkService?: PrivateLinkService'
+      return:
+        type: <xref uid="@azure/arm-network.PrivateLinkService" />
         description: ''
   - name: provisioningState
     uid: '@azure/arm-network.NetworkInterface.provisioningState'
@@ -334,5 +379,35 @@ properties:
       content: 'virtualMachine?: SubResource'
       return:
         type: <xref uid="@azure/arm-network.SubResource" />
+        description: ''
+  - name: vnetEncryptionSupported
+    uid: '@azure/arm-network.NetworkInterface.vnetEncryptionSupported'
+    package: '@azure/arm-network'
+    summary: >-
+      Whether the virtual machine this nic is attached to supports encryption.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: vnetEncryptionSupported
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'vnetEncryptionSupported?: undefined | false | true'
+      return:
+        type: undefined | false | true
+        description: ''
+  - name: workloadType
+    uid: '@azure/arm-network.NetworkInterface.workloadType'
+    package: '@azure/arm-network'
+    summary: WorkloadType of the NetworkInterface for BareMetal resources
+    fullName: workloadType
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'workloadType?: undefined | string'
+      return:
+        type: undefined | string
         description: ''
 extends: <xref uid="@azure/arm-network.Resource" />

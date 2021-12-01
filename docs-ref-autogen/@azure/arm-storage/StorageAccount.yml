@@ -46,6 +46,29 @@ properties:
       return:
         type: undefined | false | true
         description: ''
+  - name: allowSharedKeyAccess
+    uid: '@azure/arm-storage.StorageAccount.allowSharedKeyAccess'
+    package: '@azure/arm-storage'
+    summary: >-
+      Indicates whether the storage account permits requests to be authorized
+      with the account
+
+      access key via Shared Key. If false, then all requests, including shared
+      access signatures,
+
+      must be authorized with Azure Active Directory (Azure AD). The default
+      value is null, which is
+
+      equivalent to true.
+    fullName: allowSharedKeyAccess
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'allowSharedKeyAccess?: undefined | false | true'
+      return:
+        type: undefined | false | true
+        description: ''
   - name: azureFilesIdentityBasedAuthentication
     uid: '@azure/arm-storage.StorageAccount.azureFilesIdentityBasedAuthentication'
     package: '@azure/arm-storage'
@@ -127,6 +150,19 @@ properties:
       return:
         type: undefined | false | true
         description: ''
+  - name: enableNfsV3
+    uid: '@azure/arm-storage.StorageAccount.enableNfsV3'
+    package: '@azure/arm-storage'
+    summary: NFS 3.0 protocol support enabled if set to true.
+    fullName: enableNfsV3
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'enableNfsV3?: undefined | false | true'
+      return:
+        type: undefined | false | true
+        description: ''
   - name: encryption
     uid: '@azure/arm-storage.StorageAccount.encryption'
     package: '@azure/arm-storage'
@@ -144,6 +180,19 @@ properties:
       content: 'encryption?: Encryption'
       return:
         type: <xref uid="@azure/arm-storage.Encryption" />
+        description: ''
+  - name: extendedLocation
+    uid: '@azure/arm-storage.StorageAccount.extendedLocation'
+    package: '@azure/arm-storage'
+    summary: The extendedLocation of the resource.
+    fullName: extendedLocation
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'extendedLocation?: ExtendedLocation'
+      return:
+        type: <xref uid="@azure/arm-storage.ExtendedLocation" />
         description: ''
   - name: failoverInProgress
     uid: '@azure/arm-storage.StorageAccount.failoverInProgress'
@@ -184,7 +233,7 @@ properties:
     uid: '@azure/arm-storage.StorageAccount.id'
     package: '@azure/arm-storage'
     summary: >-
-      Fully qualified resource Id for the resource. Ex -
+      Fully qualified resource ID for the resource. Ex -
 
       /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
 
@@ -224,6 +273,40 @@ properties:
       content: 'isHnsEnabled?: undefined | false | true'
       return:
         type: undefined | false | true
+        description: ''
+  - name: keyCreationTime
+    uid: '@azure/arm-storage.StorageAccount.keyCreationTime'
+    package: '@azure/arm-storage'
+    summary: >-
+      Storage account keys creation time.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: keyCreationTime
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'keyCreationTime?: KeyCreationTime'
+      return:
+        type: <xref uid="@azure/arm-storage.KeyCreationTime" />
+        description: ''
+  - name: keyPolicy
+    uid: '@azure/arm-storage.StorageAccount.keyPolicy'
+    package: '@azure/arm-storage'
+    summary: >-
+      KeyPolicy assigned to the storage account.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: keyPolicy
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'keyPolicy?: KeyPolicy'
+      return:
+        type: <xref uid="@azure/arm-storage.KeyPolicy" />
         description: ''
   - name: kind
     uid: '@azure/arm-storage.StorageAccount.kind'
@@ -442,6 +525,23 @@ properties:
       return:
         type: <xref uid="@azure/arm-storage.RoutingPreference" />
         description: ''
+  - name: sasPolicy
+    uid: '@azure/arm-storage.StorageAccount.sasPolicy'
+    package: '@azure/arm-storage'
+    summary: >-
+      SasPolicy assigned to the storage account.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: sasPolicy
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'sasPolicy?: SasPolicy'
+      return:
+        type: <xref uid="@azure/arm-storage.SasPolicy" />
+        description: ''
   - name: secondaryEndpoints
     uid: '@azure/arm-storage.StorageAccount.secondaryEndpoints'
     package: '@azure/arm-storage'
@@ -562,9 +662,9 @@ properties:
     uid: '@azure/arm-storage.StorageAccount.type'
     package: '@azure/arm-storage'
     summary: >-
-      The type of the resource. Ex- Microsoft.Compute/virtualMachines or
+      The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or
 
-      Microsoft.Storage/storageAccounts.
+      "Microsoft.Storage/storageAccounts"
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**

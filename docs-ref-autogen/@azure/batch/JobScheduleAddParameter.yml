@@ -22,9 +22,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'displayName?: undefined | string'
+      content: 'displayName?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: id
     uid: '@azure/batch.JobScheduleAddParameter.id'

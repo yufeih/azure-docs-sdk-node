@@ -63,9 +63,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'mountOptions?: undefined | string'
+      content: 'mountOptions?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: relativeMountPath
     uid: '@azure/batch.AzureFileShareConfiguration.relativeMountPath'

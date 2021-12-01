@@ -14,17 +14,17 @@ properties:
     package: '@azure/batch'
     summary: >-
       The Azure Storage Account key. This property is mutually exclusive with
-      sasKey and one must be
+      both sasKey and
 
-      specified.
+      identity; exactly one must be specified.
     fullName: accountKey
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'accountKey?: undefined | string'
+      content: 'accountKey?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: accountName
     uid: '@azure/batch.AzureBlobFileSystemConfiguration.accountName'
@@ -52,9 +52,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'blobfuseOptions?: undefined | string'
+      content: 'blobfuseOptions?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: containerName
     uid: '@azure/batch.AzureBlobFileSystemConfiguration.containerName'
@@ -68,6 +68,24 @@ properties:
       content: 'containerName: string'
       return:
         type: string
+        description: ''
+  - name: identityReference
+    uid: '@azure/batch.AzureBlobFileSystemConfiguration.identityReference'
+    package: '@azure/batch'
+    summary: >-
+      The reference to the user assigned identity to use to access
+      containerName. This property is
+
+      mutually exclusive with both accountKey and sasKey; exactly one must be
+      specified.
+    fullName: identityReference
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'identityReference?: ComputeNodeIdentityReference'
+      return:
+        type: <xref uid="@azure/batch.ComputeNodeIdentityReference" />
         description: ''
   - name: relativeMountPath
     uid: '@azure/batch.AzureBlobFileSystemConfiguration.relativeMountPath'
@@ -92,16 +110,16 @@ properties:
     uid: '@azure/batch.AzureBlobFileSystemConfiguration.sasKey'
     package: '@azure/batch'
     summary: >-
-      The Azure Storage SAS token. This property is mutually exclusive with
-      accountKey and one must
+      The Azure Storage SAS token. This property is mutually exclusive with both
+      accountKey and
 
-      be specified.
+      identity; exactly one must be specified.
     fullName: sasKey
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'sasKey?: undefined | string'
+      content: 'sasKey?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''

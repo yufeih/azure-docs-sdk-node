@@ -2,7 +2,7 @@
 name: TagsResult
 uid: '@azure/arm-consumption.TagsResult'
 package: '@azure/arm-consumption'
-summary: ''
+summary: A resource listing all tags.
 fullName: TagsResult
 remarks: ''
 isPreview: false
@@ -12,7 +12,11 @@ properties:
   - name: eTag
     uid: '@azure/arm-consumption.TagsResult.eTag'
     package: '@azure/arm-consumption'
-    summary: ''
+    summary: >-
+      eTag of the resource. To handle concurrent update scenario, this field
+      will be used to
+
+      determine whether the user is updating the latest version or not.
     fullName: eTag
     remarks: ''
     isPreview: false
@@ -25,7 +29,11 @@ properties:
   - name: id
     uid: '@azure/arm-consumption.TagsResult.id'
     package: '@azure/arm-consumption'
-    summary: ''
+    summary: >-
+      Resource Id.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: id
     remarks: ''
     isPreview: false
@@ -38,7 +46,11 @@ properties:
   - name: name
     uid: '@azure/arm-consumption.TagsResult.name'
     package: '@azure/arm-consumption'
-    summary: ''
+    summary: >-
+      Resource name.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: name
     remarks: ''
     isPreview: false
@@ -48,10 +60,44 @@ properties:
       return:
         type: undefined | string
         description: ''
+  - name: nextLink
+    uid: '@azure/arm-consumption.TagsResult.nextLink'
+    package: '@azure/arm-consumption'
+    summary: >-
+      The link (url) to the next page of results.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: nextLink
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'nextLink?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''
+  - name: previousLink
+    uid: '@azure/arm-consumption.TagsResult.previousLink'
+    package: '@azure/arm-consumption'
+    summary: >-
+      The link (url) to the previous page of results.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: previousLink
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'previousLink?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''
   - name: tags
     uid: '@azure/arm-consumption.TagsResult.tags'
     package: '@azure/arm-consumption'
-    summary: ''
+    summary: A list of Tag.
     fullName: tags
     remarks: ''
     isPreview: false
@@ -64,7 +110,11 @@ properties:
   - name: type
     uid: '@azure/arm-consumption.TagsResult.type'
     package: '@azure/arm-consumption'
-    summary: ''
+    summary: >-
+      Resource type.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: type
     remarks: ''
     isPreview: false

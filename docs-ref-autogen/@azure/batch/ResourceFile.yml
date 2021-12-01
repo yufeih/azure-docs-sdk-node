@@ -25,9 +25,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'autoStorageContainerName?: undefined | string'
+      content: 'autoStorageContainerName?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: blobPrefix
     uid: '@azure/batch.ResourceFile.blobPrefix'
@@ -51,9 +51,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'blobPrefix?: undefined | string'
+      content: 'blobPrefix?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: fileMode
     uid: '@azure/batch.ResourceFile.fileMode'
@@ -74,9 +74,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'fileMode?: undefined | string'
+      content: 'fileMode?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: filePath
     uid: '@azure/batch.ResourceFile.filePath'
@@ -109,9 +109,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'filePath?: undefined | string'
+      content: 'filePath?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: httpUrl
     uid: '@azure/batch.ResourceFile.httpUrl'
@@ -123,25 +123,41 @@ properties:
       properties are mutually exclusive and one of them must be specified. If
       the URL points to
 
-      Azure Blob Storage, it must be readable using anonymous access; that is,
-      the Batch service
-
-      does not present any credentials when downloading the blob. There are two
-      ways to get such a
+      Azure Blob Storage, it must be readable from compute nodes. There are
+      three ways to get such a
 
       URL for a blob in Azure storage: include a Shared Access Signature (SAS)
       granting read
 
-      permissions on the blob, or set the ACL for the blob or its container to
-      allow public access.
+      permissions on the blob, use a managed identity with read permission, or
+      set the ACL for the
+
+      blob or its container to allow public access.
     fullName: httpUrl
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'httpUrl?: undefined | string'
+      content: 'httpUrl?: string'
       return:
-        type: undefined | string
+        type: string
+        description: ''
+  - name: identityReference
+    uid: '@azure/batch.ResourceFile.identityReference'
+    package: '@azure/batch'
+    summary: >-
+      The reference to the user assigned identity to use to access Azure Blob
+      Storage specified by
+
+      storageContainerUrl or httpUrl.
+    fullName: identityReference
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'identityReference?: ComputeNodeIdentityReference'
+      return:
+        type: <xref uid="@azure/batch.ComputeNodeIdentityReference" />
         description: ''
   - name: storageContainerUrl
     uid: '@azure/batch.ResourceFile.storageContainerUrl'
@@ -153,25 +169,22 @@ properties:
       storageContainerUrl and httpUrl properties are mutually exclusive and one
       of them must be
 
-      specified. This URL must be readable and listable using anonymous access;
-      that is, the Batch
+      specified. This URL must be readable and listable from compute nodes.
+      There are three ways to
 
-      service does not present any credentials when downloading blobs from the
-      container. There are
+      get such a URL for a container in Azure storage: include a Shared Access
+      Signature (SAS)
 
-      two ways to get such a URL for a container in Azure storage: include a
-      Shared Access Signature
+      granting read and list permissions on the container, use a managed
+      identity with read and list
 
-      (SAS) granting read and list permissions on the container, or set the ACL
-      for the container to
-
-      allow public access.
+      permissions, or set the ACL for the container to allow public access.
     fullName: storageContainerUrl
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'storageContainerUrl?: undefined | string'
+      content: 'storageContainerUrl?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''

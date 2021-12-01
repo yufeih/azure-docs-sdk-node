@@ -80,9 +80,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'autoScaleEvaluationInterval?: undefined | string'
+      content: 'autoScaleEvaluationInterval?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: autoScaleFormula
     uid: '@azure/batch.PoolSpecification.autoScaleFormula'
@@ -104,9 +104,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'autoScaleFormula?: undefined | string'
+      content: 'autoScaleFormula?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: certificateReferences
     uid: '@azure/batch.PoolSpecification.certificateReferences'
@@ -182,9 +182,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'displayName?: undefined | string'
+      content: 'displayName?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: enableAutoScale
     uid: '@azure/batch.PoolSpecification.enableAutoScale'
@@ -193,8 +193,8 @@ properties:
       Whether the Pool size should automatically adjust over time. If false, at
       least one of
 
-      targetDedicateNodes and targetLowPriorityNodes must be specified. If true,
-      the
+      targetDedicatedNodes and targetLowPriorityNodes must be specified. If
+      true, the
 
       autoScaleFormula element is required. The Pool automatically resizes
       according to the formula.
@@ -205,9 +205,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'enableAutoScale?: undefined | false | true'
+      content: 'enableAutoScale?: boolean'
       return:
-        type: undefined | false | true
+        type: boolean
         description: ''
   - name: enableInterNodeCommunication
     uid: '@azure/batch.PoolSpecification.enableInterNodeCommunication'
@@ -228,9 +228,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'enableInterNodeCommunication?: undefined | false | true'
+      content: 'enableInterNodeCommunication?: boolean'
       return:
-        type: undefined | false | true
+        type: boolean
         description: ''
   - name: metadata
     uid: '@azure/batch.PoolSpecification.metadata'
@@ -301,9 +301,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'resizeTimeout?: undefined | string'
+      content: 'resizeTimeout?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: startTask
     uid: '@azure/batch.PoolSpecification.startTask'
@@ -338,9 +338,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'targetDedicatedNodes?: undefined | number'
+      content: 'targetDedicatedNodes?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''
   - name: targetLowPriorityNodes
     uid: '@azure/batch.PoolSpecification.targetLowPriorityNodes'
@@ -358,9 +358,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'targetLowPriorityNodes?: undefined | number'
+      content: 'targetLowPriorityNodes?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''
   - name: taskSchedulingPolicy
     uid: '@azure/batch.PoolSpecification.taskSchedulingPolicy'
@@ -395,9 +395,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'taskSlotsPerNode?: undefined | number'
+      content: 'taskSlotsPerNode?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''
   - name: userAccounts
     uid: '@azure/batch.PoolSpecification.userAccounts'

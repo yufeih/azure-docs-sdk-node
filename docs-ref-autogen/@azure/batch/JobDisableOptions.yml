@@ -22,9 +22,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'clientRequestId?: undefined | string'
+      content: 'clientRequestId?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: ifMatch
     uid: '@azure/batch.JobDisableOptions.ifMatch'
@@ -42,9 +42,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'ifMatch?: undefined | string'
+      content: 'ifMatch?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: ifModifiedSince
     uid: '@azure/batch.JobDisableOptions.ifModifiedSince'
@@ -82,9 +82,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'ifNoneMatch?: undefined | string'
+      content: 'ifNoneMatch?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: ifUnmodifiedSince
     uid: '@azure/batch.JobDisableOptions.ifUnmodifiedSince'
@@ -134,9 +134,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'returnClientRequestId?: undefined | false | true'
+      content: 'returnClientRequestId?: boolean'
       return:
-        type: undefined | false | true
+        type: boolean
         description: ''
   - name: timeout
     uid: '@azure/batch.JobDisableOptions.timeout'
@@ -151,7 +151,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'timeout?: undefined | number'
+      content: 'timeout?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''

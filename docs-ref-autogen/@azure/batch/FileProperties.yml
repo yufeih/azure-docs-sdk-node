@@ -31,9 +31,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'contentType?: undefined | string'
+      content: 'contentType?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: creationTime
     uid: '@azure/batch.FileProperties.creationTime'
@@ -63,9 +63,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'fileMode?: undefined | string'
+      content: 'fileMode?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: lastModified
     uid: '@azure/batch.FileProperties.lastModified'

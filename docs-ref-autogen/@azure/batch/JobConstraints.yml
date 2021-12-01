@@ -37,9 +37,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'maxTaskRetryCount?: undefined | number'
+      content: 'maxTaskRetryCount?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''
   - name: maxWallClockTime
     uid: '@azure/batch.JobConstraints.maxWallClockTime'
@@ -61,7 +61,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'maxWallClockTime?: undefined | string'
+      content: 'maxWallClockTime?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''

@@ -38,11 +38,26 @@ properties:
       return:
         type: undefined | string
         description: ''
+  - name: http2Enabled
+    uid: '@azure/arm-apimanagement.GatewayHostnameConfigurationContract.http2Enabled'
+    package: '@azure/arm-apimanagement'
+    summary: Specifies if HTTP/2.0 is supported
+    fullName: http2Enabled
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'http2Enabled?: undefined | false | true'
+      return:
+        type: undefined | false | true
+        description: ''
   - name: id
     uid: '@azure/arm-apimanagement.GatewayHostnameConfigurationContract.id'
     package: '@azure/arm-apimanagement'
     summary: >-
-      Resource ID.
+      Fully qualified resource ID for the resource. Ex -
+
+      /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -59,7 +74,7 @@ properties:
     uid: '@azure/arm-apimanagement.GatewayHostnameConfigurationContract.name'
     package: '@azure/arm-apimanagement'
     summary: >-
-      Resource name.
+      The name of the resource
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -86,11 +101,39 @@ properties:
       return:
         type: undefined | false | true
         description: ''
+  - name: tls10Enabled
+    uid: '@azure/arm-apimanagement.GatewayHostnameConfigurationContract.tls10Enabled'
+    package: '@azure/arm-apimanagement'
+    summary: Specifies if TLS 1.0 is supported
+    fullName: tls10Enabled
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'tls10Enabled?: undefined | false | true'
+      return:
+        type: undefined | false | true
+        description: ''
+  - name: tls11Enabled
+    uid: '@azure/arm-apimanagement.GatewayHostnameConfigurationContract.tls11Enabled'
+    package: '@azure/arm-apimanagement'
+    summary: Specifies if TLS 1.1 is supported
+    fullName: tls11Enabled
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'tls11Enabled?: undefined | false | true'
+      return:
+        type: undefined | false | true
+        description: ''
   - name: type
     uid: '@azure/arm-apimanagement.GatewayHostnameConfigurationContract.type'
     package: '@azure/arm-apimanagement'
     summary: >-
-      Resource type for API Management resource.
+      The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or
+
+      "Microsoft.Storage/storageAccounts"
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**

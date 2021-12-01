@@ -18,9 +18,30 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'activeKey?: KeyVaultAndKeyReference'
+      content: 'activeKey?: KeyForDiskEncryptionSet'
       return:
-        type: <xref uid="@azure/arm-compute.KeyVaultAndKeyReference" />
+        type: <xref uid="@azure/arm-compute.KeyForDiskEncryptionSet" />
+        description: ''
+  - name: autoKeyRotationError
+    uid: '@azure/arm-compute.DiskEncryptionSet.autoKeyRotationError'
+    package: '@azure/arm-compute'
+    summary: >-
+      The error that was encountered during auto-key rotation. If an error is
+      present, then auto-key
+
+      rotation will not be attempted until the error on this disk encryption set
+      is fixed.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: autoKeyRotationError
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'autoKeyRotationError?: ApiError'
+      return:
+        type: <xref uid="@azure/arm-compute.ApiError" />
         description: ''
   - name: encryptionType
     uid: '@azure/arm-compute.DiskEncryptionSet.encryptionType'
@@ -66,6 +87,23 @@ properties:
       content: 'identity?: EncryptionSetIdentity'
       return:
         type: <xref uid="@azure/arm-compute.EncryptionSetIdentity" />
+        description: ''
+  - name: lastKeyRotationTimestamp
+    uid: '@azure/arm-compute.DiskEncryptionSet.lastKeyRotationTimestamp'
+    package: '@azure/arm-compute'
+    summary: >-
+      The time when the active key of this disk encryption set was updated.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: lastKeyRotationTimestamp
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'lastKeyRotationTimestamp?: Date'
+      return:
+        type: Date
         description: ''
   - name: location
     uid: '@azure/arm-compute.DiskEncryptionSet.location'
@@ -114,9 +152,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'previousKeys?: KeyVaultAndKeyReference[]'
+      content: 'previousKeys?: KeyForDiskEncryptionSet[]'
       return:
-        type: '<xref uid="@azure/arm-compute.KeyVaultAndKeyReference" />[]'
+        type: '<xref uid="@azure/arm-compute.KeyForDiskEncryptionSet" />[]'
         description: ''
   - name: provisioningState
     uid: '@azure/arm-compute.DiskEncryptionSet.provisioningState'
@@ -134,6 +172,23 @@ properties:
       content: 'provisioningState?: undefined | string'
       return:
         type: undefined | string
+        description: ''
+  - name: rotationToLatestKeyVersionEnabled
+    uid: '@azure/arm-compute.DiskEncryptionSet.rotationToLatestKeyVersionEnabled'
+    package: '@azure/arm-compute'
+    summary: >-
+      Set this flag to true to enable auto-updating of this disk encryption set
+      to the latest key
+
+      version.
+    fullName: rotationToLatestKeyVersionEnabled
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'rotationToLatestKeyVersionEnabled?: undefined | false | true'
+      return:
+        type: undefined | false | true
         description: ''
   - name: tags
     uid: '@azure/arm-compute.DiskEncryptionSet.tags'

@@ -72,9 +72,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'storeName?: undefined | string'
+      content: 'storeName?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: thumbprint
     uid: '@azure/batch.CertificateReference.thumbprint'

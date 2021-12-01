@@ -9,6 +9,29 @@ isPreview: false
 isDeprecated: false
 type: interface
 properties:
+  - name: exactVersion
+    uid: '@azure/batch.ImageReference.exactVersion'
+    package: '@azure/batch'
+    summary: >-
+      The specific version of the platform image or marketplace image used to
+      create the node. This
+
+      read-only field differs from 'version' only if the value specified for
+      'version' when the pool
+
+      was created was 'latest'.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: exactVersion
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'exactVersion?: string'
+      return:
+        type: string
+        description: ''
   - name: offer
     uid: '@azure/batch.ImageReference.offer'
     package: '@azure/batch'
@@ -22,9 +45,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'offer?: undefined | string'
+      content: 'offer?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: publisher
     uid: '@azure/batch.ImageReference.publisher'
@@ -39,9 +62,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'publisher?: undefined | string'
+      content: 'publisher?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: sku
     uid: '@azure/batch.ImageReference.sku'
@@ -56,9 +79,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'sku?: undefined | string'
+      content: 'sku?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: version
     uid: '@azure/batch.ImageReference.version'
@@ -74,9 +97,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'version?: undefined | string'
+      content: 'version?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: virtualMachineImageId
     uid: '@azure/batch.ImageReference.virtualMachineImageId'
@@ -114,7 +137,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'virtualMachineImageId?: undefined | string'
+      content: 'virtualMachineImageId?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''

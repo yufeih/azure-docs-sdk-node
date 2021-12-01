@@ -85,6 +85,23 @@ properties:
       return:
         type: <xref uid="@azure/batch.DiskEncryptionConfiguration" />
         description: ''
+  - name: extensions
+    uid: '@azure/batch.VirtualMachineConfiguration.extensions'
+    package: '@azure/batch'
+    summary: >-
+      The virtual machine extension for the pool. If specified, the extensions
+      mentioned in this
+
+      configuration will be installed on each node.
+    fullName: extensions
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'extensions?: VMExtension[]'
+      return:
+        type: '<xref uid="@azure/batch.VMExtension" />[]'
+        description: ''
   - name: imageReference
     uid: '@azure/batch.VirtualMachineConfiguration.imageReference'
     package: '@azure/batch'
@@ -125,9 +142,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'licenseType?: undefined | string'
+      content: 'licenseType?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: nodeAgentSKUId
     uid: '@azure/batch.VirtualMachineConfiguration.nodeAgentSKUId'
@@ -160,6 +177,36 @@ properties:
       content: 'nodeAgentSKUId: string'
       return:
         type: string
+        description: ''
+  - name: nodePlacementConfiguration
+    uid: '@azure/batch.VirtualMachineConfiguration.nodePlacementConfiguration'
+    package: '@azure/batch'
+    summary: >-
+      The node placement configuration for the pool. This configuration will
+      specify rules on how
+
+      nodes in the pool will be physically allocated.
+    fullName: nodePlacementConfiguration
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'nodePlacementConfiguration?: NodePlacementConfiguration'
+      return:
+        type: <xref uid="@azure/batch.NodePlacementConfiguration" />
+        description: ''
+  - name: osDisk
+    uid: '@azure/batch.VirtualMachineConfiguration.osDisk'
+    package: '@azure/batch'
+    summary: Settings for the operating system disk of the Virtual Machine.
+    fullName: osDisk
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'osDisk?: OSDisk'
+      return:
+        type: <xref uid="@azure/batch.OSDisk" />
         description: ''
   - name: windowsConfiguration
     uid: '@azure/batch.VirtualMachineConfiguration.windowsConfiguration'

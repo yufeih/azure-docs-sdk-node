@@ -86,6 +86,21 @@ properties:
       return:
         type: undefined | false | true
         description: ''
+  - name: start
+    uid: '@azure/cognitiveservices-face.LargeFaceListListOptionalParams.start'
+    package: '@azure/cognitiveservices-face'
+    summary: >-
+      Starting large face list id to return (used to list a range of large face
+      lists).
+    fullName: start
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'start?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''
   - name: timeout
     uid: '@azure/cognitiveservices-face.LargeFaceListListOptionalParams.timeout'
     package: '@azure/cognitiveservices-face'
@@ -98,6 +113,23 @@ properties:
     isDeprecated: false
     syntax:
       content: 'timeout?: undefined | number'
+      return:
+        type: undefined | number
+        description: ''
+  - name: top
+    uid: '@azure/cognitiveservices-face.LargeFaceListListOptionalParams.top'
+    package: '@azure/cognitiveservices-face'
+    summary: >-
+      Number of large face lists to return starting with the large face list id
+      indicated by the
+
+      'start' parameter.
+    fullName: top
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'top?: undefined | number'
       return:
         type: undefined | number
         description: ''

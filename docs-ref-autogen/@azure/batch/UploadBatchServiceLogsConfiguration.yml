@@ -16,13 +16,16 @@ properties:
       The URL of the container within Azure Blob Storage to which to upload the
       Batch Service log
 
-      file(s). The URL must include a Shared Access Signature (SAS) granting
-      write permissions to
+      file(s). If a user assigned managed identity is not being used, the URL
+      must include a Shared
 
-      the container. The SAS duration must allow enough time for the upload to
-      finish. The start
+      Access Signature (SAS) granting write permissions to the container. The
+      SAS duration must
 
-      time for SAS is optional and recommended to not be specified.
+      allow enough time for the upload to finish. The start time for SAS is
+      optional and recommended
+
+      to not be specified.
     fullName: containerUrl
     remarks: ''
     isPreview: false
@@ -57,6 +60,24 @@ properties:
       content: 'endTime?: Date'
       return:
         type: Date
+        description: ''
+  - name: identityReference
+    uid: '@azure/batch.UploadBatchServiceLogsConfiguration.identityReference'
+    package: '@azure/batch'
+    summary: >-
+      The reference to the user assigned identity to use to access Azure Blob
+      Storage specified by
+
+      containerUrl. The identity must have write access to the Azure Blob
+      Storage container.
+    fullName: identityReference
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'identityReference?: ComputeNodeIdentityReference'
+      return:
+        type: <xref uid="@azure/batch.ComputeNodeIdentityReference" />
         description: ''
   - name: startTime
     uid: '@azure/batch.UploadBatchServiceLogsConfiguration.startTime'

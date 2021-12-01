@@ -24,6 +24,7 @@ interfaces:
   - '@azure/service-bus.QueueRuntimeProperties'
   - '@azure/service-bus.ReceiveMessagesOptions'
   - '@azure/service-bus.RuleProperties'
+  - '@azure/service-bus.ServiceBusAdministrationClientOptions'
   - '@azure/service-bus.ServiceBusClientOptions'
   - '@azure/service-bus.ServiceBusConnectionStringProperties'
   - '@azure/service-bus.ServiceBusMessage'
@@ -50,7 +51,7 @@ typeAliases:
   - '@azure/service-bus.SqlRuleAction'
   - '@azure/service-bus.WithResponse'
 functions:
-  - name: isServiceBusError(any)
+  - name: isServiceBusError(unknown)
     uid: '@azure/service-bus.isServiceBusError'
     package: '@azure/service-bus'
     summary: Determines if an error is of type `ServiceBusError`
@@ -58,10 +59,10 @@ functions:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function isServiceBusError(err: any)'
+      content: 'function isServiceBusError(err: unknown)'
       parameters:
         - id: err
-          type: any
+          type: unknown
           description: |
             An error to check to see if it's of type ServiceBusError
       return:

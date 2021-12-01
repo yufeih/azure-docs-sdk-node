@@ -9,4 +9,4 @@ isPreview: false
 isDeprecated: false
 syntax: >-
   type FileGetFromTaskResponse = FileGetFromTaskHeaders & { _response: Object,
-  blobBody: Promise<Blob>, readableStreamBody: NodeJS.ReadableStream }
+  blobBody: Promise<Blob>, readableStreamBody: ReadableStream }

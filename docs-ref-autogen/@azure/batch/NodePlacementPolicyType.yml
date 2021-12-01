@@ -1,0 +1,12 @@
+### YamlMime:TSTypeAlias
+name: NodePlacementPolicyType
+uid: '@azure/batch.NodePlacementPolicyType'
+package: '@azure/batch'
+summary: |-
+  Defines values for NodePlacementPolicyType.
+  Possible values include: 'regional', 'zonal'
+fullName: NodePlacementPolicyType
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: type NodePlacementPolicyType = "regional" | "zonal"

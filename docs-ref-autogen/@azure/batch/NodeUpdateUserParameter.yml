@@ -46,9 +46,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'password?: undefined | string'
+      content: 'password?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: sshPublicKey
     uid: '@azure/batch.NodeUpdateUserParameter.sshPublicKey'
@@ -73,7 +73,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'sshPublicKey?: undefined | string'
+      content: 'sshPublicKey?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''

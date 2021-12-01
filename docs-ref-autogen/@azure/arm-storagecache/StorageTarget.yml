@@ -9,6 +9,19 @@ isPreview: false
 isDeprecated: false
 type: interface
 properties:
+  - name: blobNfs
+    uid: '@azure/arm-storagecache.StorageTarget.blobNfs'
+    package: '@azure/arm-storagecache'
+    summary: Properties when targetType is blobNfs.
+    fullName: blobNfs
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'blobNfs?: BlobNfsTarget'
+      return:
+        type: <xref uid="@azure/arm-storagecache.BlobNfsTarget" />
+        description: ''
   - name: clfs
     uid: '@azure/arm-storagecache.StorageTarget.clfs'
     package: '@azure/arm-storagecache'
@@ -52,6 +65,23 @@ properties:
       return:
         type: '<xref uid="@azure/arm-storagecache.NamespaceJunction" />[]'
         description: ''
+  - name: location
+    uid: '@azure/arm-storagecache.StorageTarget.location'
+    package: '@azure/arm-storagecache'
+    summary: >-
+      Region name string.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: location
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'location?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''
   - name: name
     uid: '@azure/arm-storagecache.StorageTarget.name'
     package: '@azure/arm-storagecache'
@@ -94,6 +124,9 @@ properties:
       'Deleting',
 
       'Updating'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: provisioningState
     remarks: ''
     isPreview: false
@@ -103,31 +136,54 @@ properties:
       return:
         type: <xref uid="@azure/arm-storagecache.ProvisioningStateType" />
         description: ''
-  - name: targetBaseType
-    uid: '@azure/arm-storagecache.StorageTarget.targetBaseType'
+  - name: state
+    uid: '@azure/arm-storagecache.StorageTarget.state'
     package: '@azure/arm-storagecache'
-    summary: Polymorphic Discriminator
-    fullName: targetBaseType
+    summary: >-
+      Storage target operational state. Possible values include: 'Ready',
+      'Busy', 'Suspended',
+
+      'Flushing'
+    fullName: state
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'targetBaseType: string'
+      content: 'state?: OperationalStateType'
       return:
-        type: string
+        type: <xref uid="@azure/arm-storagecache.OperationalStateType" />
+        description: ''
+  - name: systemData
+    uid: '@azure/arm-storagecache.StorageTarget.systemData'
+    package: '@azure/arm-storagecache'
+    summary: >-
+      The system meta data relating to this resource.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: systemData
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'systemData?: SystemData'
+      return:
+        type: <xref uid="@azure/arm-storagecache.SystemData" />
         description: ''
   - name: targetType
     uid: '@azure/arm-storagecache.StorageTarget.targetType'
     package: '@azure/arm-storagecache'
-    summary: Type of the Storage Target.
+    summary: >-
+      Type of the Storage Target. Possible values include: 'nfs3', 'clfs',
+      'unknown', 'blobNfs'
     fullName: targetType
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'targetType?: undefined | string'
+      content: 'targetType: StorageTargetType'
       return:
-        type: undefined | string
+        type: <xref uid="@azure/arm-storagecache.StorageTargetType" />
         description: ''
   - name: type
     uid: '@azure/arm-storagecache.StorageTarget.type'

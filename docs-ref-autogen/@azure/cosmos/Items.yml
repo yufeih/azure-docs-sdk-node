@@ -23,7 +23,64 @@ properties:
         type: <xref uid="@azure/cosmos.Container" />
         description: ''
 methods:
-  - name: 'bulk(OperationInput[], RequestOptions)'
+  - name: 'batch(OperationInput[], string, RequestOptions)'
+    uid: '@azure/cosmos.Items.batch'
+    package: '@azure/cosmos'
+    summary: >
+      Execute transactional batch operations on items.
+
+      Batch takes an array of Operations which are typed based on what the
+      operation does. Batch is transactional and will rollback all operations if
+      one fails.
+
+      The choices are: Create, Upsert, Read, Replace, and Delete
+
+
+      Usage example:
+
+      ```typescript
+
+      // partitionKey is required as a second argument to batch, but defaults to
+      the default partition key
+
+      const operations: OperationInput[] = [
+         {
+            operationType: "Create",
+            resourceBody: { id: "doc1", name: "sample", key: "A" }
+         },
+         {
+            operationType: "Upsert",
+            partitionKey: 'A',
+            resourceBody: { id: "doc2", name: "other", key: "A" }
+         }
+      ]
+
+
+      await database.container.items.batch(operations)
+
+      ```
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function batch(operations: OperationInput[], partitionKey?: string,
+        options?: RequestOptions)
+      parameters:
+        - id: operations
+          type: '<xref uid="@azure/cosmos.OperationInput" />[]'
+          description: List of operations. Limit 100
+        - id: partitionKey
+          type: string
+          description: ''
+        - id: options
+          type: <xref uid="@azure/cosmos.RequestOptions" />
+          description: |
+            Used for modifying the request
+      return:
+        type: Promise&lt;Response&lt;any&gt;&gt;
+        description: ''
+  - name: 'bulk(OperationInput[], BulkOptions, RequestOptions)'
     uid: '@azure/cosmos.Items.bulk'
     package: '@azure/cosmos'
     summary: >
@@ -37,6 +94,7 @@ methods:
 
       Usage example:
 
+      ```typescript
 
       // partitionKey is optional at the top level if present in the
       resourceBody
@@ -54,16 +112,27 @@ methods:
       ]
 
 
-      await database.container.items.bulk(operation)
+      await database.container.items.bulk(operations)
+
+      ```
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function bulk(operations: OperationInput[], options?: RequestOptions)'
+      content: >-
+        function bulk(operations: OperationInput[], bulkOptions?: BulkOptions,
+        options?: RequestOptions)
       parameters:
         - id: operations
           type: '<xref uid="@azure/cosmos.OperationInput" />[]'
-          description: ''
+          description: List of operations. Limit 100
+        - id: bulkOptions
+          type: <xref uid="@azure/cosmos.BulkOptions" />
+          description: >-
+            Optional options object to modify bulk behavior. Pass \{
+            continueOnError: true \} to continue executing operations when one
+            fails. (Defaults to false) ** NOTE: THIS WILL DEFAULT TO TRUE IN THE
+            4.0 RELEASE
         - id: options
           type: <xref uid="@azure/cosmos.RequestOptions" />
           description: |
@@ -83,8 +152,7 @@ methods:
       parameters:
         - id: changeFeedOptions
           type: <xref uid="@azure/cosmos.ChangeFeedOptions" />
-          description: |+
-
+          description: ''
       return:
         type: <xref uid="@azure/cosmos.ChangeFeedIterator" />&lt;any&gt;
         description: ''
@@ -105,8 +173,7 @@ methods:
           description: ''
         - id: changeFeedOptions
           type: <xref uid="@azure/cosmos.ChangeFeedOptions" />
-          description: |+
-
+          description: ''
       return:
         type: <xref uid="@azure/cosmos.ChangeFeedIterator" />&lt;any&gt;
         description: ''
@@ -122,8 +189,7 @@ methods:
       parameters:
         - id: changeFeedOptions
           type: <xref uid="@azure/cosmos.ChangeFeedOptions" />
-          description: |+
-
+          description: ''
       return:
         type: <xref uid="@azure/cosmos.ChangeFeedIterator" />&lt;T&gt;
         description: ''
@@ -144,8 +210,7 @@ methods:
           description: ''
         - id: changeFeedOptions
           type: <xref uid="@azure/cosmos.ChangeFeedOptions" />
-          description: |+
-
+          description: ''
       return:
         type: <xref uid="@azure/cosmos.ChangeFeedIterator" />&lt;T&gt;
         description: ''
@@ -293,8 +358,7 @@ methods:
       parameters:
         - id: changeFeedOptions
           type: <xref uid="@azure/cosmos.ChangeFeedOptions" />
-          description: |+
-
+          description: ''
       return:
         type: <xref uid="@azure/cosmos.ChangeFeedIterator" />&lt;any&gt;
         description: ''
@@ -333,8 +397,7 @@ methods:
       parameters:
         - id: changeFeedOptions
           type: <xref uid="@azure/cosmos.ChangeFeedOptions" />
-          description: |+
-
+          description: ''
       return:
         type: <xref uid="@azure/cosmos.ChangeFeedIterator" />&lt;T&gt;
         description: ''
@@ -356,12 +419,11 @@ methods:
           description: ''
         - id: changeFeedOptions
           type: <xref uid="@azure/cosmos.ChangeFeedOptions" />
-          description: |+
-
+          description: ''
       return:
         type: <xref uid="@azure/cosmos.ChangeFeedIterator" />&lt;T&gt;
         description: ''
-  - name: 'upsert(any, RequestOptions)'
+  - name: 'upsert(unknown, RequestOptions)'
     uid: '@azure/cosmos.Items.upsert'
     package: '@azure/cosmos'
     summary: >
@@ -373,10 +435,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function upsert(body: any, options?: RequestOptions)'
+      content: 'function upsert(body: unknown, options?: RequestOptions)'
       parameters:
         - id: body
-          type: any
+          type: unknown
           description: >-
             Represents the body of the item. Can contain any number of user
             defined properties.

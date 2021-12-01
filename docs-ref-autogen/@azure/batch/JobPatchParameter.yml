@@ -26,6 +26,30 @@ properties:
       return:
         type: <xref uid="@azure/batch.JobConstraints" />
         description: ''
+  - name: maxParallelTasks
+    uid: '@azure/batch.JobPatchParameter.maxParallelTasks'
+    package: '@azure/batch'
+    summary: >-
+      The maximum number of tasks that can be executed in parallel for the job.
+      The value of
+
+      maxParallelTasks must be -1 or greater than 0 if specified. If not
+      specified, the default
+
+      value is -1, which means there's no limit to the number of tasks that can
+      be run at once. You
+
+      can update a job's maxParallelTasks after it has been created using the
+      update job API.
+    fullName: maxParallelTasks
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'maxParallelTasks?: number'
+      return:
+        type: number
+        description: ''
   - name: metadata
     uid: '@azure/batch.JobPatchParameter.metadata'
     package: '@azure/batch'
@@ -117,7 +141,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'priority?: undefined | number'
+      content: 'priority?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''

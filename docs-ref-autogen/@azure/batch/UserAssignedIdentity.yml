@@ -1,0 +1,58 @@
+### YamlMime:TSType
+name: UserAssignedIdentity
+uid: '@azure/batch.UserAssignedIdentity'
+package: '@azure/batch'
+summary: The user assigned Identity
+fullName: UserAssignedIdentity
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: clientId
+    uid: '@azure/batch.UserAssignedIdentity.clientId'
+    package: '@azure/batch'
+    summary: >-
+      The client id of the user assigned identity.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: clientId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'clientId?: string'
+      return:
+        type: string
+        description: ''
+  - name: principalId
+    uid: '@azure/batch.UserAssignedIdentity.principalId'
+    package: '@azure/batch'
+    summary: >-
+      The principal id of the user assigned identity.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: principalId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'principalId?: string'
+      return:
+        type: string
+        description: ''
+  - name: resourceId
+    uid: '@azure/batch.UserAssignedIdentity.resourceId'
+    package: '@azure/batch'
+    summary: The ARM resource id of the user assigned identity
+    fullName: resourceId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'resourceId: string'
+      return:
+        type: string
+        description: ''

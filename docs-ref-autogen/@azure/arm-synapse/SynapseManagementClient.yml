@@ -10,8 +10,8 @@ isDeprecated: false
 type: class
 constructors:
   - name: >-
-      SynapseManagementClient(ServiceClientCredentials, string,
-      Models.SynapseManagementClientOptions)
+      SynapseManagementClient(ServiceClientCredentials | TokenCredential,
+      string, Models.SynapseManagementClientOptions)
     uid: '@azure/arm-synapse.SynapseManagementClient.constructor'
     package: '@azure/arm-synapse'
     summary: Initializes a new instance of the SynapseManagementClient class.
@@ -20,12 +20,25 @@ constructors:
     isDeprecated: false
     syntax:
       content: >-
-        new SynapseManagementClient(credentials: ServiceClientCredentials,
-        subscriptionId: string, options?: Models.SynapseManagementClientOptions)
+        new SynapseManagementClient(credentials: ServiceClientCredentials |
+        TokenCredential, subscriptionId: string, options?:
+        Models.SynapseManagementClientOptions)
       parameters:
         - id: credentials
-          type: ServiceClientCredentials
-          description: Credentials needed for the client to connect to Azure.
+          type: ServiceClientCredentials | TokenCredential
+          description: >-
+            Credentials needed for the client to connect to Azure. Credentials
+
+            implementing the TokenCredential interface from the @azure/identity
+            package are recommended. For
+
+            more information about these credentials, see
+
+            <xref:https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40azure%2Fidentity>.
+            Credentials implementing the
+
+            ServiceClientCredentials interface from the older packages
+            @azure/ms-rest-nodeauth and
         - id: subscriptionId
           type: string
           description: The ID of the target subscription.
@@ -46,18 +59,18 @@ properties:
       return:
         type: string
         description: ''
-  - name: apiVersion
-    uid: '@azure/arm-synapse.SynapseManagementClient.apiVersion'
+  - name: azureADOnlyAuthentications
+    uid: '@azure/arm-synapse.SynapseManagementClient.azureADOnlyAuthentications'
     package: '@azure/arm-synapse'
     summary: ''
-    fullName: apiVersion
+    fullName: azureADOnlyAuthentications
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'apiVersion?: undefined | string'
+      content: 'azureADOnlyAuthentications: AzureADOnlyAuthentications'
       return:
-        type: undefined | string
+        type: <xref uid="@azure/arm-synapse.AzureADOnlyAuthentications" />
         description: ''
   - name: bigDataPools
     uid: '@azure/arm-synapse.SynapseManagementClient.bigDataPools'
@@ -81,9 +94,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'credentials: ServiceClientCredentials'
+      content: 'credentials: ServiceClientCredentials | TokenCredential'
       return:
-        type: ServiceClientCredentials
+        type: ServiceClientCredentials | TokenCredential
         description: ''
   - name: dataMaskingPolicies
     uid: '@azure/arm-synapse.SynapseManagementClient.dataMaskingPolicies'
@@ -279,6 +292,146 @@ properties:
       return:
         type: <xref uid="@azure/arm-synapse.Keys" />
         description: ''
+  - name: kustoOperations
+    uid: '@azure/arm-synapse.SynapseManagementClient.kustoOperations'
+    package: '@azure/arm-synapse'
+    summary: ''
+    fullName: kustoOperations
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'kustoOperations: KustoOperations'
+      return:
+        type: <xref uid="@azure/arm-synapse.KustoOperations" />
+        description: ''
+  - name: kustoPoolAttachedDatabaseConfigurations
+    uid: >-
+      @azure/arm-synapse.SynapseManagementClient.kustoPoolAttachedDatabaseConfigurations
+    package: '@azure/arm-synapse'
+    summary: ''
+    fullName: kustoPoolAttachedDatabaseConfigurations
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        kustoPoolAttachedDatabaseConfigurations:
+        KustoPoolAttachedDatabaseConfigurations
+      return:
+        type: >-
+          <xref uid="@azure/arm-synapse.KustoPoolAttachedDatabaseConfigurations"
+          />
+        description: ''
+  - name: kustoPoolChildResource
+    uid: '@azure/arm-synapse.SynapseManagementClient.kustoPoolChildResource'
+    package: '@azure/arm-synapse'
+    summary: ''
+    fullName: kustoPoolChildResource
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'kustoPoolChildResource: KustoPoolChildResource'
+      return:
+        type: <xref uid="@azure/arm-synapse.KustoPoolChildResource" />
+        description: ''
+  - name: kustoPoolDatabasePrincipalAssignments
+    uid: >-
+      @azure/arm-synapse.SynapseManagementClient.kustoPoolDatabasePrincipalAssignments
+    package: '@azure/arm-synapse'
+    summary: ''
+    fullName: kustoPoolDatabasePrincipalAssignments
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        kustoPoolDatabasePrincipalAssignments:
+        KustoPoolDatabasePrincipalAssignments
+      return:
+        type: >-
+          <xref uid="@azure/arm-synapse.KustoPoolDatabasePrincipalAssignments"
+          />
+        description: ''
+  - name: kustoPoolDatabases
+    uid: '@azure/arm-synapse.SynapseManagementClient.kustoPoolDatabases'
+    package: '@azure/arm-synapse'
+    summary: ''
+    fullName: kustoPoolDatabases
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'kustoPoolDatabases: KustoPoolDatabases'
+      return:
+        type: <xref uid="@azure/arm-synapse.KustoPoolDatabases" />
+        description: ''
+  - name: kustoPoolDataConnections
+    uid: '@azure/arm-synapse.SynapseManagementClient.kustoPoolDataConnections'
+    package: '@azure/arm-synapse'
+    summary: ''
+    fullName: kustoPoolDataConnections
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'kustoPoolDataConnections: KustoPoolDataConnections'
+      return:
+        type: <xref uid="@azure/arm-synapse.KustoPoolDataConnections" />
+        description: ''
+  - name: kustoPoolPrincipalAssignments
+    uid: '@azure/arm-synapse.SynapseManagementClient.kustoPoolPrincipalAssignments'
+    package: '@azure/arm-synapse'
+    summary: ''
+    fullName: kustoPoolPrincipalAssignments
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'kustoPoolPrincipalAssignments: KustoPoolPrincipalAssignments'
+      return:
+        type: <xref uid="@azure/arm-synapse.KustoPoolPrincipalAssignments" />
+        description: ''
+  - name: kustoPools
+    uid: '@azure/arm-synapse.SynapseManagementClient.kustoPools'
+    package: '@azure/arm-synapse'
+    summary: ''
+    fullName: kustoPools
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'kustoPools: KustoPools'
+      return:
+        type: <xref uid="@azure/arm-synapse.KustoPools" />
+        description: ''
+  - name: libraries
+    uid: '@azure/arm-synapse.SynapseManagementClient.libraries'
+    package: '@azure/arm-synapse'
+    summary: ''
+    fullName: libraries
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'libraries: Libraries'
+      return:
+        type: <xref uid="@azure/arm-synapse.Libraries" />
+        description: ''
+  - name: library
+    uid: '@azure/arm-synapse.SynapseManagementClient.library'
+    package: '@azure/arm-synapse'
+    summary: ''
+    fullName: library
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'library: Library'
+      return:
+        type: <xref uid="@azure/arm-synapse.Library" />
+        description: ''
   - name: longRunningOperationRetryTimeout
     uid: >-
       @azure/arm-synapse.SynapseManagementClient.longRunningOperationRetryTimeout
@@ -339,6 +492,20 @@ properties:
           <xref
           uid="@azure/arm-synapse.PrivateEndpointConnectionsPrivateLinkHub" />
         description: ''
+  - name: privateLinkHubPrivateLinkResources
+    uid: >-
+      @azure/arm-synapse.SynapseManagementClient.privateLinkHubPrivateLinkResources
+    package: '@azure/arm-synapse'
+    summary: ''
+    fullName: privateLinkHubPrivateLinkResources
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'privateLinkHubPrivateLinkResources: PrivateLinkHubPrivateLinkResources'
+      return:
+        type: <xref uid="@azure/arm-synapse.PrivateLinkHubPrivateLinkResources" />
+        description: ''
   - name: privateLinkHubs
     uid: '@azure/arm-synapse.SynapseManagementClient.privateLinkHubs'
     package: '@azure/arm-synapse'
@@ -377,6 +544,32 @@ properties:
       content: 'restorableDroppedSqlPools: RestorableDroppedSqlPools'
       return:
         type: <xref uid="@azure/arm-synapse.RestorableDroppedSqlPools" />
+        description: ''
+  - name: sparkConfiguration
+    uid: '@azure/arm-synapse.SynapseManagementClient.sparkConfiguration'
+    package: '@azure/arm-synapse'
+    summary: ''
+    fullName: sparkConfiguration
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'sparkConfiguration: SparkConfiguration'
+      return:
+        type: <xref uid="@azure/arm-synapse.SparkConfiguration" />
+        description: ''
+  - name: sparkConfigurations
+    uid: '@azure/arm-synapse.SynapseManagementClient.sparkConfigurations'
+    package: '@azure/arm-synapse'
+    summary: ''
+    fullName: sparkConfigurations
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'sparkConfigurations: SparkConfigurations'
+      return:
+        type: <xref uid="@azure/arm-synapse.SparkConfigurations" />
         description: ''
   - name: sqlPoolBlobAuditingPolicies
     uid: '@azure/arm-synapse.SynapseManagementClient.sqlPoolBlobAuditingPolicies'
@@ -444,6 +637,32 @@ properties:
       return:
         type: <xref uid="@azure/arm-synapse.SqlPoolGeoBackupPolicies" />
         description: ''
+  - name: sqlPoolMaintenanceWindowOptions
+    uid: '@azure/arm-synapse.SynapseManagementClient.sqlPoolMaintenanceWindowOptions'
+    package: '@azure/arm-synapse'
+    summary: ''
+    fullName: sqlPoolMaintenanceWindowOptions
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'sqlPoolMaintenanceWindowOptions: SqlPoolMaintenanceWindowOptions'
+      return:
+        type: <xref uid="@azure/arm-synapse.SqlPoolMaintenanceWindowOptions" />
+        description: ''
+  - name: sqlPoolMaintenanceWindows
+    uid: '@azure/arm-synapse.SynapseManagementClient.sqlPoolMaintenanceWindows'
+    package: '@azure/arm-synapse'
+    summary: ''
+    fullName: sqlPoolMaintenanceWindows
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'sqlPoolMaintenanceWindows: SqlPoolMaintenanceWindows'
+      return:
+        type: <xref uid="@azure/arm-synapse.SqlPoolMaintenanceWindows" />
+        description: ''
   - name: sqlPoolMetadataSyncConfigs
     uid: '@azure/arm-synapse.SynapseManagementClient.sqlPoolMetadataSyncConfigs'
     package: '@azure/arm-synapse'
@@ -482,6 +701,20 @@ properties:
       content: 'sqlPoolOperations: SqlPoolOperations'
       return:
         type: <xref uid="@azure/arm-synapse.SqlPoolOperations" />
+        description: ''
+  - name: sqlPoolRecommendedSensitivityLabels
+    uid: >-
+      @azure/arm-synapse.SynapseManagementClient.sqlPoolRecommendedSensitivityLabels
+    package: '@azure/arm-synapse'
+    summary: ''
+    fullName: sqlPoolRecommendedSensitivityLabels
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'sqlPoolRecommendedSensitivityLabels: SqlPoolRecommendedSensitivityLabels'
+      return:
+        type: <xref uid="@azure/arm-synapse.SqlPoolRecommendedSensitivityLabels" />
         description: ''
   - name: sqlPoolReplicationLinks
     uid: '@azure/arm-synapse.SynapseManagementClient.sqlPoolReplicationLinks'
@@ -749,6 +982,25 @@ properties:
           uid="@azure/arm-synapse.WorkspaceManagedSqlServerBlobAuditingPolicies"
           />
         description: ''
+  - name: workspaceManagedSqlServerEncryptionProtector
+    uid: >-
+      @azure/arm-synapse.SynapseManagementClient.workspaceManagedSqlServerEncryptionProtector
+    package: '@azure/arm-synapse'
+    summary: ''
+    fullName: workspaceManagedSqlServerEncryptionProtector
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        workspaceManagedSqlServerEncryptionProtector:
+        WorkspaceManagedSqlServerEncryptionProtector
+      return:
+        type: >-
+          <xref
+          uid="@azure/arm-synapse.WorkspaceManagedSqlServerEncryptionProtector"
+          />
+        description: ''
   - name: workspaceManagedSqlServerExtendedBlobAuditingPolicies
     uid: >-
       @azure/arm-synapse.SynapseManagementClient.workspaceManagedSqlServerExtendedBlobAuditingPolicies
@@ -768,23 +1020,23 @@ properties:
           uid="@azure/arm-synapse.WorkspaceManagedSqlServerExtendedBlobAuditingPolicies"
           />
         description: ''
-  - name: workspaceManagedSqlServerRecoverableSqlpools
+  - name: workspaceManagedSqlServerRecoverableSqlPools
     uid: >-
-      @azure/arm-synapse.SynapseManagementClient.workspaceManagedSqlServerRecoverableSqlpools
+      @azure/arm-synapse.SynapseManagementClient.workspaceManagedSqlServerRecoverableSqlPools
     package: '@azure/arm-synapse'
     summary: ''
-    fullName: workspaceManagedSqlServerRecoverableSqlpools
+    fullName: workspaceManagedSqlServerRecoverableSqlPools
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
-        workspaceManagedSqlServerRecoverableSqlpools:
-        WorkspaceManagedSqlServerRecoverableSqlpools
+        workspaceManagedSqlServerRecoverableSqlPools:
+        WorkspaceManagedSqlServerRecoverableSqlPools
       return:
         type: >-
           <xref
-          uid="@azure/arm-synapse.WorkspaceManagedSqlServerRecoverableSqlpools"
+          uid="@azure/arm-synapse.WorkspaceManagedSqlServerRecoverableSqlPools"
           />
         description: ''
   - name: workspaceManagedSqlServerSecurityAlertPolicy

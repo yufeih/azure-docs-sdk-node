@@ -181,9 +181,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'id?: undefined | string'
+      content: 'id?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: rerunOnNodeRebootAfterSuccess
     uid: '@azure/batch.JobPreparationTask.rerunOnNodeRebootAfterSuccess'
@@ -207,9 +207,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'rerunOnNodeRebootAfterSuccess?: undefined | false | true'
+      content: 'rerunOnNodeRebootAfterSuccess?: boolean'
       return:
-        type: undefined | false | true
+        type: boolean
         description: ''
   - name: resourceFiles
     uid: '@azure/batch.JobPreparationTask.resourceFiles'
@@ -300,7 +300,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'waitForSuccess?: undefined | false | true'
+      content: 'waitForSuccess?: boolean'
       return:
-        type: undefined | false | true
+        type: boolean
         description: ''

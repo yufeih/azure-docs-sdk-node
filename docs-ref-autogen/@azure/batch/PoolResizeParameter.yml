@@ -48,9 +48,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'resizeTimeout?: undefined | string'
+      content: 'resizeTimeout?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: targetDedicatedNodes
     uid: '@azure/batch.PoolResizeParameter.targetDedicatedNodes'
@@ -61,9 +61,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'targetDedicatedNodes?: undefined | number'
+      content: 'targetDedicatedNodes?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''
   - name: targetLowPriorityNodes
     uid: '@azure/batch.PoolResizeParameter.targetLowPriorityNodes'
@@ -74,7 +74,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'targetLowPriorityNodes?: undefined | number'
+      content: 'targetLowPriorityNodes?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''

@@ -31,9 +31,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'displayName?: undefined | string'
+      content: 'displayName?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: eTag
     uid: '@azure/batch.CloudJobSchedule.eTag'
@@ -54,9 +54,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'eTag?: undefined | string'
+      content: 'eTag?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: executionInfo
     uid: '@azure/batch.CloudJobSchedule.executionInfo'
@@ -80,9 +80,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'id?: undefined | string'
+      content: 'id?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: jobSpecification
     uid: '@azure/batch.CloudJobSchedule.jobSpecification'
@@ -243,7 +243,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'url?: undefined | string'
+      content: 'url?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''

@@ -22,9 +22,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'clientRequestId?: undefined | string'
+      content: 'clientRequestId?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: expand
     uid: '@azure/batch.JobListFromJobScheduleOptions.expand'
@@ -35,9 +35,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'expand?: undefined | string'
+      content: 'expand?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: filter
     uid: '@azure/batch.JobListFromJobScheduleOptions.filter'
@@ -52,9 +52,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'filter?: undefined | string'
+      content: 'filter?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: maxResults
     uid: '@azure/batch.JobListFromJobScheduleOptions.maxResults'
@@ -69,9 +69,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'maxResults?: undefined | number'
+      content: 'maxResults?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''
   - name: ocpDate
     uid: '@azure/batch.JobListFromJobScheduleOptions.ocpDate'
@@ -101,9 +101,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'returnClientRequestId?: undefined | false | true'
+      content: 'returnClientRequestId?: boolean'
       return:
-        type: undefined | false | true
+        type: boolean
         description: ''
   - name: select
     uid: '@azure/batch.JobListFromJobScheduleOptions.select'
@@ -114,9 +114,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'select?: undefined | string'
+      content: 'select?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: timeout
     uid: '@azure/batch.JobListFromJobScheduleOptions.timeout'
@@ -131,7 +131,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'timeout?: undefined | number'
+      content: 'timeout?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''

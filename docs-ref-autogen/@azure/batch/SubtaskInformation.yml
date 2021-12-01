@@ -69,9 +69,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'exitCode?: undefined | number'
+      content: 'exitCode?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''
   - name: failureInfo
     uid: '@azure/batch.SubtaskInformation.failureInfo'
@@ -99,9 +99,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'id?: undefined | number'
+      content: 'id?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''
   - name: nodeInfo
     uid: '@azure/batch.SubtaskInformation.nodeInfo'

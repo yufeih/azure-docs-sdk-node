@@ -24,6 +24,27 @@ constructors:
           description: |
             Reference to the service client.
 methods:
+  - name: 'add(CertificateAddParameter, CertificateAddOptionalParams)'
+    uid: '@azure/batch.CertificateOperations.add'
+    package: '@azure/batch'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function add(certificate: CertificateAddParameter, options?:
+        CertificateAddOptionalParams)
+      parameters:
+        - id: certificate
+          type: <xref uid="@azure/batch.CertificateAddParameter" />
+          description: The Certificate to be added.
+        - id: options
+          type: <xref uid="@azure/batch.CertificateAddOptionalParams" />
+          description: ''
+      return:
+        type: Promise&lt;<xref uid="Models.CertificateAddResponse" />&gt;
+        description: Promise<Models.CertificateAddResponse>
   - name: >-
       add(CertificateAddParameter, CertificateAddOptionalParams,
       ServiceCallback<void>)
@@ -48,27 +69,6 @@ methods:
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
-  - name: 'add(CertificateAddParameter, Models.CertificateAddOptionalParams)'
-    uid: '@azure/batch.CertificateOperations.add'
-    package: '@azure/batch'
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        function add(certificate: CertificateAddParameter, options?:
-        Models.CertificateAddOptionalParams)
-      parameters:
-        - id: certificate
-          type: <xref uid="@azure/batch.CertificateAddParameter" />
-          description: The Certificate to be added.
-        - id: options
-          type: <xref uid="Models.CertificateAddOptionalParams" />
-          description: ''
-      return:
-        type: Promise&lt;<xref uid="Models.CertificateAddResponse" />&gt;
-        description: Promise<Models.CertificateAddResponse>
   - name: 'add(CertificateAddParameter, ServiceCallback<void>)'
     uid: '@azure/batch.CertificateOperations.add_1'
     package: '@azure/batch'
@@ -88,6 +88,48 @@ methods:
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
+  - name: 'cancelDeletion(string, string, CertificateCancelDeletionOptionalParams)'
+    uid: '@azure/batch.CertificateOperations.cancelDeletion'
+    package: '@azure/batch'
+    summary: >-
+      If you try to delete a Certificate that is being used by a Pool or Compute
+      Node, the status of
+
+      the Certificate changes to deleteFailed. If you decide that you want to
+      continue using the
+
+      Certificate, you can use this operation to set the status of the
+      Certificate back to active. If
+
+      you intend to delete the Certificate, you do not need to run this
+      operation after the deletion
+
+      failed. You must make sure that the Certificate is not being used by any
+      resources, and then you
+
+      can try again to delete the Certificate.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function cancelDeletion(thumbprintAlgorithm: string, thumbprint: string,
+        options?: CertificateCancelDeletionOptionalParams)
+      parameters:
+        - id: thumbprintAlgorithm
+          type: string
+          description: |-
+            The algorithm used to derive the thumbprint parameter. This must be
+            sha1.
+        - id: thumbprint
+          type: string
+          description: The thumbprint of the Certificate being deleted.
+        - id: options
+          type: <xref uid="@azure/batch.CertificateCancelDeletionOptionalParams" />
+          description: ''
+      return:
+        type: Promise&lt;<xref uid="Models.CertificateCancelDeletionResponse" />&gt;
+        description: Promise<Models.CertificateCancelDeletionResponse>
   - name: >-
       cancelDeletion(string, string, CertificateCancelDeletionOptionalParams,
       ServiceCallback<void>)
@@ -118,50 +160,6 @@ methods:
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
-  - name: >-
-      cancelDeletion(string, string,
-      Models.CertificateCancelDeletionOptionalParams)
-    uid: '@azure/batch.CertificateOperations.cancelDeletion'
-    package: '@azure/batch'
-    summary: >-
-      If you try to delete a Certificate that is being used by a Pool or Compute
-      Node, the status of
-
-      the Certificate changes to deleteFailed. If you decide that you want to
-      continue using the
-
-      Certificate, you can use this operation to set the status of the
-      Certificate back to active. If
-
-      you intend to delete the Certificate, you do not need to run this
-      operation after the deletion
-
-      failed. You must make sure that the Certificate is not being used by any
-      resources, and then you
-
-      can try again to delete the Certificate.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        function cancelDeletion(thumbprintAlgorithm: string, thumbprint: string,
-        options?: Models.CertificateCancelDeletionOptionalParams)
-      parameters:
-        - id: thumbprintAlgorithm
-          type: string
-          description: |-
-            The algorithm used to derive the thumbprint parameter. This must be
-            sha1.
-        - id: thumbprint
-          type: string
-          description: The thumbprint of the Certificate being deleted.
-        - id: options
-          type: <xref uid="Models.CertificateCancelDeletionOptionalParams" />
-          description: ''
-      return:
-        type: Promise&lt;<xref uid="Models.CertificateCancelDeletionResponse" />&gt;
-        description: Promise<Models.CertificateCancelDeletionResponse>
   - name: 'cancelDeletion(string, string, ServiceCallback<void>)'
     uid: '@azure/batch.CertificateOperations.cancelDeletion_1'
     package: '@azure/batch'
@@ -186,37 +184,7 @@ methods:
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
-  - name: >-
-      deleteMethod(string, string, CertificateDeleteMethodOptionalParams,
-      ServiceCallback<void>)
-    uid: '@azure/batch.CertificateOperations.deleteMethod_2'
-    package: '@azure/batch'
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        function deleteMethod(thumbprintAlgorithm: string, thumbprint: string,
-        options: CertificateDeleteMethodOptionalParams, callback:
-        ServiceCallback<void>)
-      parameters:
-        - id: thumbprintAlgorithm
-          type: string
-          description: |-
-            The algorithm used to derive the thumbprint parameter. This must be
-            sha1.
-        - id: thumbprint
-          type: string
-          description: The thumbprint of the Certificate to be deleted.
-        - id: options
-          type: <xref uid="@azure/batch.CertificateDeleteMethodOptionalParams" />
-          description: The optional parameters
-        - id: callback
-          type: ServiceCallback&lt;void&gt;
-          description: |
-            The callback
-  - name: 'deleteMethod(string, string, Models.CertificateDeleteMethodOptionalParams)'
+  - name: 'deleteMethod(string, string, CertificateDeleteMethodOptionalParams)'
     uid: '@azure/batch.CertificateOperations.deleteMethod'
     package: '@azure/batch'
     summary: >-
@@ -248,7 +216,7 @@ methods:
     syntax:
       content: >-
         function deleteMethod(thumbprintAlgorithm: string, thumbprint: string,
-        options?: Models.CertificateDeleteMethodOptionalParams)
+        options?: CertificateDeleteMethodOptionalParams)
       parameters:
         - id: thumbprintAlgorithm
           type: string
@@ -259,11 +227,41 @@ methods:
           type: string
           description: The thumbprint of the Certificate to be deleted.
         - id: options
-          type: <xref uid="Models.CertificateDeleteMethodOptionalParams" />
+          type: <xref uid="@azure/batch.CertificateDeleteMethodOptionalParams" />
           description: ''
       return:
         type: Promise&lt;<xref uid="Models.CertificateDeleteResponse" />&gt;
         description: Promise<Models.CertificateDeleteResponse>
+  - name: >-
+      deleteMethod(string, string, CertificateDeleteMethodOptionalParams,
+      ServiceCallback<void>)
+    uid: '@azure/batch.CertificateOperations.deleteMethod_2'
+    package: '@azure/batch'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function deleteMethod(thumbprintAlgorithm: string, thumbprint: string,
+        options: CertificateDeleteMethodOptionalParams, callback:
+        ServiceCallback<void>)
+      parameters:
+        - id: thumbprintAlgorithm
+          type: string
+          description: |-
+            The algorithm used to derive the thumbprint parameter. This must be
+            sha1.
+        - id: thumbprint
+          type: string
+          description: The thumbprint of the Certificate to be deleted.
+        - id: options
+          type: <xref uid="@azure/batch.CertificateDeleteMethodOptionalParams" />
+          description: The optional parameters
+        - id: callback
+          type: ServiceCallback&lt;void&gt;
+          description: |
+            The callback
   - name: 'deleteMethod(string, string, ServiceCallback<void>)'
     uid: '@azure/batch.CertificateOperations.deleteMethod_1'
     package: '@azure/batch'
@@ -288,6 +286,32 @@ methods:
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
+  - name: 'get(string, string, CertificateGetOptionalParams)'
+    uid: '@azure/batch.CertificateOperations.get'
+    package: '@azure/batch'
+    summary: Gets information about the specified Certificate.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function get(thumbprintAlgorithm: string, thumbprint: string, options?:
+        CertificateGetOptionalParams)
+      parameters:
+        - id: thumbprintAlgorithm
+          type: string
+          description: |-
+            The algorithm used to derive the thumbprint parameter. This must be
+            sha1.
+        - id: thumbprint
+          type: string
+          description: The thumbprint of the Certificate to get.
+        - id: options
+          type: <xref uid="@azure/batch.CertificateGetOptionalParams" />
+          description: ''
+      return:
+        type: Promise&lt;<xref uid="Models.CertificateGetResponse" />&gt;
+        description: Promise<Models.CertificateGetResponse>
   - name: >-
       get(string, string, CertificateGetOptionalParams,
       ServiceCallback<Certificate>)
@@ -317,32 +341,6 @@ methods:
           type: ServiceCallback&lt;<xref uid="@azure/batch.Certificate" />&gt;
           description: |
             The callback
-  - name: 'get(string, string, Models.CertificateGetOptionalParams)'
-    uid: '@azure/batch.CertificateOperations.get'
-    package: '@azure/batch'
-    summary: Gets information about the specified Certificate.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        function get(thumbprintAlgorithm: string, thumbprint: string, options?:
-        Models.CertificateGetOptionalParams)
-      parameters:
-        - id: thumbprintAlgorithm
-          type: string
-          description: |-
-            The algorithm used to derive the thumbprint parameter. This must be
-            sha1.
-        - id: thumbprint
-          type: string
-          description: The thumbprint of the Certificate to get.
-        - id: options
-          type: <xref uid="Models.CertificateGetOptionalParams" />
-          description: ''
-      return:
-        type: Promise&lt;<xref uid="Models.CertificateGetResponse" />&gt;
-        description: Promise<Models.CertificateGetResponse>
   - name: 'get(string, string, ServiceCallback<Certificate>)'
     uid: '@azure/batch.CertificateOperations.get_1'
     package: '@azure/batch'
@@ -367,6 +365,22 @@ methods:
           type: ServiceCallback&lt;<xref uid="@azure/batch.Certificate" />&gt;
           description: |
             The callback
+  - name: list(CertificateListOptionalParams)
+    uid: '@azure/batch.CertificateOperations.list'
+    package: '@azure/batch'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function list(options?: CertificateListOptionalParams)'
+      parameters:
+        - id: options
+          type: <xref uid="@azure/batch.CertificateListOptionalParams" />
+          description: ''
+      return:
+        type: Promise&lt;<xref uid="Models.CertificateListResponse" />&gt;
+        description: Promise<Models.CertificateListResponse>
   - name: >-
       list(CertificateListOptionalParams,
       ServiceCallback<CertificateListResult>)
@@ -390,22 +404,6 @@ methods:
             />&gt;
           description: |
             The callback
-  - name: list(Models.CertificateListOptionalParams)
-    uid: '@azure/batch.CertificateOperations.list'
-    package: '@azure/batch'
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function list(options?: Models.CertificateListOptionalParams)'
-      parameters:
-        - id: options
-          type: <xref uid="Models.CertificateListOptionalParams" />
-          description: ''
-      return:
-        type: Promise&lt;<xref uid="Models.CertificateListResponse" />&gt;
-        description: Promise<Models.CertificateListResponse>
   - name: list(ServiceCallback<CertificateListResult>)
     uid: '@azure/batch.CertificateOperations.list_1'
     package: '@azure/batch'
@@ -422,6 +420,27 @@ methods:
             />&gt;
           description: |
             The callback
+  - name: 'listNext(string, CertificateListNextOptionalParams)'
+    uid: '@azure/batch.CertificateOperations.listNext'
+    package: '@azure/batch'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function listNext(nextPageLink: string, options?:
+        CertificateListNextOptionalParams)
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: The NextLink from the previous successful call to List operation.
+        - id: options
+          type: <xref uid="@azure/batch.CertificateListNextOptionalParams" />
+          description: ''
+      return:
+        type: Promise&lt;<xref uid="Models.CertificateListResponse" />&gt;
+        description: Promise<Models.CertificateListResponse>
   - name: >-
       listNext(string, CertificateListNextOptionalParams,
       ServiceCallback<CertificateListResult>)
@@ -449,27 +468,6 @@ methods:
             />&gt;
           description: |
             The callback
-  - name: 'listNext(string, Models.CertificateListNextOptionalParams)'
-    uid: '@azure/batch.CertificateOperations.listNext'
-    package: '@azure/batch'
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        function listNext(nextPageLink: string, options?:
-        Models.CertificateListNextOptionalParams)
-      parameters:
-        - id: nextPageLink
-          type: string
-          description: The NextLink from the previous successful call to List operation.
-        - id: options
-          type: <xref uid="Models.CertificateListNextOptionalParams" />
-          description: ''
-      return:
-        type: Promise&lt;<xref uid="Models.CertificateListResponse" />&gt;
-        description: Promise<Models.CertificateListResponse>
   - name: 'listNext(string, ServiceCallback<CertificateListResult>)'
     uid: '@azure/batch.CertificateOperations.listNext_1'
     package: '@azure/batch'

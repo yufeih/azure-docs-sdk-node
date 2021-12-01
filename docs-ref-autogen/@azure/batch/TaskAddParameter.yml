@@ -237,9 +237,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'displayName?: undefined | string'
+      content: 'displayName?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: environmentSettings
     uid: '@azure/batch.TaskAddParameter.environmentSettings'
@@ -343,9 +343,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'requiredSlots?: undefined | number'
+      content: 'requiredSlots?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''
   - name: resourceFiles
     uid: '@azure/batch.TaskAddParameter.resourceFiles'

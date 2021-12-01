@@ -1,0 +1,97 @@
+### YamlMime:TSType
+name: ComputeNodeExtensionListNextOptionalParams
+uid: '@azure/batch.ComputeNodeExtensionListNextOptionalParams'
+package: '@azure/batch'
+summary: Optional Parameters.
+fullName: ComputeNodeExtensionListNextOptionalParams
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: abortSignal
+    uid: '@azure/batch.ComputeNodeExtensionListNextOptionalParams.abortSignal'
+    package: '@azure/batch'
+    summary: The signal which can be used to abort requests.
+    fullName: abortSignal
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'abortSignal?: AbortSignalLike'
+      return:
+        type: AbortSignalLike
+        description: ''
+  - name: computeNodeExtensionListNextOptions
+    uid: >-
+      @azure/batch.ComputeNodeExtensionListNextOptionalParams.computeNodeExtensionListNextOptions
+    package: '@azure/batch'
+    summary: Additional parameters for the operation
+    fullName: computeNodeExtensionListNextOptions
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        computeNodeExtensionListNextOptions?:
+        ComputeNodeExtensionListNextOptions
+      return:
+        type: <xref uid="@azure/batch.ComputeNodeExtensionListNextOptions" />
+        description: ''
+  - name: customHeaders
+    uid: '@azure/batch.ComputeNodeExtensionListNextOptionalParams.customHeaders'
+    package: '@azure/batch'
+    summary: |-
+      {object} [customHeaders] User defined custom request headers that
+      will be applied before the request is sent.
+    fullName: customHeaders
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'customHeaders?: [key: string]: string'
+      return:
+        type: '[key: string]\: string'
+        description: ''
+  - name: onDownloadProgress
+    uid: '@azure/batch.ComputeNodeExtensionListNextOptionalParams.onDownloadProgress'
+    package: '@azure/batch'
+    summary: Callback which fires upon download progress.
+    fullName: onDownloadProgress
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'onDownloadProgress?: (progress: TransferProgressEvent) => void'
+      return:
+        type: '(progress: TransferProgressEvent) =&gt; void'
+        description: ''
+  - name: onUploadProgress
+    uid: '@azure/batch.ComputeNodeExtensionListNextOptionalParams.onUploadProgress'
+    package: '@azure/batch'
+    summary: Callback which fires upon upload progress.
+    fullName: onUploadProgress
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'onUploadProgress?: (progress: TransferProgressEvent) => void'
+      return:
+        type: '(progress: TransferProgressEvent) =&gt; void'
+        description: ''
+  - name: timeout
+    uid: '@azure/batch.ComputeNodeExtensionListNextOptionalParams.timeout'
+    package: '@azure/batch'
+    summary: >-
+      The number of milliseconds a request can take before automatically being
+      terminated.
+    fullName: timeout
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'timeout?: number'
+      return:
+        type: number
+        description: ''
+extends: RequestOptionsBase

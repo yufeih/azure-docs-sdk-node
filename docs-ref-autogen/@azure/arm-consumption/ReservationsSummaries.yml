@@ -27,6 +27,132 @@ constructors:
             Reference to the service client.
 methods:
   - name: >-
+      list(string, Models.Datagrain,
+      Models.ReservationsSummariesListOptionalParams)
+    uid: '@azure/arm-consumption.ReservationsSummaries.list'
+    package: '@azure/arm-consumption'
+    summary: >-
+      Lists the reservations summaries for the defined scope daily or monthly
+      grain.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function list(scope: string, grain: Models.Datagrain, options?:
+        Models.ReservationsSummariesListOptionalParams)
+      parameters:
+        - id: scope
+          type: string
+          description: >-
+            The scope associated with reservations summaries operations. This
+            includes
+
+            '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}'
+            for BillingAccount scope
+
+            (legacy), and
+
+            '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}'
+
+            for BillingProfile scope (modern).
+        - id: grain
+          type: <xref uid="Models.Datagrain" />
+          description: >-
+            Can be daily or monthly. Possible values include: 'DailyGrain',
+            'MonthlyGrain'
+        - id: options
+          type: <xref uid="Models.ReservationsSummariesListOptionalParams" />
+          description: ''
+      return:
+        type: Promise&lt;<xref uid="Models.ReservationsSummariesListResponse" />&gt;
+        description: Promise<Models.ReservationsSummariesListResponse>
+  - name: >-
+      list(string, Models.Datagrain, ReservationsSummariesListOptionalParams,
+      ServiceCallback<ReservationSummariesListResult>)
+    uid: '@azure/arm-consumption.ReservationsSummaries.list_2'
+    package: '@azure/arm-consumption'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function list(scope: string, grain: Models.Datagrain, options:
+        ReservationsSummariesListOptionalParams, callback:
+        ServiceCallback<ReservationSummariesListResult>)
+      parameters:
+        - id: scope
+          type: string
+          description: >-
+            The scope associated with reservations summaries operations. This
+            includes
+
+            '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}'
+            for BillingAccount scope
+
+            (legacy), and
+
+            '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}'
+
+            for BillingProfile scope (modern).
+        - id: grain
+          type: <xref uid="Models.Datagrain" />
+          description: >-
+            Can be daily or monthly. Possible values include: 'DailyGrain',
+            'MonthlyGrain'
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-consumption.ReservationsSummariesListOptionalParams"
+            />
+          description: The optional parameters
+        - id: callback
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-consumption.ReservationSummariesListResult" />&gt;
+          description: |
+            The callback
+  - name: >-
+      list(string, Models.Datagrain,
+      ServiceCallback<ReservationSummariesListResult>)
+    uid: '@azure/arm-consumption.ReservationsSummaries.list_1'
+    package: '@azure/arm-consumption'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function list(scope: string, grain: Models.Datagrain, callback:
+        ServiceCallback<ReservationSummariesListResult>)
+      parameters:
+        - id: scope
+          type: string
+          description: >-
+            The scope associated with reservations summaries operations. This
+            includes
+
+            '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}'
+            for BillingAccount scope
+
+            (legacy), and
+
+            '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}'
+
+            for BillingProfile scope (modern).
+        - id: grain
+          type: <xref uid="Models.Datagrain" />
+          description: >-
+            Can be daily or monthly. Possible values include: 'DailyGrain',
+            'MonthlyGrain'
+        - id: callback
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-consumption.ReservationSummariesListResult" />&gt;
+          description: |
+            The callback
+  - name: >-
       listByReservationOrder(string, Models.Datagrain,
       Models.ReservationsSummariesListByReservationOrderOptionalParams)
     uid: '@azure/arm-consumption.ReservationsSummaries.listByReservationOrder'
@@ -242,8 +368,8 @@ methods:
           description: |
             The callback
   - name: >-
-      listByReservationOrderAndReservationNext(string,
-      msRest.RequestOptionsBase)
+      listByReservationOrderAndReservationNext(string, Models.Datagrain,
+      Models.ReservationsSummariesListByReservationOrderAndReservationNextOptionalParams)
     uid: >-
       @azure/arm-consumption.ReservationsSummaries.listByReservationOrderAndReservationNext
     package: '@azure/arm-consumption'
@@ -254,13 +380,22 @@ methods:
     syntax:
       content: >-
         function listByReservationOrderAndReservationNext(nextPageLink: string,
-        options?: msRest.RequestOptionsBase)
+        grain: Models.Datagrain, options?:
+        Models.ReservationsSummariesListByReservationOrderAndReservationNextOptionalParams)
       parameters:
         - id: nextPageLink
           type: string
           description: The NextLink from the previous successful call to List operation.
+        - id: grain
+          type: <xref uid="Models.Datagrain" />
+          description: >-
+            Can be daily or monthly. Possible values include: 'DailyGrain',
+            'MonthlyGrain'
         - id: options
-          type: <xref uid="msRest.RequestOptionsBase" />
+          type: >-
+            <xref
+            uid="Models.ReservationsSummariesListByReservationOrderAndReservationNextOptionalParams"
+            />
           description: ''
       return:
         type: >-
@@ -270,7 +405,8 @@ methods:
         description: >-
           Promise<Models.ReservationsSummariesListByReservationOrderAndReservationNextResponse>
   - name: >-
-      listByReservationOrderAndReservationNext(string, RequestOptionsBase,
+      listByReservationOrderAndReservationNext(string, Models.Datagrain,
+      ReservationsSummariesListByReservationOrderAndReservationNextOptionalParams,
       ServiceCallback<ReservationSummariesListResult>)
     uid: >-
       @azure/arm-consumption.ReservationsSummaries.listByReservationOrderAndReservationNext_2
@@ -282,14 +418,23 @@ methods:
     syntax:
       content: >-
         function listByReservationOrderAndReservationNext(nextPageLink: string,
-        options: RequestOptionsBase, callback:
-        ServiceCallback<ReservationSummariesListResult>)
+        grain: Models.Datagrain, options:
+        ReservationsSummariesListByReservationOrderAndReservationNextOptionalParams,
+        callback: ServiceCallback<ReservationSummariesListResult>)
       parameters:
         - id: nextPageLink
           type: string
           description: The NextLink from the previous successful call to List operation.
+        - id: grain
+          type: <xref uid="Models.Datagrain" />
+          description: >-
+            Can be daily or monthly. Possible values include: 'DailyGrain',
+            'MonthlyGrain'
         - id: options
-          type: RequestOptionsBase
+          type: >-
+            <xref
+            uid="@azure/arm-consumption.ReservationsSummariesListByReservationOrderAndReservationNextOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: >-
@@ -298,7 +443,7 @@ methods:
           description: |
             The callback
   - name: >-
-      listByReservationOrderAndReservationNext(string,
+      listByReservationOrderAndReservationNext(string, Models.Datagrain,
       ServiceCallback<ReservationSummariesListResult>)
     uid: >-
       @azure/arm-consumption.ReservationsSummaries.listByReservationOrderAndReservationNext_1
@@ -310,18 +455,26 @@ methods:
     syntax:
       content: >-
         function listByReservationOrderAndReservationNext(nextPageLink: string,
-        callback: ServiceCallback<ReservationSummariesListResult>)
+        grain: Models.Datagrain, callback:
+        ServiceCallback<ReservationSummariesListResult>)
       parameters:
         - id: nextPageLink
           type: string
           description: The NextLink from the previous successful call to List operation.
+        - id: grain
+          type: <xref uid="Models.Datagrain" />
+          description: >-
+            Can be daily or monthly. Possible values include: 'DailyGrain',
+            'MonthlyGrain'
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
             uid="@azure/arm-consumption.ReservationSummariesListResult" />&gt;
           description: |
             The callback
-  - name: 'listByReservationOrderNext(string, msRest.RequestOptionsBase)'
+  - name: >-
+      listByReservationOrderNext(string, Models.Datagrain,
+      Models.ReservationsSummariesListByReservationOrderNextOptionalParams)
     uid: '@azure/arm-consumption.ReservationsSummaries.listByReservationOrderNext'
     package: '@azure/arm-consumption'
     summary: Lists the reservations summaries for daily or monthly grain.
@@ -330,14 +483,23 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function listByReservationOrderNext(nextPageLink: string, options?:
-        msRest.RequestOptionsBase)
+        function listByReservationOrderNext(nextPageLink: string, grain:
+        Models.Datagrain, options?:
+        Models.ReservationsSummariesListByReservationOrderNextOptionalParams)
       parameters:
         - id: nextPageLink
           type: string
           description: The NextLink from the previous successful call to List operation.
+        - id: grain
+          type: <xref uid="Models.Datagrain" />
+          description: >-
+            Can be daily or monthly. Possible values include: 'DailyGrain',
+            'MonthlyGrain'
         - id: options
-          type: <xref uid="msRest.RequestOptionsBase" />
+          type: >-
+            <xref
+            uid="Models.ReservationsSummariesListByReservationOrderNextOptionalParams"
+            />
           description: ''
       return:
         type: >-
@@ -347,7 +509,8 @@ methods:
         description: >-
           Promise<Models.ReservationsSummariesListByReservationOrderNextResponse>
   - name: >-
-      listByReservationOrderNext(string, RequestOptionsBase,
+      listByReservationOrderNext(string, Models.Datagrain,
+      ReservationsSummariesListByReservationOrderNextOptionalParams,
       ServiceCallback<ReservationSummariesListResult>)
     uid: '@azure/arm-consumption.ReservationsSummaries.listByReservationOrderNext_2'
     package: '@azure/arm-consumption'
@@ -357,15 +520,24 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function listByReservationOrderNext(nextPageLink: string, options:
-        RequestOptionsBase, callback:
+        function listByReservationOrderNext(nextPageLink: string, grain:
+        Models.Datagrain, options:
+        ReservationsSummariesListByReservationOrderNextOptionalParams, callback:
         ServiceCallback<ReservationSummariesListResult>)
       parameters:
         - id: nextPageLink
           type: string
           description: The NextLink from the previous successful call to List operation.
+        - id: grain
+          type: <xref uid="Models.Datagrain" />
+          description: >-
+            Can be daily or monthly. Possible values include: 'DailyGrain',
+            'MonthlyGrain'
         - id: options
-          type: RequestOptionsBase
+          type: >-
+            <xref
+            uid="@azure/arm-consumption.ReservationsSummariesListByReservationOrderNextOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: >-
@@ -374,7 +546,7 @@ methods:
           description: |
             The callback
   - name: >-
-      listByReservationOrderNext(string,
+      listByReservationOrderNext(string, Models.Datagrain,
       ServiceCallback<ReservationSummariesListResult>)
     uid: '@azure/arm-consumption.ReservationsSummaries.listByReservationOrderNext_1'
     package: '@azure/arm-consumption'
@@ -384,12 +556,114 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function listByReservationOrderNext(nextPageLink: string, callback:
+        function listByReservationOrderNext(nextPageLink: string, grain:
+        Models.Datagrain, callback:
         ServiceCallback<ReservationSummariesListResult>)
       parameters:
         - id: nextPageLink
           type: string
           description: The NextLink from the previous successful call to List operation.
+        - id: grain
+          type: <xref uid="Models.Datagrain" />
+          description: >-
+            Can be daily or monthly. Possible values include: 'DailyGrain',
+            'MonthlyGrain'
+        - id: callback
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-consumption.ReservationSummariesListResult" />&gt;
+          description: |
+            The callback
+  - name: >-
+      listNext(string, Models.Datagrain,
+      Models.ReservationsSummariesListNextOptionalParams)
+    uid: '@azure/arm-consumption.ReservationsSummaries.listNext'
+    package: '@azure/arm-consumption'
+    summary: >-
+      Lists the reservations summaries for the defined scope daily or monthly
+      grain.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function listNext(nextPageLink: string, grain: Models.Datagrain,
+        options?: Models.ReservationsSummariesListNextOptionalParams)
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: The NextLink from the previous successful call to List operation.
+        - id: grain
+          type: <xref uid="Models.Datagrain" />
+          description: >-
+            Can be daily or monthly. Possible values include: 'DailyGrain',
+            'MonthlyGrain'
+        - id: options
+          type: <xref uid="Models.ReservationsSummariesListNextOptionalParams" />
+          description: ''
+      return:
+        type: >-
+          Promise&lt;<xref uid="Models.ReservationsSummariesListNextResponse"
+          />&gt;
+        description: Promise<Models.ReservationsSummariesListNextResponse>
+  - name: >-
+      listNext(string, Models.Datagrain,
+      ReservationsSummariesListNextOptionalParams,
+      ServiceCallback<ReservationSummariesListResult>)
+    uid: '@azure/arm-consumption.ReservationsSummaries.listNext_2'
+    package: '@azure/arm-consumption'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function listNext(nextPageLink: string, grain: Models.Datagrain,
+        options: ReservationsSummariesListNextOptionalParams, callback:
+        ServiceCallback<ReservationSummariesListResult>)
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: The NextLink from the previous successful call to List operation.
+        - id: grain
+          type: <xref uid="Models.Datagrain" />
+          description: >-
+            Can be daily or monthly. Possible values include: 'DailyGrain',
+            'MonthlyGrain'
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-consumption.ReservationsSummariesListNextOptionalParams"
+            />
+          description: The optional parameters
+        - id: callback
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-consumption.ReservationSummariesListResult" />&gt;
+          description: |
+            The callback
+  - name: >-
+      listNext(string, Models.Datagrain,
+      ServiceCallback<ReservationSummariesListResult>)
+    uid: '@azure/arm-consumption.ReservationsSummaries.listNext_1'
+    package: '@azure/arm-consumption'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function listNext(nextPageLink: string, grain: Models.Datagrain,
+        callback: ServiceCallback<ReservationSummariesListResult>)
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: The NextLink from the previous successful call to List operation.
+        - id: grain
+          type: <xref uid="Models.Datagrain" />
+          description: >-
+            Can be daily or monthly. Possible values include: 'DailyGrain',
+            'MonthlyGrain'
         - id: callback
           type: >-
             ServiceCallback&lt;<xref

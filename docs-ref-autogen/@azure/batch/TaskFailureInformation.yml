@@ -37,9 +37,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'code?: undefined | string'
+      content: 'code?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: details
     uid: '@azure/batch.TaskFailureInformation.details'
@@ -65,7 +65,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'message?: undefined | string'
+      content: 'message?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''

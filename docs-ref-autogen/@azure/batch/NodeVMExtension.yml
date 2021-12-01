@@ -1,0 +1,50 @@
+### YamlMime:TSType
+name: NodeVMExtension
+uid: '@azure/batch.NodeVMExtension'
+package: '@azure/batch'
+summary: An interface representing NodeVMExtension.
+fullName: NodeVMExtension
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: instanceView
+    uid: '@azure/batch.NodeVMExtension.instanceView'
+    package: '@azure/batch'
+    summary: The vm extension instance view.
+    fullName: instanceView
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'instanceView?: VMExtensionInstanceView'
+      return:
+        type: <xref uid="@azure/batch.VMExtensionInstanceView" />
+        description: ''
+  - name: provisioningState
+    uid: '@azure/batch.NodeVMExtension.provisioningState'
+    package: '@azure/batch'
+    summary: The provisioning state of the virtual machine extension.
+    fullName: provisioningState
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'provisioningState?: string'
+      return:
+        type: string
+        description: ''
+  - name: vmExtension
+    uid: '@azure/batch.NodeVMExtension.vmExtension'
+    package: '@azure/batch'
+    summary: The virtual machine extension.
+    fullName: vmExtension
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'vmExtension?: VMExtension'
+      return:
+        type: <xref uid="@azure/batch.VMExtension" />
+        description: ''

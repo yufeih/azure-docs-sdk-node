@@ -34,7 +34,9 @@ properties:
     package: '@azure/batch'
     summary: >-
       A list containing the IDs of the Compute Nodes to be removed from the
-      specified Pool.
+      specified Pool. A
+
+      maximum of 100 nodes may be removed per request.
     fullName: nodeList
     remarks: ''
     isPreview: false
@@ -63,7 +65,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'resizeTimeout?: undefined | string'
+      content: 'resizeTimeout?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''

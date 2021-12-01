@@ -66,8 +66,8 @@ properties:
     uid: '@azure/cognitiveservices-face.IdentifyRequest.maxNumOfCandidatesReturned'
     package: '@azure/cognitiveservices-face'
     summary: >-
-      The range of maxNumOfCandidatesReturned is between 1 and 5 (default is 1).
-      Default value: 1.
+      The range of maxNumOfCandidatesReturned is between 1 and 100 (default is
+      1). Default value: 1.
     fullName: maxNumOfCandidatesReturned
     remarks: ''
     isPreview: false

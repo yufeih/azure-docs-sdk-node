@@ -9,6 +9,23 @@ isPreview: false
 isDeprecated: false
 type: interface
 properties:
+  - name: inboundNatRulesPortMapping
+    uid: '@azure/arm-network.LoadBalancerBackendAddress.inboundNatRulesPortMapping'
+    package: '@azure/arm-network'
+    summary: >-
+      Collection of inbound NAT rule port mappings.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: inboundNatRulesPortMapping
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'inboundNatRulesPortMapping?: NatRulePortMapping[]'
+      return:
+        type: '<xref uid="@azure/arm-network.NatRulePortMapping" />[]'
+        description: ''
   - name: ipAddress
     uid: '@azure/arm-network.LoadBalancerBackendAddress.ipAddress'
     package: '@azure/arm-network'
@@ -66,6 +83,19 @@ properties:
     isDeprecated: false
     syntax:
       content: 'networkInterfaceIPConfiguration?: SubResource'
+      return:
+        type: <xref uid="@azure/arm-network.SubResource" />
+        description: ''
+  - name: subnet
+    uid: '@azure/arm-network.LoadBalancerBackendAddress.subnet'
+    package: '@azure/arm-network'
+    summary: Reference to an existing subnet.
+    fullName: subnet
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'subnet?: SubResource'
       return:
         type: <xref uid="@azure/arm-network.SubResource" />
         description: ''

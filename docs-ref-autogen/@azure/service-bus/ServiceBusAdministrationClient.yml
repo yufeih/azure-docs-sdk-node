@@ -16,7 +16,9 @@ isPreview: false
 isDeprecated: false
 type: class
 constructors:
-  - name: 'ServiceBusAdministrationClient(string, PipelineOptions)'
+  - name: >-
+      ServiceBusAdministrationClient(string,
+      ServiceBusAdministrationClientOptions)
     uid: '@azure/service-bus.ServiceBusAdministrationClient.constructor'
     package: '@azure/service-bus'
     summary: Initializes a new instance of the ServiceBusAdministrationClient class.
@@ -26,16 +28,20 @@ constructors:
     syntax:
       content: >-
         new ServiceBusAdministrationClient(connectionString: string, options?:
-        PipelineOptions)
+        ServiceBusAdministrationClientOptions)
       parameters:
         - id: connectionString
           type: string
           description: The connection string needed for the client to connect to Azure.
         - id: options
-          type: PipelineOptions
+          type: >-
+            <xref uid="@azure/service-bus.ServiceBusAdministrationClientOptions"
+            />
           description: |
             PipelineOptions
-  - name: 'ServiceBusAdministrationClient(string, TokenCredential, PipelineOptions)'
+  - name: >-
+      ServiceBusAdministrationClient(string, TokenCredential |
+      NamedKeyCredential, ServiceBusAdministrationClientOptions)
     uid: '@azure/service-bus.ServiceBusAdministrationClient.constructor_1'
     package: '@azure/service-bus'
     summary: Initializes a new instance of the ServiceBusAdministrationClient class.
@@ -45,7 +51,8 @@ constructors:
     syntax:
       content: >-
         new ServiceBusAdministrationClient(fullyQualifiedNamespace: string,
-        credential: TokenCredential, options?: PipelineOptions)
+        credential: TokenCredential | NamedKeyCredential, options?:
+        ServiceBusAdministrationClientOptions)
       parameters:
         - id: fullyQualifiedNamespace
           type: string
@@ -53,7 +60,7 @@ constructors:
             The fully qualified namespace of your Service Bus instance which is
             likely to be similar to <yournamespace>.servicebus.windows.net.
         - id: credential
-          type: TokenCredential
+          type: TokenCredential | NamedKeyCredential
           description: >-
             A credential object used by the client to get the token to
             authenticate the connection
@@ -66,8 +73,18 @@ constructors:
 
             to be `["https://servicebus.azure.net//user_impersonation"]` to get
             the appropriate token.
+
+            Use the `AzureNamedKeyCredential` from &commat;azure/core-auth if
+            you want to pass in a `SharedAccessKeyName`
+
+            and `SharedAccessKey` without using a connection string. These
+            fields map to the `name` and `key` field respectively
+
+            in `AzureNamedKeyCredential`.
         - id: options
-          type: PipelineOptions
+          type: >-
+            <xref uid="@azure/service-bus.ServiceBusAdministrationClientOptions"
+            />
           description: |
             PipelineOptions
 methods:
@@ -645,11 +662,7 @@ methods:
           uid="@azure/service-bus.QueueProperties" />, <xref
           uid="@azure/service-bus.EntitiesResponse" />&lt;<xref
           uid="@azure/service-bus.QueueProperties" />&gt;&gt;
-        description: |-
-          {PagedAsyncIterableIterator<
-              QueueProperties,
-              EntitiesResponse<QueueProperties>,
-            >} An asyncIterableIterator that supports paging.
+        description: An asyncIterableIterator that supports paging.
   - name: listQueuesRuntimeProperties(OperationOptions)
     uid: >-
       @azure/service-bus.ServiceBusAdministrationClient.listQueuesRuntimeProperties
@@ -675,11 +688,7 @@ methods:
           uid="@azure/service-bus.QueueRuntimeProperties" />, <xref
           uid="@azure/service-bus.EntitiesResponse" />&lt;<xref
           uid="@azure/service-bus.QueueRuntimeProperties" />&gt;&gt;
-        description: |-
-          {PagedAsyncIterableIterator<
-              QueueRuntimeProperties,
-              EntitiesResponse<QueueRuntimeProperties>,
-            >} An asyncIterableIterator that supports paging.
+        description: An asyncIterableIterator that supports paging.
   - name: 'listRules(string, string, OperationOptions)'
     uid: '@azure/service-bus.ServiceBusAdministrationClient.listRules'
     package: '@azure/service-bus'
@@ -741,11 +750,7 @@ methods:
           uid="@azure/service-bus.SubscriptionProperties" />, <xref
           uid="@azure/service-bus.EntitiesResponse" />&lt;<xref
           uid="@azure/service-bus.SubscriptionProperties" />&gt;&gt;
-        description: |-
-          {PagedAsyncIterableIterator<
-              SubscriptionProperties,
-              EntitiesResponse<SubscriptionProperties>
-            >} An asyncIterableIterator that supports paging.
+        description: An asyncIterableIterator that supports paging.
   - name: 'listSubscriptionsRuntimeProperties(string, OperationOptions)'
     uid: >-
       @azure/service-bus.ServiceBusAdministrationClient.listSubscriptionsRuntimeProperties
@@ -778,12 +783,7 @@ methods:
           uid="@azure/service-bus.SubscriptionRuntimeProperties" />, <xref
           uid="@azure/service-bus.EntitiesResponse" />&lt;<xref
           uid="@azure/service-bus.SubscriptionRuntimeProperties" />&gt;&gt;
-        description: |-
-          {PagedAsyncIterableIterator<
-              SubscriptionRuntimeProperties,
-              EntitiesResponse<SubscriptionRuntimeProperties>,
-
-            >}  An asyncIterableIterator that supports paging.
+        description: An asyncIterableIterator that supports paging.
   - name: listTopics(OperationOptions)
     uid: '@azure/service-bus.ServiceBusAdministrationClient.listTopics'
     package: '@azure/service-bus'
@@ -806,11 +806,7 @@ methods:
           uid="@azure/service-bus.TopicProperties" />, <xref
           uid="@azure/service-bus.EntitiesResponse" />&lt;<xref
           uid="@azure/service-bus.TopicProperties" />&gt;&gt;
-        description: |-
-          {PagedAsyncIterableIterator<
-              TopicProperties,
-              EntitiesResponse<TopicProperties>,
-            >} An asyncIterableIterator that supports paging.
+        description: An asyncIterableIterator that supports paging.
   - name: listTopicsRuntimeProperties(OperationOptions)
     uid: >-
       @azure/service-bus.ServiceBusAdministrationClient.listTopicsRuntimeProperties
@@ -836,12 +832,7 @@ methods:
           uid="@azure/service-bus.TopicRuntimeProperties" />, <xref
           uid="@azure/service-bus.EntitiesResponse" />&lt;<xref
           uid="@azure/service-bus.TopicRuntimeProperties" />&gt;&gt;
-        description: |-
-          {PagedAsyncIterableIterator<
-              TopicRuntimeProperties,
-              EntitiesResponse<TopicRuntimeProperties>,
-
-            >} An asyncIterableIterator that supports paging.
+        description: An asyncIterableIterator that supports paging.
   - name: 'queueExists(string, OperationOptions)'
     uid: '@azure/service-bus.ServiceBusAdministrationClient.queueExists'
     package: '@azure/service-bus'

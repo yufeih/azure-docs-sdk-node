@@ -68,9 +68,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'exitCode?: undefined | number'
+      content: 'exitCode?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''
   - name: failureInfo
     uid: '@azure/batch.JobReleaseTaskExecutionInformation.failureInfo'
@@ -154,9 +154,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'taskRootDirectory?: undefined | string'
+      content: 'taskRootDirectory?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: taskRootDirectoryUrl
     uid: '@azure/batch.JobReleaseTaskExecutionInformation.taskRootDirectoryUrl'
@@ -167,7 +167,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'taskRootDirectoryUrl?: undefined | string'
+      content: 'taskRootDirectoryUrl?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''

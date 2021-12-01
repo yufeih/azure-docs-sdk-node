@@ -38,9 +38,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'autoScaleEvaluationInterval?: undefined | string'
+      content: 'autoScaleEvaluationInterval?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: autoScaleFormula
     uid: '@azure/batch.PoolEnableAutoScaleParameter.autoScaleFormula'
@@ -63,7 +63,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'autoScaleFormula?: undefined | string'
+      content: 'autoScaleFormula?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''

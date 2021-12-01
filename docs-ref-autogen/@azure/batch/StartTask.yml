@@ -138,9 +138,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'maxTaskRetryCount?: undefined | number'
+      content: 'maxTaskRetryCount?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''
   - name: resourceFiles
     uid: '@azure/batch.StartTask.resourceFiles'
@@ -223,7 +223,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'waitForSuccess?: undefined | false | true'
+      content: 'waitForSuccess?: boolean'
       return:
-        type: undefined | false | true
+        type: boolean
         description: ''

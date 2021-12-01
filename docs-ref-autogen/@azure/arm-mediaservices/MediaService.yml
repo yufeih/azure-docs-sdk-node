@@ -26,7 +26,7 @@ properties:
     uid: '@azure/arm-mediaservices.MediaService.id'
     package: '@azure/arm-mediaservices'
     summary: >-
-      Fully qualified resource Id for the resource. Ex -
+      Fully qualified resource ID for the resource. Ex -
 
       /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
 
@@ -53,6 +53,19 @@ properties:
       content: 'identity?: MediaServiceIdentity'
       return:
         type: <xref uid="@azure/arm-mediaservices.MediaServiceIdentity" />
+        description: ''
+  - name: keyDelivery
+    uid: '@azure/arm-mediaservices.MediaService.keyDelivery'
+    package: '@azure/arm-mediaservices'
+    summary: The Key Delivery properties for Media Services account.
+    fullName: keyDelivery
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'keyDelivery?: KeyDelivery'
+      return:
+        type: <xref uid="@azure/arm-mediaservices.KeyDelivery" />
         description: ''
   - name: location
     uid: '@azure/arm-mediaservices.MediaService.location'
@@ -101,6 +114,23 @@ properties:
       return:
         type: undefined | string
         description: ''
+  - name: publicNetworkAccess
+    uid: '@azure/arm-mediaservices.MediaService.publicNetworkAccess'
+    package: '@azure/arm-mediaservices'
+    summary: >-
+      Whether or not public network access is allowed for resources under the
+      Media Services
+
+      account. Possible values include: 'Enabled', 'Disabled'
+    fullName: publicNetworkAccess
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'publicNetworkAccess?: PublicNetworkAccess'
+      return:
+        type: <xref uid="@azure/arm-mediaservices.PublicNetworkAccess" />
+        description: ''
   - name: storageAccounts
     uid: '@azure/arm-mediaservices.MediaService.storageAccounts'
     package: '@azure/arm-mediaservices'
@@ -127,6 +157,23 @@ properties:
       return:
         type: <xref uid="@azure/arm-mediaservices.StorageAuthentication" />
         description: ''
+  - name: systemData
+    uid: '@azure/arm-mediaservices.MediaService.systemData'
+    package: '@azure/arm-mediaservices'
+    summary: >-
+      The system metadata relating to this resource.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: systemData
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'systemData?: SystemData'
+      return:
+        type: <xref uid="@azure/arm-mediaservices.SystemData" />
+        description: ''
   - name: tags
     uid: '@azure/arm-mediaservices.MediaService.tags'
     package: '@azure/arm-mediaservices'
@@ -144,9 +191,9 @@ properties:
     uid: '@azure/arm-mediaservices.MediaService.type'
     package: '@azure/arm-mediaservices'
     summary: >-
-      The type of the resource. Ex- Microsoft.Compute/virtualMachines or
+      The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or
 
-      Microsoft.Storage/storageAccounts.
+      "Microsoft.Storage/storageAccounts"
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**

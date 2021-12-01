@@ -41,9 +41,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'eTag?: undefined | string'
+      content: 'eTag?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: lastModified
     uid: '@azure/batch.TaskAddResult.lastModified'
@@ -67,9 +67,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'location?: undefined | string'
+      content: 'location?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: status
     uid: '@azure/batch.TaskAddResult.status'

@@ -279,6 +279,22 @@ properties:
         type: string
         description: the name of output voice.
 methods:
+  - name: addTargetLanguage(string)
+    uid: >-
+      microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.addTargetLanguage
+    package: microsoft-cognitiveservices-speech-sdk
+    summary: |-
+      dynamically add a language to list of target language
+      (can be used while recognition is ongoing)
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addTargetLanguage(lang: string)'
+      parameters:
+        - id: lang
+          type: string
+          description: language to be added
   - name: 'close(() => void, (error: string) => void)'
     uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.close
     package: microsoft-cognitiveservices-speech-sdk
@@ -313,6 +329,28 @@ methods:
             If set to true, telemetry information like microphone errors,
             recognition errors are collected and sent to Microsoft.
             If set to false, no telemetry is sent to Microsoft.
+  - name: onConnection()
+    uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.onConnection
+    package: microsoft-cognitiveservices-speech-sdk
+    summary: handles ConnectionEstablishedEvent for conversation translation scenarios.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function onConnection()
+  - name: onDisconnection()
+    uid: >-
+      microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.onDisconnection
+    package: microsoft-cognitiveservices-speech-sdk
+    summary: handles disconnection events for conversation translation scenarios.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function onDisconnection()
+      return:
+        type: Promise&lt;void&gt;
+        description: ''
   - name: >-
       recognizeOnceAsync((e: TranslationRecognitionResult) => void, (e: string)
       => void)
@@ -346,6 +384,22 @@ methods:
           type: '(e: string) =&gt; void'
           description: |
             Callback invoked in case of an error.
+  - name: removeTargetLanguage(string)
+    uid: >-
+      microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.removeTargetLanguage
+    package: microsoft-cognitiveservices-speech-sdk
+    summary: |-
+      dynamically remove a language from list of target language
+      (can be used while recognition is ongoing)
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function removeTargetLanguage(lang: string)'
+      parameters:
+        - id: lang
+          type: string
+          description: language to be removed
   - name: 'startContinuousRecognitionAsync(() => void, (e: string) => void)'
     uid: >-
       microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.startContinuousRecognitionAsync

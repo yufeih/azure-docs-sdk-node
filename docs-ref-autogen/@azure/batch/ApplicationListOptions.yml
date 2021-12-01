@@ -22,9 +22,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'clientRequestId?: undefined | string'
+      content: 'clientRequestId?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: maxResults
     uid: '@azure/batch.ApplicationListOptions.maxResults'
@@ -39,9 +39,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'maxResults?: undefined | number'
+      content: 'maxResults?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''
   - name: ocpDate
     uid: '@azure/batch.ApplicationListOptions.ocpDate'
@@ -71,9 +71,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'returnClientRequestId?: undefined | false | true'
+      content: 'returnClientRequestId?: boolean'
       return:
-        type: undefined | false | true
+        type: boolean
         description: ''
   - name: timeout
     uid: '@azure/batch.ApplicationListOptions.timeout'
@@ -88,7 +88,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'timeout?: undefined | number'
+      content: 'timeout?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''

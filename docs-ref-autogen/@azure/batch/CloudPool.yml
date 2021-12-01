@@ -99,9 +99,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'autoScaleEvaluationInterval?: undefined | string'
+      content: 'autoScaleEvaluationInterval?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: autoScaleFormula
     uid: '@azure/batch.CloudPool.autoScaleFormula'
@@ -116,9 +116,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'autoScaleFormula?: undefined | string'
+      content: 'autoScaleFormula?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: autoScaleRun
     uid: '@azure/batch.CloudPool.autoScaleRun'
@@ -214,16 +214,16 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'currentDedicatedNodes?: undefined | number'
+      content: 'currentDedicatedNodes?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''
   - name: currentLowPriorityNodes
     uid: '@azure/batch.CloudPool.currentLowPriorityNodes'
     package: '@azure/batch'
     summary: >-
       The number of low-priority Compute Nodes currently in the Pool.
-      Low-priority Compute Nodes
+      low-priority Compute Nodes
 
       which have been preempted are included in this count.
     fullName: currentLowPriorityNodes
@@ -231,9 +231,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'currentLowPriorityNodes?: undefined | number'
+      content: 'currentLowPriorityNodes?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''
   - name: displayName
     uid: '@azure/batch.CloudPool.displayName'
@@ -248,9 +248,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'displayName?: undefined | string'
+      content: 'displayName?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: enableAutoScale
     uid: '@azure/batch.CloudPool.enableAutoScale'
@@ -259,8 +259,8 @@ properties:
       Whether the Pool size should automatically adjust over time. If false, at
       least one of
 
-      targetDedicateNodes and targetLowPriorityNodes must be specified. If true,
-      the
+      targetDedicatedNodes and targetLowPriorityNodes must be specified. If
+      true, the
 
       autoScaleFormula property is required and the Pool automatically resizes
       according to the
@@ -271,9 +271,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'enableAutoScale?: undefined | false | true'
+      content: 'enableAutoScale?: boolean'
       return:
-        type: undefined | false | true
+        type: boolean
         description: ''
   - name: enableInterNodeCommunication
     uid: '@azure/batch.CloudPool.enableInterNodeCommunication'
@@ -292,9 +292,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'enableInterNodeCommunication?: undefined | false | true'
+      content: 'enableInterNodeCommunication?: boolean'
       return:
-        type: undefined | false | true
+        type: boolean
         description: ''
   - name: eTag
     uid: '@azure/batch.CloudPool.eTag'
@@ -315,9 +315,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'eTag?: undefined | string'
+      content: 'eTag?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: id
     uid: '@azure/batch.CloudPool.id'
@@ -338,9 +338,29 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'id?: undefined | string'
+      content: 'id?: string'
       return:
-        type: undefined | string
+        type: string
+        description: ''
+  - name: identity
+    uid: '@azure/batch.CloudPool.identity'
+    package: '@azure/batch'
+    summary: >-
+      The identity of the Batch pool, if configured. The list of user identities
+      associated with the
+
+      Batch pool. The user identity dictionary key references will be ARM
+      resource ids in the form:
+
+      '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+    fullName: identity
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'identity?: BatchPoolIdentity'
+      return:
+        type: <xref uid="@azure/batch.BatchPoolIdentity" />
         description: ''
   - name: lastModified
     uid: '@azure/batch.CloudPool.lastModified'
@@ -441,9 +461,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'resizeTimeout?: undefined | string'
+      content: 'resizeTimeout?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: startTask
     uid: '@azure/batch.CloudPool.startTask'
@@ -519,9 +539,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'targetDedicatedNodes?: undefined | number'
+      content: 'targetDedicatedNodes?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''
   - name: targetLowPriorityNodes
     uid: '@azure/batch.CloudPool.targetLowPriorityNodes'
@@ -532,9 +552,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'targetLowPriorityNodes?: undefined | number'
+      content: 'targetLowPriorityNodes?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''
   - name: taskSchedulingPolicy
     uid: '@azure/batch.CloudPool.taskSchedulingPolicy'
@@ -569,9 +589,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'taskSlotsPerNode?: undefined | number'
+      content: 'taskSlotsPerNode?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''
   - name: url
     uid: '@azure/batch.CloudPool.url'
@@ -582,9 +602,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'url?: undefined | string'
+      content: 'url?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: userAccounts
     uid: '@azure/batch.CloudPool.userAccounts'
@@ -634,7 +654,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'vmSize?: undefined | string'
+      content: 'vmSize?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''

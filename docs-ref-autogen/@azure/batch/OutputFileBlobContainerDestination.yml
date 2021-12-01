@@ -14,10 +14,12 @@ properties:
     package: '@azure/batch'
     summary: >-
       The URL of the container within Azure Blob Storage to which to upload the
-      file(s). The URL
+      file(s). If not
 
-      must include a Shared Access Signature (SAS) granting write permissions to
-      the container.
+      using a managed identity, the URL must include a Shared Access Signature
+      (SAS) granting write
+
+      permissions to the container.
     fullName: containerUrl
     remarks: ''
     isPreview: false
@@ -26,6 +28,24 @@ properties:
       content: 'containerUrl: string'
       return:
         type: string
+        description: ''
+  - name: identityReference
+    uid: '@azure/batch.OutputFileBlobContainerDestination.identityReference'
+    package: '@azure/batch'
+    summary: >-
+      The reference to the user assigned identity to use to access Azure Blob
+      Storage specified by
+
+      containerUrl. The identity must have write access to the Azure Blob
+      Storage container
+    fullName: identityReference
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'identityReference?: ComputeNodeIdentityReference'
+      return:
+        type: <xref uid="@azure/batch.ComputeNodeIdentityReference" />
         description: ''
   - name: path
     uid: '@azure/batch.OutputFileBlobContainerDestination.path'
@@ -52,7 +72,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'path?: undefined | string'
+      content: 'path?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''

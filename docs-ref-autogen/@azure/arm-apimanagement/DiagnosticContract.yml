@@ -73,7 +73,9 @@ properties:
     uid: '@azure/arm-apimanagement.DiagnosticContract.id'
     package: '@azure/arm-apimanagement'
     summary: >-
-      Resource ID.
+      Fully qualified resource ID for the resource. Ex -
+
+      /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -116,7 +118,7 @@ properties:
     uid: '@azure/arm-apimanagement.DiagnosticContract.name'
     package: '@azure/arm-apimanagement'
     summary: >-
-      Resource name.
+      The name of the resource
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -128,6 +130,23 @@ properties:
       content: 'name?: undefined | string'
       return:
         type: undefined | string
+        description: ''
+  - name: operationNameFormat
+    uid: '@azure/arm-apimanagement.DiagnosticContract.operationNameFormat'
+    package: '@azure/arm-apimanagement'
+    summary: >-
+      The format of the Operation Name for Application Insights telemetries.
+      Default is Name.
+
+      Possible values include: 'Name', 'Url'
+    fullName: operationNameFormat
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'operationNameFormat?: OperationNameFormat'
+      return:
+        type: <xref uid="@azure/arm-apimanagement.OperationNameFormat" />
         description: ''
   - name: sampling
     uid: '@azure/arm-apimanagement.DiagnosticContract.sampling'
@@ -146,7 +165,9 @@ properties:
     uid: '@azure/arm-apimanagement.DiagnosticContract.type'
     package: '@azure/arm-apimanagement'
     summary: >-
-      Resource type for API Management resource.
+      The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or
+
+      "Microsoft.Storage/storageAccounts"
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**

@@ -2,17 +2,30 @@
 name: ManagedClusterPodIdentity
 uid: '@azure/arm-containerservice.ManagedClusterPodIdentity'
 package: '@azure/arm-containerservice'
-summary: An interface representing ManagedClusterPodIdentity.
+summary: Details about the pod identity assigned to the Managed Cluster.
 fullName: ManagedClusterPodIdentity
 remarks: ''
 isPreview: false
 isDeprecated: false
 type: interface
 properties:
+  - name: bindingSelector
+    uid: '@azure/arm-containerservice.ManagedClusterPodIdentity.bindingSelector'
+    package: '@azure/arm-containerservice'
+    summary: The binding selector to use for the AzureIdentityBinding resource.
+    fullName: bindingSelector
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'bindingSelector?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''
   - name: identity
     uid: '@azure/arm-containerservice.ManagedClusterPodIdentity.identity'
     package: '@azure/arm-containerservice'
-    summary: Information of the user assigned identity.
+    summary: The user assigned identity details.
     fullName: identity
     remarks: ''
     isPreview: false
@@ -25,7 +38,7 @@ properties:
   - name: name
     uid: '@azure/arm-containerservice.ManagedClusterPodIdentity.name'
     package: '@azure/arm-containerservice'
-    summary: Name of the pod identity.
+    summary: The name of the pod identity.
     fullName: name
     remarks: ''
     isPreview: false
@@ -38,7 +51,7 @@ properties:
   - name: namespace
     uid: '@azure/arm-containerservice.ManagedClusterPodIdentity.namespace'
     package: '@azure/arm-containerservice'
-    summary: Namespace of the pod identity.
+    summary: The namespace of the pod identity.
     fullName: namespace
     remarks: ''
     isPreview: false

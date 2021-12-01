@@ -33,9 +33,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'customHeaders?: undefined | [key: string]: string'
+      content: 'customHeaders?: [key: string]: string'
       return:
-        type: 'undefined | [key: string]: string'
+        type: '[key: string]\: string'
         description: ''
   - name: jobScheduleListNextOptions
     uid: '@azure/batch.JobScheduleListNextOptionalParams.jobScheduleListNextOptions'
@@ -59,11 +59,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: >-
-        onDownloadProgress?: undefined | (progress: TransferProgressEvent) =>
-        void
+      content: 'onDownloadProgress?: (progress: TransferProgressEvent) => void'
       return:
-        type: 'undefined | (progress: TransferProgressEvent) =&gt; void'
+        type: '(progress: TransferProgressEvent) =&gt; void'
         description: ''
   - name: onUploadProgress
     uid: '@azure/batch.JobScheduleListNextOptionalParams.onUploadProgress'
@@ -74,9 +72,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'onUploadProgress?: undefined | (progress: TransferProgressEvent) => void'
+      content: 'onUploadProgress?: (progress: TransferProgressEvent) => void'
       return:
-        type: 'undefined | (progress: TransferProgressEvent) =&gt; void'
+        type: '(progress: TransferProgressEvent) =&gt; void'
         description: ''
   - name: timeout
     uid: '@azure/batch.JobScheduleListNextOptionalParams.timeout'
@@ -89,8 +87,8 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'timeout?: undefined | number'
+      content: 'timeout?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''
 extends: RequestOptionsBase

@@ -14,17 +14,35 @@ properties:
     package: '@azure/arm-datafactory'
     summary: >-
       Specifies the additional columns to be added to source data. Type: array
-      of objects (or
+      of
 
-      Expression with resultType array of objects).
+      objects(AdditionalColumns) (or Expression with resultType array of
+      objects).
     fullName: additionalColumns
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'additionalColumns?: AdditionalColumns[]'
+      content: 'additionalColumns?: any'
       return:
-        type: '<xref uid="@azure/arm-datafactory.AdditionalColumns" />[]'
+        type: any
+        description: ''
+  - name: disableMetricsCollection
+    uid: '@azure/arm-datafactory.SapHanaSource.disableMetricsCollection'
+    package: '@azure/arm-datafactory'
+    summary: >-
+      If true, disable data store metrics collection. Default is false. Type:
+      boolean (or Expression
+
+      with resultType boolean).
+    fullName: disableMetricsCollection
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'disableMetricsCollection?: any'
+      return:
+        type: any
         description: ''
   - name: maxConcurrentConnections
     uid: '@azure/arm-datafactory.SapHanaSource.maxConcurrentConnections'
@@ -67,15 +85,15 @@ properties:
       The partition mechanism that will be used for SAP HANA read in parallel.
       Possible values
 
-      include: 'None', 'PhysicalPartitionsOfTable', 'SapHanaDynamicRange'
+      include: "None", "PhysicalPartitionsOfTable", "SapHanaDynamicRange".
     fullName: partitionOption
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'partitionOption?: SapHanaPartitionOption'
+      content: 'partitionOption?: any'
       return:
-        type: <xref uid="@azure/arm-datafactory.SapHanaPartitionOption" />
+        type: any
         description: ''
   - name: partitionSettings
     uid: '@azure/arm-datafactory.SapHanaSource.partitionSettings'

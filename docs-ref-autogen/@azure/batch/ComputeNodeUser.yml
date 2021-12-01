@@ -39,9 +39,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'isAdmin?: undefined | false | true'
+      content: 'isAdmin?: boolean'
       return:
-        type: undefined | false | true
+        type: boolean
         description: ''
   - name: name
     uid: '@azure/batch.ComputeNodeUser.name'
@@ -75,9 +75,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'password?: undefined | string'
+      content: 'password?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: sshPublicKey
     uid: '@azure/batch.ComputeNodeUser.sshPublicKey'
@@ -101,7 +101,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'sshPublicKey?: undefined | string'
+      content: 'sshPublicKey?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''

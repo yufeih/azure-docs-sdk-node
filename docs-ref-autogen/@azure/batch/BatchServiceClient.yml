@@ -11,7 +11,7 @@ type: class
 constructors:
   - name: >-
       BatchServiceClient(ServiceClientCredentials, string,
-      msRestAzure.AzureServiceClientOptions)
+      AzureServiceClientOptions)
     uid: '@azure/batch.BatchServiceClient.constructor'
     package: '@azure/batch'
     summary: Initializes a new instance of the BatchServiceClient class.
@@ -21,7 +21,7 @@ constructors:
     syntax:
       content: >-
         new BatchServiceClient(credentials: ServiceClientCredentials, batchUrl:
-        string, options?: msRestAzure.AzureServiceClientOptions)
+        string, options?: AzureServiceClientOptions)
       parameters:
         - id: credentials
           type: ServiceClientCredentials
@@ -30,7 +30,7 @@ constructors:
           type: string
           description: The base URL for all Azure Batch service requests.
         - id: options
-          type: <xref uid="msRestAzure.AzureServiceClientOptions" />
+          type: AzureServiceClientOptions
           description: ''
 properties:
   - name: acceptLanguage
@@ -68,9 +68,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'apiVersion?: undefined | string'
+      content: 'apiVersion?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: application
     uid: '@azure/batch.BatchServiceClient.application'
@@ -123,6 +123,19 @@ properties:
       content: 'computeNode: ComputeNodeOperations'
       return:
         type: <xref uid="@azure/batch.ComputeNodeOperations" />
+        description: ''
+  - name: computeNodeExtension
+    uid: '@azure/batch.BatchServiceClient.computeNodeExtension'
+    package: '@azure/batch'
+    summary: ''
+    fullName: computeNodeExtension
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'computeNodeExtension: ComputeNodeExtension'
+      return:
+        type: <xref uid="@azure/batch.ComputeNodeExtension" />
         description: ''
   - name: credentials
     uid: '@azure/batch.BatchServiceClient.credentials'
@@ -187,9 +200,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'longRunningOperationRetryTimeout?: undefined | number'
+      content: 'longRunningOperationRetryTimeout?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''
   - name: pool
     uid: '@azure/batch.BatchServiceClient.pool'

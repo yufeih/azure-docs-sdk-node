@@ -9,6 +9,19 @@ isPreview: false
 isDeprecated: false
 type: interface
 properties:
+  - name: id
+    uid: '@azure/cosmos.ReplaceOperationInput.id'
+    package: '@azure/cosmos'
+    summary: ''
+    fullName: id
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'id: string'
+      return:
+        type: string
+        description: ''
   - name: ifMatch
     uid: '@azure/cosmos.ReplaceOperationInput.ifMatch'
     package: '@azure/cosmos'
@@ -57,9 +70,11 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'partitionKey?: string | number | null | __type | undefined'
+      content: >-
+        partitionKey?: string | number | null | Record<string, unknown> |
+        undefined
       return:
-        type: string | number | null | __type | undefined
+        type: 'string | number | null | Record&lt;string, unknown&gt; | undefined'
         description: ''
   - name: resourceBody
     uid: '@azure/cosmos.ReplaceOperationInput.resourceBody'

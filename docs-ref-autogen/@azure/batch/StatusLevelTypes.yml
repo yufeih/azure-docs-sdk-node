@@ -1,0 +1,12 @@
+### YamlMime:TSTypeAlias
+name: StatusLevelTypes
+uid: '@azure/batch.StatusLevelTypes'
+package: '@azure/batch'
+summary: |-
+  Defines values for StatusLevelTypes.
+  Possible values include: 'Error', 'Info', 'Warning'
+fullName: StatusLevelTypes
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: type StatusLevelTypes = "Error" | "Info" | "Warning"

@@ -22,9 +22,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'clientRequestId?: undefined | string'
+      content: 'clientRequestId?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: endTime
     uid: '@azure/batch.PoolListUsageMetricsOptions.endTime'
@@ -59,9 +59,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'filter?: undefined | string'
+      content: 'filter?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: maxResults
     uid: '@azure/batch.PoolListUsageMetricsOptions.maxResults'
@@ -76,9 +76,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'maxResults?: undefined | number'
+      content: 'maxResults?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''
   - name: ocpDate
     uid: '@azure/batch.PoolListUsageMetricsOptions.ocpDate'
@@ -108,9 +108,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'returnClientRequestId?: undefined | false | true'
+      content: 'returnClientRequestId?: boolean'
       return:
-        type: undefined | false | true
+        type: boolean
         description: ''
   - name: startTime
     uid: '@azure/batch.PoolListUsageMetricsOptions.startTime'
@@ -145,7 +145,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'timeout?: undefined | number'
+      content: 'timeout?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''

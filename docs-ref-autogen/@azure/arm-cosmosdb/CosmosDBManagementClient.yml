@@ -10,8 +10,8 @@ isDeprecated: false
 type: class
 constructors:
   - name: >-
-      CosmosDBManagementClient(ServiceClientCredentials, string,
-      Models.CosmosDBManagementClientOptions)
+      CosmosDBManagementClient(ServiceClientCredentials | TokenCredential,
+      string, Models.CosmosDBManagementClientOptions)
     uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.constructor'
     package: '@azure/arm-cosmosdb'
     summary: Initializes a new instance of the CosmosDBManagementClient class.
@@ -20,13 +20,25 @@ constructors:
     isDeprecated: false
     syntax:
       content: >-
-        new CosmosDBManagementClient(credentials: ServiceClientCredentials,
-        subscriptionId: string, options?:
+        new CosmosDBManagementClient(credentials: ServiceClientCredentials |
+        TokenCredential, subscriptionId: string, options?:
         Models.CosmosDBManagementClientOptions)
       parameters:
         - id: credentials
-          type: ServiceClientCredentials
-          description: Credentials needed for the client to connect to Azure.
+          type: ServiceClientCredentials | TokenCredential
+          description: >-
+            Credentials needed for the client to connect to Azure. Credentials
+
+            implementing the TokenCredential interface from the @azure/identity
+            package are recommended. For
+
+            more information about these credentials, see
+
+            <xref:https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40azure%2Fidentity>.
+            Credentials implementing the
+
+            ServiceClientCredentials interface from the older packages
+            @azure/ms-rest-nodeauth and
         - id: subscriptionId
           type: string
           description: The ID of the target subscription.
@@ -46,6 +58,45 @@ properties:
       content: 'acceptLanguage: string'
       return:
         type: string
+        description: ''
+  - name: apiVersion
+    uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.apiVersion'
+    package: '@azure/arm-cosmosdb'
+    summary: ''
+    fullName: apiVersion
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'apiVersion?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''
+  - name: cassandraClusters
+    uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.cassandraClusters'
+    package: '@azure/arm-cosmosdb'
+    summary: ''
+    fullName: cassandraClusters
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'cassandraClusters: CassandraClusters'
+      return:
+        type: <xref uid="@azure/arm-cosmosdb.CassandraClusters" />
+        description: ''
+  - name: cassandraDataCenters
+    uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.cassandraDataCenters'
+    package: '@azure/arm-cosmosdb'
+    summary: ''
+    fullName: cassandraDataCenters
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'cassandraDataCenters: CassandraDataCenters'
+      return:
+        type: <xref uid="@azure/arm-cosmosdb.CassandraDataCenters" />
         description: ''
   - name: cassandraResources
     uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.cassandraResources'
@@ -121,9 +172,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'credentials: ServiceClientCredentials'
+      content: 'credentials: ServiceClientCredentials | TokenCredential'
       return:
-        type: ServiceClientCredentials
+        type: ServiceClientCredentials | TokenCredential
         description: ''
   - name: database
     uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.database'
@@ -176,6 +227,19 @@ properties:
       content: 'gremlinResources: GremlinResources'
       return:
         type: <xref uid="@azure/arm-cosmosdb.GremlinResources" />
+        description: ''
+  - name: locations
+    uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.locations'
+    package: '@azure/arm-cosmosdb'
+    summary: ''
+    fullName: locations
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'locations: Locations'
+      return:
+        type: <xref uid="@azure/arm-cosmosdb.Locations" />
         description: ''
   - name: longRunningOperationRetryTimeout
     uid: >-
@@ -322,6 +386,97 @@ properties:
       content: 'privateLinkResources: PrivateLinkResources'
       return:
         type: <xref uid="@azure/arm-cosmosdb.PrivateLinkResources" />
+        description: ''
+  - name: restorableDatabaseAccounts
+    uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.restorableDatabaseAccounts'
+    package: '@azure/arm-cosmosdb'
+    summary: ''
+    fullName: restorableDatabaseAccounts
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'restorableDatabaseAccounts: RestorableDatabaseAccounts'
+      return:
+        type: <xref uid="@azure/arm-cosmosdb.RestorableDatabaseAccounts" />
+        description: ''
+  - name: restorableMongodbCollections
+    uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.restorableMongodbCollections'
+    package: '@azure/arm-cosmosdb'
+    summary: ''
+    fullName: restorableMongodbCollections
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'restorableMongodbCollections: RestorableMongodbCollections'
+      return:
+        type: <xref uid="@azure/arm-cosmosdb.RestorableMongodbCollections" />
+        description: ''
+  - name: restorableMongodbDatabases
+    uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.restorableMongodbDatabases'
+    package: '@azure/arm-cosmosdb'
+    summary: ''
+    fullName: restorableMongodbDatabases
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'restorableMongodbDatabases: RestorableMongodbDatabases'
+      return:
+        type: <xref uid="@azure/arm-cosmosdb.RestorableMongodbDatabases" />
+        description: ''
+  - name: restorableMongodbResources
+    uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.restorableMongodbResources'
+    package: '@azure/arm-cosmosdb'
+    summary: ''
+    fullName: restorableMongodbResources
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'restorableMongodbResources: RestorableMongodbResources'
+      return:
+        type: <xref uid="@azure/arm-cosmosdb.RestorableMongodbResources" />
+        description: ''
+  - name: restorableSqlContainers
+    uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.restorableSqlContainers'
+    package: '@azure/arm-cosmosdb'
+    summary: ''
+    fullName: restorableSqlContainers
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'restorableSqlContainers: RestorableSqlContainers'
+      return:
+        type: <xref uid="@azure/arm-cosmosdb.RestorableSqlContainers" />
+        description: ''
+  - name: restorableSqlDatabases
+    uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.restorableSqlDatabases'
+    package: '@azure/arm-cosmosdb'
+    summary: ''
+    fullName: restorableSqlDatabases
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'restorableSqlDatabases: RestorableSqlDatabases'
+      return:
+        type: <xref uid="@azure/arm-cosmosdb.RestorableSqlDatabases" />
+        description: ''
+  - name: restorableSqlResources
+    uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.restorableSqlResources'
+    package: '@azure/arm-cosmosdb'
+    summary: ''
+    fullName: restorableSqlResources
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'restorableSqlResources: RestorableSqlResources'
+      return:
+        type: <xref uid="@azure/arm-cosmosdb.RestorableSqlResources" />
         description: ''
   - name: sqlResources
     uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.sqlResources'

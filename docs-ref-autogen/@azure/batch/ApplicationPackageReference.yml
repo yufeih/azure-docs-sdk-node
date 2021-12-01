@@ -44,7 +44,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'version?: undefined | string'
+      content: 'version?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''

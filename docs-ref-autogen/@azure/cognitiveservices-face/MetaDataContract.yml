@@ -22,18 +22,18 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'name?: undefined | string'
+      content: 'name: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: recognitionModel
     uid: '@azure/cognitiveservices-face.MetaDataContract.recognitionModel'
     package: '@azure/cognitiveservices-face'
     summary: >-
       Possible values include: 'recognition_01', 'recognition_02',
-      'recognition_03'. Default value:
+      'recognition_03',
 
-      'recognition_01'.
+      'recognition_04'. Default value: 'recognition_01'.
     fullName: recognitionModel
     remarks: ''
     isPreview: false
@@ -56,4 +56,7 @@ properties:
       return:
         type: undefined | string
         description: ''
-extends: <xref uid="@azure/cognitiveservices-face.NameAndUserDataContract" />
+extends: >-
+  <xref
+  uid="@azure/cognitiveservices-face.NonNullableNameAndNullableUserDataContract"
+  />

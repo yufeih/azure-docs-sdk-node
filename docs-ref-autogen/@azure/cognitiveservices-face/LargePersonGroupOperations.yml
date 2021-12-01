@@ -25,7 +25,7 @@ constructors:
             Reference to the service client.
 methods:
   - name: >-
-      create(string, LargePersonGroupCreateOptionalParams,
+      create(string, string, LargePersonGroupCreateOptionalParams,
       ServiceCallback<void>)
     uid: '@azure/cognitiveservices-face.LargePersonGroupOperations.create_2'
     package: '@azure/cognitiveservices-face'
@@ -35,12 +35,15 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function create(largePersonGroupId: string, options:
+        function create(largePersonGroupId: string, name: string, options:
         LargePersonGroupCreateOptionalParams, callback: ServiceCallback<void>)
       parameters:
         - id: largePersonGroupId
           type: string
           description: Id referencing a particular large person group.
+        - id: name
+          type: string
+          description: 'User defined name, maximum length is 128.'
         - id: options
           type: >-
             <xref
@@ -51,7 +54,7 @@ methods:
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
-  - name: 'create(string, Models.LargePersonGroupCreateOptionalParams)'
+  - name: 'create(string, string, Models.LargePersonGroupCreateOptionalParams)'
     uid: '@azure/cognitiveservices-face.LargePersonGroupOperations.create'
     package: '@azure/cognitiveservices-face'
     summary: >-
@@ -69,30 +72,29 @@ methods:
 
       <br /> After creation, use [LargePersonGroup Person -
 
-      Create](https://docs.microsoft.com/rest/api/cognitiveservices/face/largepersongroupperson/create)
+      Create](https://docs.microsoft.com/rest/api/faceapi/largepersongroupperson/create)
+      to add person
 
-      to add person into the group, and call [LargePersonGroup -
+      into the group, and call [LargePersonGroup -
 
-      Train](https://docs.microsoft.com/rest/api/cognitiveservices/face/largepersongroup/train)
-      to get
+      Train](https://docs.microsoft.com/rest/api/faceapi/largepersongroup/train)
+      to get this group
 
-      this group ready for [Face -
-
-      Identify](https://docs.microsoft.com/rest/api/cognitiveservices/face/face/identify).
+      ready for [Face -
+      Identify](https://docs.microsoft.com/rest/api/faceapi/face/identify).
 
       <br /> No image will be stored. Only the person's extracted face features
       and userData will be
 
       stored on server until [LargePersonGroup Person -
 
-      Delete](https://docs.microsoft.com/rest/api/cognitiveservices/face/largepersongroupperson/delete)
+      Delete](https://docs.microsoft.com/rest/api/faceapi/largepersongroupperson/delete)
+      or
 
-      or [LargePersonGroup -
+      [LargePersonGroup -
+      Delete](https://docs.microsoft.com/rest/api/faceapi/largepersongroup/delete)
 
-      Delete](https://docs.microsoft.com/rest/api/cognitiveservices/face/largepersongroup/delete)
-      is
-
-      called.
+      is called.
 
       <br/>'recognitionModel' should be specified to associate with this large
       person group. The
@@ -109,23 +111,9 @@ methods:
       Existing face features in a large person group can't be updated to
       features extracted by another
 
-      version of recognition model.
+      version of recognition model. Please refer to [Specify a face recognition
 
-      * 'recognition_01': The default recognition model for [LargePersonGroup -
-
-      Create](https://docs.microsoft.com/rest/api/cognitiveservices/face/largepersongroup/create).
-      All
-
-      those large person groups created before 2019 March are bonded with this
-      recognition model.
-
-      * 'recognition_02': Recognition model released in 2019 March.
-
-      * 'recognition_03': Recognition model released in 2020 May.
-      'recognition_03' is recommended
-
-      since its overall accuracy is improved compared with 'recognition_01' and
-      'recognition_02'.
+      model](https://docs.microsoft.com/azure/cognitive-services/face/face-api-how-to-topics/specify-recognition-model).
 
       Large person group quota:
 
@@ -137,19 +125,22 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function create(largePersonGroupId: string, options?:
+        function create(largePersonGroupId: string, name: string, options?:
         Models.LargePersonGroupCreateOptionalParams)
       parameters:
         - id: largePersonGroupId
           type: string
           description: Id referencing a particular large person group.
+        - id: name
+          type: string
+          description: 'User defined name, maximum length is 128.'
         - id: options
           type: <xref uid="Models.LargePersonGroupCreateOptionalParams" />
           description: ''
       return:
         type: Promise&lt;RestResponse&gt;
         description: Promise<msRest.RestResponse>
-  - name: 'create(string, ServiceCallback<void>)'
+  - name: 'create(string, string, ServiceCallback<void>)'
     uid: '@azure/cognitiveservices-face.LargePersonGroupOperations.create_1'
     package: '@azure/cognitiveservices-face'
     summary: ''
@@ -158,12 +149,15 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function create(largePersonGroupId: string, callback:
+        function create(largePersonGroupId: string, name: string, callback:
         ServiceCallback<void>)
       parameters:
         - id: largePersonGroupId
           type: string
           description: Id referencing a particular large person group.
+        - id: name
+          type: string
+          description: 'User defined name, maximum length is 128.'
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
@@ -275,10 +269,10 @@ methods:
       use [LargePersonGroup
 
       Person -
+      List](https://docs.microsoft.com/rest/api/faceapi/largepersongroupperson/list)
+      instead
 
-      List](https://docs.microsoft.com/rest/api/cognitiveservices/face/largepersongroupperson/list)
-
-      instead to retrieve person information under the large person group.
+      to retrieve person information under the large person group.
     remarks: ''
     isPreview: false
     isDeprecated: false

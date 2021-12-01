@@ -1,0 +1,266 @@
+### YamlMime:TSType
+name: ComputeNodeExtension
+uid: '@azure/batch.ComputeNodeExtension'
+package: '@azure/batch'
+summary: Class representing a ComputeNodeExtension.
+fullName: ComputeNodeExtension
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: ComputeNodeExtension(BatchServiceClientContext)
+    uid: '@azure/batch.ComputeNodeExtension.constructor'
+    package: '@azure/batch'
+    summary: Create a ComputeNodeExtension.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new ComputeNodeExtension(client: BatchServiceClientContext)'
+      parameters:
+        - id: client
+          type: <xref uid="@azure/batch.BatchServiceClientContext" />
+          description: |
+            Reference to the service client.
+methods:
+  - name: 'get(string, string, string, ComputeNodeExtensionGetOptionalParams)'
+    uid: '@azure/batch.ComputeNodeExtension.get'
+    package: '@azure/batch'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function get(poolId: string, nodeId: string, extensionName: string,
+        options?: ComputeNodeExtensionGetOptionalParams)
+      parameters:
+        - id: poolId
+          type: string
+          description: The ID of the Pool that contains the Compute Node.
+        - id: nodeId
+          type: string
+          description: The ID of the Compute Node that contains the extensions.
+        - id: extensionName
+          type: string
+          description: |-
+            The name of the of the Compute Node Extension that you want to get
+            information about.
+        - id: options
+          type: <xref uid="@azure/batch.ComputeNodeExtensionGetOptionalParams" />
+          description: ''
+      return:
+        type: Promise&lt;<xref uid="Models.ComputeNodeExtensionGetResponse" />&gt;
+        description: Promise<Models.ComputeNodeExtensionGetResponse>
+  - name: >-
+      get(string, string, string, ComputeNodeExtensionGetOptionalParams,
+      ServiceCallback<NodeVMExtension>)
+    uid: '@azure/batch.ComputeNodeExtension.get_2'
+    package: '@azure/batch'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function get(poolId: string, nodeId: string, extensionName: string,
+        options: ComputeNodeExtensionGetOptionalParams, callback:
+        ServiceCallback<NodeVMExtension>)
+      parameters:
+        - id: poolId
+          type: string
+          description: The ID of the Pool that contains the Compute Node.
+        - id: nodeId
+          type: string
+          description: The ID of the Compute Node that contains the extensions.
+        - id: extensionName
+          type: string
+          description: |-
+            The name of the of the Compute Node Extension that you want to get
+            information about.
+        - id: options
+          type: <xref uid="@azure/batch.ComputeNodeExtensionGetOptionalParams" />
+          description: The optional parameters
+        - id: callback
+          type: ServiceCallback&lt;<xref uid="@azure/batch.NodeVMExtension" />&gt;
+          description: |
+            The callback
+  - name: 'get(string, string, string, ServiceCallback<NodeVMExtension>)'
+    uid: '@azure/batch.ComputeNodeExtension.get_1'
+    package: '@azure/batch'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function get(poolId: string, nodeId: string, extensionName: string,
+        callback: ServiceCallback<NodeVMExtension>)
+      parameters:
+        - id: poolId
+          type: string
+          description: The ID of the Pool that contains the Compute Node.
+        - id: nodeId
+          type: string
+          description: The ID of the Compute Node that contains the extensions.
+        - id: extensionName
+          type: string
+          description: |-
+            The name of the of the Compute Node Extension that you want to get
+            information about.
+        - id: callback
+          type: ServiceCallback&lt;<xref uid="@azure/batch.NodeVMExtension" />&gt;
+          description: |
+            The callback
+  - name: 'list(string, string, ComputeNodeExtensionListOptionalParams)'
+    uid: '@azure/batch.ComputeNodeExtension.list'
+    package: '@azure/batch'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function list(poolId: string, nodeId: string, options?:
+        ComputeNodeExtensionListOptionalParams)
+      parameters:
+        - id: poolId
+          type: string
+          description: The ID of the Pool that contains Compute Node.
+        - id: nodeId
+          type: string
+          description: The ID of the Compute Node that you want to list extensions.
+        - id: options
+          type: <xref uid="@azure/batch.ComputeNodeExtensionListOptionalParams" />
+          description: ''
+      return:
+        type: Promise&lt;<xref uid="Models.ComputeNodeExtensionListResponse" />&gt;
+        description: Promise<Models.ComputeNodeExtensionListResponse>
+  - name: >-
+      list(string, string, ComputeNodeExtensionListOptionalParams,
+      ServiceCallback<NodeVMExtensionList>)
+    uid: '@azure/batch.ComputeNodeExtension.list_2'
+    package: '@azure/batch'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function list(poolId: string, nodeId: string, options:
+        ComputeNodeExtensionListOptionalParams, callback:
+        ServiceCallback<NodeVMExtensionList>)
+      parameters:
+        - id: poolId
+          type: string
+          description: The ID of the Pool that contains Compute Node.
+        - id: nodeId
+          type: string
+          description: The ID of the Compute Node that you want to list extensions.
+        - id: options
+          type: <xref uid="@azure/batch.ComputeNodeExtensionListOptionalParams" />
+          description: The optional parameters
+        - id: callback
+          type: >-
+            ServiceCallback&lt;<xref uid="@azure/batch.NodeVMExtensionList"
+            />&gt;
+          description: |
+            The callback
+  - name: 'list(string, string, ServiceCallback<NodeVMExtensionList>)'
+    uid: '@azure/batch.ComputeNodeExtension.list_1'
+    package: '@azure/batch'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function list(poolId: string, nodeId: string, callback:
+        ServiceCallback<NodeVMExtensionList>)
+      parameters:
+        - id: poolId
+          type: string
+          description: The ID of the Pool that contains Compute Node.
+        - id: nodeId
+          type: string
+          description: The ID of the Compute Node that you want to list extensions.
+        - id: callback
+          type: >-
+            ServiceCallback&lt;<xref uid="@azure/batch.NodeVMExtensionList"
+            />&gt;
+          description: |
+            The callback
+  - name: 'listNext(string, ComputeNodeExtensionListNextOptionalParams)'
+    uid: '@azure/batch.ComputeNodeExtension.listNext'
+    package: '@azure/batch'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function listNext(nextPageLink: string, options?:
+        ComputeNodeExtensionListNextOptionalParams)
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: The NextLink from the previous successful call to List operation.
+        - id: options
+          type: >-
+            <xref uid="@azure/batch.ComputeNodeExtensionListNextOptionalParams"
+            />
+          description: ''
+      return:
+        type: Promise&lt;<xref uid="Models.ComputeNodeExtensionListResponse" />&gt;
+        description: Promise<Models.ComputeNodeExtensionListResponse>
+  - name: >-
+      listNext(string, ComputeNodeExtensionListNextOptionalParams,
+      ServiceCallback<NodeVMExtensionList>)
+    uid: '@azure/batch.ComputeNodeExtension.listNext_2'
+    package: '@azure/batch'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function listNext(nextPageLink: string, options:
+        ComputeNodeExtensionListNextOptionalParams, callback:
+        ServiceCallback<NodeVMExtensionList>)
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: The NextLink from the previous successful call to List operation.
+        - id: options
+          type: >-
+            <xref uid="@azure/batch.ComputeNodeExtensionListNextOptionalParams"
+            />
+          description: The optional parameters
+        - id: callback
+          type: >-
+            ServiceCallback&lt;<xref uid="@azure/batch.NodeVMExtensionList"
+            />&gt;
+          description: |
+            The callback
+  - name: 'listNext(string, ServiceCallback<NodeVMExtensionList>)'
+    uid: '@azure/batch.ComputeNodeExtension.listNext_1'
+    package: '@azure/batch'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function listNext(nextPageLink: string, callback:
+        ServiceCallback<NodeVMExtensionList>)
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: The NextLink from the previous successful call to List operation.
+        - id: callback
+          type: >-
+            ServiceCallback&lt;<xref uid="@azure/batch.NodeVMExtensionList"
+            />&gt;
+          description: |
+            The callback

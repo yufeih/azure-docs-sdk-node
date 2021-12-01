@@ -25,9 +25,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'containerRunOptions?: undefined | string'
+      content: 'containerRunOptions?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: imageName
     uid: '@azure/batch.TaskContainerSettings.imageName'

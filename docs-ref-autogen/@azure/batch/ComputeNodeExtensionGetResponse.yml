@@ -1,0 +1,12 @@
+### YamlMime:TSTypeAlias
+name: ComputeNodeExtensionGetResponse
+uid: '@azure/batch.ComputeNodeExtensionGetResponse'
+package: '@azure/batch'
+summary: Contains response data for the get operation.
+fullName: ComputeNodeExtensionGetResponse
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: >-
+  type ComputeNodeExtensionGetResponse = NodeVMExtension &
+  ComputeNodeExtensionGetHeaders & { _response: Object }

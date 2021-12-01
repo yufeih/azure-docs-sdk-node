@@ -292,6 +292,27 @@ properties:
       return:
         type: undefined | string
         description: ''
+  - name: platformVersion
+    uid: >-
+      @azure/arm-apimanagement.ApiManagementServiceBaseProperties.platformVersion
+    package: '@azure/arm-apimanagement'
+    summary: >-
+      Compute Platform Version running the service in this location. Possible
+      values include:
+
+      'undetermined', 'stv1', 'stv2', 'mtv1'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: platformVersion
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'platformVersion?: PlatformVersion'
+      return:
+        type: <xref uid="@azure/arm-apimanagement.PlatformVersion" />
+        description: ''
   - name: portalUrl
     uid: '@azure/arm-apimanagement.ApiManagementServiceBaseProperties.portalUrl'
     package: '@azure/arm-apimanagement'
@@ -309,6 +330,23 @@ properties:
       return:
         type: undefined | string
         description: ''
+  - name: privateEndpointConnections
+    uid: >-
+      @azure/arm-apimanagement.ApiManagementServiceBaseProperties.privateEndpointConnections
+    package: '@azure/arm-apimanagement'
+    summary: List of Private Endpoint Connections of this service.
+    fullName: privateEndpointConnections
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'privateEndpointConnections?: RemotePrivateEndpointConnectionWrapper[]'
+      return:
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.RemotePrivateEndpointConnectionWrapper"
+          />[]
+        description: ''
   - name: privateIPAddresses
     uid: >-
       @azure/arm-apimanagement.ApiManagementServiceBaseProperties.privateIPAddresses
@@ -318,9 +356,9 @@ properties:
       Primary region
 
       which is deployed in an Internal Virtual Network. Available only for
-      Basic, Standard and
+      Basic, Standard, Premium
 
-      Premium SKU.
+      and Isolated SKU.
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -364,7 +402,7 @@ properties:
       Public Static Load Balanced IP addresses of the API Management service in
       Primary region.
 
-      Available only for Basic, Standard and Premium SKU.
+      Available only for Basic, Standard, Premium and Isolated SKU.
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -376,6 +414,69 @@ properties:
       content: 'publicIPAddresses?: string[]'
       return:
         type: 'string[]'
+        description: ''
+  - name: publicIpAddressId
+    uid: >-
+      @azure/arm-apimanagement.ApiManagementServiceBaseProperties.publicIpAddressId
+    package: '@azure/arm-apimanagement'
+    summary: >-
+      Public Standard SKU IP V4 based IP address to be associated with Virtual
+      Network deployed
+
+      service in the region. Supported only for Developer and Premium SKU being
+      deployed in Virtual
+
+      Network.
+    fullName: publicIpAddressId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'publicIpAddressId?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''
+  - name: publicNetworkAccess
+    uid: >-
+      @azure/arm-apimanagement.ApiManagementServiceBaseProperties.publicNetworkAccess
+    package: '@azure/arm-apimanagement'
+    summary: >-
+      Whether or not public endpoint access is allowed for this API Management
+      service.  Value is
+
+      optional but if passed in, must be 'Enabled' or 'Disabled'. If 'Disabled',
+      private endpoints
+
+      are the exclusive access method. Default value is 'Enabled'. Possible
+      values include:
+
+      'Enabled', 'Disabled'
+    fullName: publicNetworkAccess
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'publicNetworkAccess?: PublicNetworkAccess'
+      return:
+        type: <xref uid="@azure/arm-apimanagement.PublicNetworkAccess" />
+        description: ''
+  - name: restore
+    uid: '@azure/arm-apimanagement.ApiManagementServiceBaseProperties.restore'
+    package: '@azure/arm-apimanagement'
+    summary: >-
+      Undelete Api Management Service if it was previously soft-deleted. If this
+      flag is specified
+
+      and set to True all other properties will be ignored. Default value:
+      false.
+    fullName: restore
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'restore?: undefined | false | true'
+      return:
+        type: undefined | false | true
         description: ''
   - name: scmUrl
     uid: '@azure/arm-apimanagement.ApiManagementServiceBaseProperties.scmUrl'

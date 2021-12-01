@@ -46,11 +46,30 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'odatanextLink?: undefined | string'
+      content: 'odatanextLink?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
 methods:
+  - name: at(number)
+    uid: '@azure/batch.PoolListUsageMetricsResult.at'
+    package: '@azure/batch'
+    summary: |-
+      Takes an integer value and returns the item at that index,
+      allowing for positive and negative integers.
+      Negative integers count back from the last item in the array.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function at(index: number)'
+      parameters:
+        - id: index
+          type: number
+          description: ''
+      return:
+        type: <xref uid="@azure/batch.PoolUsageMetrics" /> | undefined
+        description: ''
   - name: 'concat(ConcatArray<PoolUsageMetrics>[])'
     uid: '@azure/batch.PoolListUsageMetricsResult.concat'
     package: '@azure/batch'
@@ -85,7 +104,7 @@ methods:
       return:
         type: '<xref uid="@azure/batch.PoolUsageMetrics" />[]'
         description: ''
-  - name: 'copyWithin(number, number, undefined | number)'
+  - name: 'copyWithin(number, number, number)'
     uid: '@azure/batch.PoolListUsageMetricsResult.copyWithin'
     package: '@azure/batch'
     summary: >-
@@ -97,9 +116,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: >-
-        function copyWithin(target: number, start: number, end?: undefined |
-        number)
+      content: 'function copyWithin(target: number, start: number, end?: number)'
       parameters:
         - id: target
           type: number
@@ -116,7 +133,7 @@ methods:
 
             is treated as length+end.
         - id: end
-          type: undefined | number
+          type: number
           description: >
             If not specified, length of the this object is used as its default
             value.
@@ -166,7 +183,7 @@ methods:
       return:
         type: boolean
         description: ''
-  - name: 'fill(PoolUsageMetrics, undefined | number, undefined | number)'
+  - name: 'fill(PoolUsageMetrics, number, number)'
     uid: '@azure/batch.PoolListUsageMetricsResult.fill'
     package: '@azure/batch'
     summary: >-
@@ -176,22 +193,20 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: >-
-        function fill(value: PoolUsageMetrics, start?: undefined | number, end?:
-        undefined | number)
+      content: 'function fill(value: PoolUsageMetrics, start?: number, end?: number)'
       parameters:
         - id: value
           type: <xref uid="@azure/batch.PoolUsageMetrics" />
           description: value to fill array section with
         - id: start
-          type: undefined | number
+          type: number
           description: >-
             index to start filling the array at. If start is negative, it is
             treated as
 
             length+start where length is the length of the array.
         - id: end
-          type: undefined | number
+          type: number
           description: >
             index to stop filling the array at. If end is negative, it is
             treated as
@@ -373,6 +388,260 @@ methods:
       return:
         type: number
         description: ''
+  - name: flat<U>(number)
+    uid: '@azure/batch.PoolListUsageMetricsResult.flat_8'
+    package: '@azure/batch'
+    summary: >-
+      Returns a new array with all sub-array elements concatenated into it
+      recursively up to the
+
+      specified depth. If no depth is provided, flat method defaults to the
+      depth of 1.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function flat<U>(depth?: number)'
+      parameters:
+        - id: depth
+          type: number
+          description: |
+            The maximum recursion depth
+      return:
+        type: 'any[]'
+        description: ''
+  - name: 'flat<U>(U[], 0)'
+    uid: '@azure/batch.PoolListUsageMetricsResult.flat_7'
+    package: '@azure/batch'
+    summary: >-
+      Returns a new array with all sub-array elements concatenated into it
+      recursively up to the
+
+      specified depth.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function flat<U>(this: U[], depth: 0)'
+      parameters:
+        - id: this
+          type: 'U[]'
+          description: ''
+        - id: depth
+          type: '0'
+          description: |
+            The maximum recursion depth
+      return:
+        type: 'U[]'
+        description: ''
+  - name: 'flat<U>(U[][], 1)'
+    uid: '@azure/batch.PoolListUsageMetricsResult.flat_6'
+    package: '@azure/batch'
+    summary: >-
+      Returns a new array with all sub-array elements concatenated into it
+      recursively up to the
+
+      specified depth.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function flat<U>(this: U[][], depth?: 1)'
+      parameters:
+        - id: this
+          type: 'U[][]'
+          description: ''
+        - id: depth
+          type: '1'
+          description: |
+            The maximum recursion depth
+      return:
+        type: 'U[]'
+        description: ''
+  - name: 'flat<U>(U[][][], 2)'
+    uid: '@azure/batch.PoolListUsageMetricsResult.flat_5'
+    package: '@azure/batch'
+    summary: >-
+      Returns a new array with all sub-array elements concatenated into it
+      recursively up to the
+
+      specified depth.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function flat<U>(this: U[][][], depth: 2)'
+      parameters:
+        - id: this
+          type: 'U[][][]'
+          description: ''
+        - id: depth
+          type: '2'
+          description: |
+            The maximum recursion depth
+      return:
+        type: 'U[]'
+        description: ''
+  - name: 'flat<U>(U[][][][], 3)'
+    uid: '@azure/batch.PoolListUsageMetricsResult.flat_4'
+    package: '@azure/batch'
+    summary: >-
+      Returns a new array with all sub-array elements concatenated into it
+      recursively up to the
+
+      specified depth.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function flat<U>(this: U[][][][], depth: 3)'
+      parameters:
+        - id: this
+          type: 'U[][][][]'
+          description: ''
+        - id: depth
+          type: '3'
+          description: |
+            The maximum recursion depth
+      return:
+        type: 'U[]'
+        description: ''
+  - name: 'flat<U>(U[][][][][], 4)'
+    uid: '@azure/batch.PoolListUsageMetricsResult.flat_3'
+    package: '@azure/batch'
+    summary: >-
+      Returns a new array with all sub-array elements concatenated into it
+      recursively up to the
+
+      specified depth.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function flat<U>(this: U[][][][][], depth: 4)'
+      parameters:
+        - id: this
+          type: 'U[][][][][]'
+          description: ''
+        - id: depth
+          type: '4'
+          description: |
+            The maximum recursion depth
+      return:
+        type: 'U[]'
+        description: ''
+  - name: 'flat<U>(U[][][][][][], 5)'
+    uid: '@azure/batch.PoolListUsageMetricsResult.flat_2'
+    package: '@azure/batch'
+    summary: >-
+      Returns a new array with all sub-array elements concatenated into it
+      recursively up to the
+
+      specified depth.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function flat<U>(this: U[][][][][][], depth: 5)'
+      parameters:
+        - id: this
+          type: 'U[][][][][][]'
+          description: ''
+        - id: depth
+          type: '5'
+          description: |
+            The maximum recursion depth
+      return:
+        type: 'U[]'
+        description: ''
+  - name: 'flat<U>(U[][][][][][][], 6)'
+    uid: '@azure/batch.PoolListUsageMetricsResult.flat_1'
+    package: '@azure/batch'
+    summary: >-
+      Returns a new array with all sub-array elements concatenated into it
+      recursively up to the
+
+      specified depth.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function flat<U>(this: U[][][][][][][], depth: 6)'
+      parameters:
+        - id: this
+          type: 'U[][][][][][][]'
+          description: ''
+        - id: depth
+          type: '6'
+          description: |
+            The maximum recursion depth
+      return:
+        type: 'U[]'
+        description: ''
+  - name: 'flat<U>(U[][][][][][][][], 7)'
+    uid: '@azure/batch.PoolListUsageMetricsResult.flat'
+    package: '@azure/batch'
+    summary: >-
+      Returns a new array with all sub-array elements concatenated into it
+      recursively up to the
+
+      specified depth.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function flat<U>(this: U[][][][][][][][], depth: 7)'
+      parameters:
+        - id: this
+          type: 'U[][][][][][][][]'
+          description: ''
+        - id: depth
+          type: '7'
+          description: |
+            The maximum recursion depth
+      return:
+        type: 'U[]'
+        description: ''
+  - name: >-
+      flatMap<U>((this: This, value: PoolUsageMetrics, index: number, array:
+      PoolUsageMetrics[]) => U | ReadonlyArray<U>, This)
+    uid: '@azure/batch.PoolListUsageMetricsResult.flatMap'
+    package: '@azure/batch'
+    summary: >-
+      Calls a defined callback function on each element of an array. Then,
+      flattens the result into
+
+      a new array.
+
+      This is identical to a map followed by flat with depth 1.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function flatMap<U>(callback: (this: This, value: PoolUsageMetrics,
+        index: number, array: PoolUsageMetrics[]) => U | ReadonlyArray<U>,
+        thisArg?: This)
+      parameters:
+        - id: callback
+          type: >-
+            (this: This, value: PoolUsageMetrics, index: number, array:
+            PoolUsageMetrics[]) =&gt; U | ReadonlyArray&lt;U&gt;
+          description: >-
+            A function that accepts up to three arguments. The flatMap method
+            calls the
+
+            callback function one time for each element in the array.
+        - id: thisArg
+          type: This
+          description: >
+            An object to which the this keyword can refer in the callback
+            function. If
+
+            thisArg is omitted, undefined is used as the this value.
+      return:
+        type: 'U[]'
+        description: ''
   - name: >-
       forEach((value: PoolUsageMetrics, index: number, array:
       PoolUsageMetrics[]) => void, any)
@@ -400,7 +669,7 @@ methods:
             An object to which the this keyword can refer in the callbackfn
             function. If thisArg is omitted, undefined is used as the this
             value.
-  - name: 'includes(PoolUsageMetrics, undefined | number)'
+  - name: 'includes(PoolUsageMetrics, number)'
     uid: '@azure/batch.PoolListUsageMetricsResult.includes'
     package: '@azure/batch'
     summary: >-
@@ -410,22 +679,20 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: >-
-        function includes(searchElement: PoolUsageMetrics, fromIndex?: undefined
-        | number)
+      content: 'function includes(searchElement: PoolUsageMetrics, fromIndex?: number)'
       parameters:
         - id: searchElement
           type: <xref uid="@azure/batch.PoolUsageMetrics" />
           description: The element to search for.
         - id: fromIndex
-          type: undefined | number
+          type: number
           description: >
             The position in this array at which to begin searching for
             searchElement.
       return:
         type: boolean
         description: ''
-  - name: 'indexOf(PoolUsageMetrics, undefined | number)'
+  - name: 'indexOf(PoolUsageMetrics, number)'
     uid: '@azure/batch.PoolListUsageMetricsResult.indexOf'
     package: '@azure/batch'
     summary: Returns the index of the first occurrence of a value in an array.
@@ -433,22 +700,20 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: >-
-        function indexOf(searchElement: PoolUsageMetrics, fromIndex?: undefined
-        | number)
+      content: 'function indexOf(searchElement: PoolUsageMetrics, fromIndex?: number)'
       parameters:
         - id: searchElement
           type: <xref uid="@azure/batch.PoolUsageMetrics" />
           description: The value to locate in the array.
         - id: fromIndex
-          type: undefined | number
+          type: number
           description: >
             The array index at which to begin the search. If fromIndex is
             omitted, the search starts at index 0.
       return:
         type: number
         description: ''
-  - name: join(undefined | string)
+  - name: join(string)
     uid: '@azure/batch.PoolListUsageMetricsResult.join'
     package: '@azure/batch'
     summary: >-
@@ -458,10 +723,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function join(separator?: undefined | string)'
+      content: 'function join(separator?: string)'
       parameters:
         - id: separator
-          type: undefined | string
+          type: string
           description: >
             A string used to separate one element of an array from the next in
             the resulting String. If omitted, the array elements are separated
@@ -481,7 +746,7 @@ methods:
       return:
         type: IterableIterator&lt;number&gt;
         description: ''
-  - name: 'lastIndexOf(PoolUsageMetrics, undefined | number)'
+  - name: 'lastIndexOf(PoolUsageMetrics, number)'
     uid: '@azure/batch.PoolListUsageMetricsResult.lastIndexOf'
     package: '@azure/batch'
     summary: Returns the index of the last occurrence of a specified value in an array.
@@ -491,13 +756,13 @@ methods:
     syntax:
       content: >-
         function lastIndexOf(searchElement: PoolUsageMetrics, fromIndex?:
-        undefined | number)
+        number)
       parameters:
         - id: searchElement
           type: <xref uid="@azure/batch.PoolUsageMetrics" />
           description: The value to locate in the array.
         - id: fromIndex
-          type: undefined | number
+          type: number
           description: >
             The array index at which to begin the search. If fromIndex is
             omitted, the search starts at the last index in the array.
@@ -778,7 +1043,7 @@ methods:
       return:
         type: <xref uid="@azure/batch.PoolUsageMetrics" /> | undefined
         description: ''
-  - name: 'slice(undefined | number, undefined | number)'
+  - name: 'slice(number, number)'
     uid: '@azure/batch.PoolListUsageMetricsResult.slice'
     package: '@azure/batch'
     summary: Returns a section of an array.
@@ -786,13 +1051,13 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function slice(start?: undefined | number, end?: undefined | number)'
+      content: 'function slice(start?: number, end?: number)'
       parameters:
         - id: start
-          type: undefined | number
+          type: number
           description: The beginning of the specified portion of the array.
         - id: end
-          type: undefined | number
+          type: number
           description: |
             The end of the specified portion of the array.
       return:
@@ -831,7 +1096,7 @@ methods:
       return:
         type: boolean
         description: ''
-  - name: 'sort(undefined | (a: PoolUsageMetrics, b: PoolUsageMetrics) => number)'
+  - name: 'sort((a: PoolUsageMetrics, b: PoolUsageMetrics) => number)'
     uid: '@azure/batch.PoolListUsageMetricsResult.sort'
     package: '@azure/batch'
     summary: Sorts an array.
@@ -840,17 +1105,41 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function sort(compareFn?: undefined | (a: PoolUsageMetrics, b:
-        PoolUsageMetrics) => number)
+        function sort(compareFn?: (a: PoolUsageMetrics, b: PoolUsageMetrics) =>
+        number)
       parameters:
         - id: compareFn
-          type: 'undefined | (a: PoolUsageMetrics, b: PoolUsageMetrics) =&gt; number'
+          type: '(a: PoolUsageMetrics, b: PoolUsageMetrics) =&gt; number'
           description: >
             The name of the function used to determine the order of the
             elements. If omitted, the elements are sorted in ascending, ASCII
             character order.
       return:
         type: this
+        description: ''
+  - name: 'splice(number, number)'
+    uid: '@azure/batch.PoolListUsageMetricsResult.splice'
+    package: '@azure/batch'
+    summary: >-
+      Removes elements from an array and, if necessary, inserts new elements in
+      their place, returning the deleted elements.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function splice(start: number, deleteCount?: number)'
+      parameters:
+        - id: start
+          type: number
+          description: >-
+            The zero-based location in the array from which to start removing
+            elements.
+        - id: deleteCount
+          type: number
+          description: |
+            The number of elements to remove.
+      return:
+        type: '<xref uid="@azure/batch.PoolUsageMetrics" />[]'
         description: ''
   - name: 'splice(number, number, PoolUsageMetrics[])'
     uid: '@azure/batch.PoolListUsageMetricsResult.splice_1'
@@ -878,30 +1167,6 @@ methods:
           type: '<xref uid="@azure/batch.PoolUsageMetrics" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
-      return:
-        type: '<xref uid="@azure/batch.PoolUsageMetrics" />[]'
-        description: ''
-  - name: 'splice(number, undefined | number)'
-    uid: '@azure/batch.PoolListUsageMetricsResult.splice'
-    package: '@azure/batch'
-    summary: >-
-      Removes elements from an array and, if necessary, inserts new elements in
-      their place, returning the deleted elements.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function splice(start: number, deleteCount?: undefined | number)'
-      parameters:
-        - id: start
-          type: number
-          description: >-
-            The zero-based location in the array from which to start removing
-            elements.
-        - id: deleteCount
-          type: undefined | number
-          description: |
-            The number of elements to remove.
       return:
         type: '<xref uid="@azure/batch.PoolUsageMetrics" />[]'
         description: ''

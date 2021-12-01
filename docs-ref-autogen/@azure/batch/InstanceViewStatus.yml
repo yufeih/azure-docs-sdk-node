@@ -1,0 +1,76 @@
+### YamlMime:TSType
+name: InstanceViewStatus
+uid: '@azure/batch.InstanceViewStatus'
+package: '@azure/batch'
+summary: An interface representing InstanceViewStatus.
+fullName: InstanceViewStatus
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: code
+    uid: '@azure/batch.InstanceViewStatus.code'
+    package: '@azure/batch'
+    summary: The status code.
+    fullName: code
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'code?: string'
+      return:
+        type: string
+        description: ''
+  - name: displayStatus
+    uid: '@azure/batch.InstanceViewStatus.displayStatus'
+    package: '@azure/batch'
+    summary: The localized label for the status.
+    fullName: displayStatus
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'displayStatus?: string'
+      return:
+        type: string
+        description: ''
+  - name: level
+    uid: '@azure/batch.InstanceViewStatus.level'
+    package: '@azure/batch'
+    summary: 'Level code. Possible values include: ''Error'', ''Info'', ''Warning'''
+    fullName: level
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'level?: StatusLevelTypes'
+      return:
+        type: <xref uid="@azure/batch.StatusLevelTypes" />
+        description: ''
+  - name: message
+    uid: '@azure/batch.InstanceViewStatus.message'
+    package: '@azure/batch'
+    summary: The detailed status message.
+    fullName: message
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'message?: string'
+      return:
+        type: string
+        description: ''
+  - name: time
+    uid: '@azure/batch.InstanceViewStatus.time'
+    package: '@azure/batch'
+    summary: The time of the status.
+    fullName: time
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'time?: string'
+      return:
+        type: string
+        description: ''

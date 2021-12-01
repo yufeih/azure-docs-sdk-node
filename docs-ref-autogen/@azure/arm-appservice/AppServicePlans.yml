@@ -933,7 +933,7 @@ methods:
         description: Promise<Models.AppServicePlansGetVnetFromServerFarmResponse>
   - name: >-
       getVnetFromServerFarm(string, string, string, RequestOptionsBase,
-      ServiceCallback<VnetInfo>)
+      ServiceCallback<VnetInfoResource>)
     uid: '@azure/arm-appservice.AppServicePlans.getVnetFromServerFarm_2'
     package: '@azure/arm-appservice'
     summary: ''
@@ -944,7 +944,7 @@ methods:
       content: >-
         function getVnetFromServerFarm(resourceGroupName: string, name: string,
         vnetName: string, options: RequestOptionsBase, callback:
-        ServiceCallback<VnetInfo>)
+        ServiceCallback<VnetInfoResource>)
       parameters:
         - id: resourceGroupName
           type: string
@@ -959,10 +959,14 @@ methods:
           type: RequestOptionsBase
           description: The optional parameters
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/arm-appservice.VnetInfo" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-appservice.VnetInfoResource" />&gt;
           description: |
             The callback
-  - name: 'getVnetFromServerFarm(string, string, string, ServiceCallback<VnetInfo>)'
+  - name: >-
+      getVnetFromServerFarm(string, string, string,
+      ServiceCallback<VnetInfoResource>)
     uid: '@azure/arm-appservice.AppServicePlans.getVnetFromServerFarm_1'
     package: '@azure/arm-appservice'
     summary: ''
@@ -972,7 +976,7 @@ methods:
     syntax:
       content: >-
         function getVnetFromServerFarm(resourceGroupName: string, name: string,
-        vnetName: string, callback: ServiceCallback<VnetInfo>)
+        vnetName: string, callback: ServiceCallback<VnetInfoResource>)
       parameters:
         - id: resourceGroupName
           type: string
@@ -984,7 +988,9 @@ methods:
           type: string
           description: Name of the Virtual Network.
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/arm-appservice.VnetInfo" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-appservice.VnetInfoResource" />&gt;
           description: |
             The callback
   - name: 'getVnetGateway(string, string, string, string, msRest.RequestOptionsBase)'
@@ -1628,29 +1634,8 @@ methods:
             uid="@azure/arm-appservice.HybridConnectionCollection" />&gt;
           description: |
             The callback
-  - name: 'listNext(string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-appservice.AppServicePlans.listNext'
-    package: '@azure/arm-appservice'
-    summary: Description for Get all App Service plans for a subscription.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        function listNext(nextPageLink: string, options?:
-        msRest.RequestOptionsBase)
-      parameters:
-        - id: nextPageLink
-          type: string
-          description: The NextLink from the previous successful call to List operation.
-        - id: options
-          type: <xref uid="msRest.RequestOptionsBase" />
-          description: ''
-      return:
-        type: Promise&lt;<xref uid="Models.AppServicePlansListNextResponse" />&gt;
-        description: Promise<Models.AppServicePlansListNextResponse>
   - name: >-
-      listNext(string, RequestOptionsBase,
+      listNext(string, AppServicePlansListNextOptionalParams,
       ServiceCallback<AppServicePlanCollection>)
     uid: '@azure/arm-appservice.AppServicePlans.listNext_2'
     package: '@azure/arm-appservice'
@@ -1660,14 +1645,17 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function listNext(nextPageLink: string, options: RequestOptionsBase,
-        callback: ServiceCallback<AppServicePlanCollection>)
+        function listNext(nextPageLink: string, options:
+        AppServicePlansListNextOptionalParams, callback:
+        ServiceCallback<AppServicePlanCollection>)
       parameters:
         - id: nextPageLink
           type: string
           description: The NextLink from the previous successful call to List operation.
         - id: options
-          type: RequestOptionsBase
+          type: >-
+            <xref
+            uid="@azure/arm-appservice.AppServicePlansListNextOptionalParams" />
           description: The optional parameters
         - id: callback
           type: >-
@@ -1675,6 +1663,27 @@ methods:
             uid="@azure/arm-appservice.AppServicePlanCollection" />&gt;
           description: |
             The callback
+  - name: 'listNext(string, Models.AppServicePlansListNextOptionalParams)'
+    uid: '@azure/arm-appservice.AppServicePlans.listNext'
+    package: '@azure/arm-appservice'
+    summary: Description for Get all App Service plans for a subscription.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function listNext(nextPageLink: string, options?:
+        Models.AppServicePlansListNextOptionalParams)
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: The NextLink from the previous successful call to List operation.
+        - id: options
+          type: <xref uid="Models.AppServicePlansListNextOptionalParams" />
+          description: ''
+      return:
+        type: Promise&lt;<xref uid="Models.AppServicePlansListNextResponse" />&gt;
+        description: Promise<Models.AppServicePlansListNextResponse>
   - name: 'listNext(string, ServiceCallback<AppServicePlanCollection>)'
     uid: '@azure/arm-appservice.AppServicePlans.listNext_1'
     package: '@azure/arm-appservice'
@@ -1870,31 +1879,8 @@ methods:
             uid="@azure/arm-appservice.CsmUsageQuotaCollection" />&gt;
           description: |
             The callback
-  - name: 'listUsagesNext(string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-appservice.AppServicePlans.listUsagesNext'
-    package: '@azure/arm-appservice'
-    summary: Description for Gets server farm usage information
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        function listUsagesNext(nextPageLink: string, options?:
-        msRest.RequestOptionsBase)
-      parameters:
-        - id: nextPageLink
-          type: string
-          description: The NextLink from the previous successful call to List operation.
-        - id: options
-          type: <xref uid="msRest.RequestOptionsBase" />
-          description: ''
-      return:
-        type: >-
-          Promise&lt;<xref uid="Models.AppServicePlansListUsagesNextResponse"
-          />&gt;
-        description: Promise<Models.AppServicePlansListUsagesNextResponse>
   - name: >-
-      listUsagesNext(string, RequestOptionsBase,
+      listUsagesNext(string, AppServicePlansListUsagesNextOptionalParams,
       ServiceCallback<CsmUsageQuotaCollection>)
     uid: '@azure/arm-appservice.AppServicePlans.listUsagesNext_2'
     package: '@azure/arm-appservice'
@@ -1905,13 +1891,17 @@ methods:
     syntax:
       content: >-
         function listUsagesNext(nextPageLink: string, options:
-        RequestOptionsBase, callback: ServiceCallback<CsmUsageQuotaCollection>)
+        AppServicePlansListUsagesNextOptionalParams, callback:
+        ServiceCallback<CsmUsageQuotaCollection>)
       parameters:
         - id: nextPageLink
           type: string
           description: The NextLink from the previous successful call to List operation.
         - id: options
-          type: RequestOptionsBase
+          type: >-
+            <xref
+            uid="@azure/arm-appservice.AppServicePlansListUsagesNextOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: >-
@@ -1919,6 +1909,29 @@ methods:
             uid="@azure/arm-appservice.CsmUsageQuotaCollection" />&gt;
           description: |
             The callback
+  - name: 'listUsagesNext(string, Models.AppServicePlansListUsagesNextOptionalParams)'
+    uid: '@azure/arm-appservice.AppServicePlans.listUsagesNext'
+    package: '@azure/arm-appservice'
+    summary: Description for Gets server farm usage information
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function listUsagesNext(nextPageLink: string, options?:
+        Models.AppServicePlansListUsagesNextOptionalParams)
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: The NextLink from the previous successful call to List operation.
+        - id: options
+          type: <xref uid="Models.AppServicePlansListUsagesNextOptionalParams" />
+          description: ''
+      return:
+        type: >-
+          Promise&lt;<xref uid="Models.AppServicePlansListUsagesNextResponse"
+          />&gt;
+        description: Promise<Models.AppServicePlansListUsagesNextResponse>
   - name: 'listUsagesNext(string, ServiceCallback<CsmUsageQuotaCollection>)'
     uid: '@azure/arm-appservice.AppServicePlans.listUsagesNext_1'
     package: '@azure/arm-appservice'
@@ -1966,7 +1979,9 @@ methods:
       return:
         type: Promise&lt;<xref uid="Models.AppServicePlansListVnetsResponse" />&gt;
         description: Promise<Models.AppServicePlansListVnetsResponse>
-  - name: 'listVnets(string, string, RequestOptionsBase, ServiceCallback<VnetInfo[]>)'
+  - name: >-
+      listVnets(string, string, RequestOptionsBase,
+      ServiceCallback<VnetInfoResource[]>)
     uid: '@azure/arm-appservice.AppServicePlans.listVnets_2'
     package: '@azure/arm-appservice'
     summary: ''
@@ -1976,7 +1991,7 @@ methods:
     syntax:
       content: >-
         function listVnets(resourceGroupName: string, name: string, options:
-        RequestOptionsBase, callback: ServiceCallback<VnetInfo[]>)
+        RequestOptionsBase, callback: ServiceCallback<VnetInfoResource[]>)
       parameters:
         - id: resourceGroupName
           type: string
@@ -1989,11 +2004,11 @@ methods:
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-appservice.VnetInfo"
-            />[]&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-appservice.VnetInfoResource" />[]&gt;
           description: |
             The callback
-  - name: 'listVnets(string, string, ServiceCallback<VnetInfo[]>)'
+  - name: 'listVnets(string, string, ServiceCallback<VnetInfoResource[]>)'
     uid: '@azure/arm-appservice.AppServicePlans.listVnets_1'
     package: '@azure/arm-appservice'
     summary: ''
@@ -2003,7 +2018,7 @@ methods:
     syntax:
       content: >-
         function listVnets(resourceGroupName: string, name: string, callback:
-        ServiceCallback<VnetInfo[]>)
+        ServiceCallback<VnetInfoResource[]>)
       parameters:
         - id: resourceGroupName
           type: string
@@ -2013,8 +2028,8 @@ methods:
           description: Name of the App Service plan.
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-appservice.VnetInfo"
-            />[]&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-appservice.VnetInfoResource" />[]&gt;
           description: |
             The callback
   - name: >-
@@ -2286,31 +2301,8 @@ methods:
             uid="@azure/arm-appservice.ResourceCollection" />&gt;
           description: |
             The callback
-  - name: 'listWebAppsNext(string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-appservice.AppServicePlans.listWebAppsNext'
-    package: '@azure/arm-appservice'
-    summary: Description for Get all apps associated with an App Service plan.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        function listWebAppsNext(nextPageLink: string, options?:
-        msRest.RequestOptionsBase)
-      parameters:
-        - id: nextPageLink
-          type: string
-          description: The NextLink from the previous successful call to List operation.
-        - id: options
-          type: <xref uid="msRest.RequestOptionsBase" />
-          description: ''
-      return:
-        type: >-
-          Promise&lt;<xref uid="Models.AppServicePlansListWebAppsNextResponse"
-          />&gt;
-        description: Promise<Models.AppServicePlansListWebAppsNextResponse>
   - name: >-
-      listWebAppsNext(string, RequestOptionsBase,
+      listWebAppsNext(string, AppServicePlansListWebAppsNextOptionalParams,
       ServiceCallback<WebAppCollection>)
     uid: '@azure/arm-appservice.AppServicePlans.listWebAppsNext_2'
     package: '@azure/arm-appservice'
@@ -2321,13 +2313,17 @@ methods:
     syntax:
       content: >-
         function listWebAppsNext(nextPageLink: string, options:
-        RequestOptionsBase, callback: ServiceCallback<WebAppCollection>)
+        AppServicePlansListWebAppsNextOptionalParams, callback:
+        ServiceCallback<WebAppCollection>)
       parameters:
         - id: nextPageLink
           type: string
           description: The NextLink from the previous successful call to List operation.
         - id: options
-          type: RequestOptionsBase
+          type: >-
+            <xref
+            uid="@azure/arm-appservice.AppServicePlansListWebAppsNextOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: >-
@@ -2335,6 +2331,31 @@ methods:
             uid="@azure/arm-appservice.WebAppCollection" />&gt;
           description: |
             The callback
+  - name: >-
+      listWebAppsNext(string,
+      Models.AppServicePlansListWebAppsNextOptionalParams)
+    uid: '@azure/arm-appservice.AppServicePlans.listWebAppsNext'
+    package: '@azure/arm-appservice'
+    summary: Description for Get all apps associated with an App Service plan.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function listWebAppsNext(nextPageLink: string, options?:
+        Models.AppServicePlansListWebAppsNextOptionalParams)
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: The NextLink from the previous successful call to List operation.
+        - id: options
+          type: <xref uid="Models.AppServicePlansListWebAppsNextOptionalParams" />
+          description: ''
+      return:
+        type: >-
+          Promise&lt;<xref uid="Models.AppServicePlansListWebAppsNextResponse"
+          />&gt;
+        description: Promise<Models.AppServicePlansListWebAppsNextResponse>
   - name: 'listWebAppsNext(string, ServiceCallback<WebAppCollection>)'
     uid: '@azure/arm-appservice.AppServicePlans.listWebAppsNext_1'
     package: '@azure/arm-appservice'

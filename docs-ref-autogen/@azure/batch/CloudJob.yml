@@ -67,9 +67,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'displayName?: undefined | string'
+      content: 'displayName?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: eTag
     uid: '@azure/batch.CloudJob.eTag'
@@ -90,9 +90,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'eTag?: undefined | string'
+      content: 'eTag?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: executionInfo
     uid: '@azure/batch.CloudJob.executionInfo'
@@ -123,9 +123,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'id?: undefined | string'
+      content: 'id?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: jobManagerTask
     uid: '@azure/batch.CloudJob.jobManagerTask'
@@ -193,6 +193,32 @@ properties:
       content: 'lastModified?: Date'
       return:
         type: Date
+        description: ''
+  - name: maxParallelTasks
+    uid: '@azure/batch.CloudJob.maxParallelTasks'
+    package: '@azure/batch'
+    summary: >-
+      The maximum number of tasks that can be executed in parallel for the job.
+      The value of
+
+      maxParallelTasks must be -1 or greater than 0 if specified. If not
+      specified, the default
+
+      value is -1, which means there's no limit to the number of tasks that can
+      be run at once. You
+
+      can update a job's maxParallelTasks after it has been created using the
+      update job API.
+
+      Default value: -1.
+    fullName: maxParallelTasks
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'maxParallelTasks?: number'
+      return:
+        type: number
         description: ''
   - name: metadata
     uid: '@azure/batch.CloudJob.metadata'
@@ -332,9 +358,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'priority?: undefined | number'
+      content: 'priority?: number'
       return:
-        type: undefined | number
+        type: number
         description: ''
   - name: state
     uid: '@azure/batch.CloudJob.state'
@@ -398,9 +424,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'url?: undefined | string'
+      content: 'url?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: usesTaskDependencies
     uid: '@azure/batch.CloudJob.usesTaskDependencies'
@@ -413,7 +439,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'usesTaskDependencies?: undefined | false | true'
+      content: 'usesTaskDependencies?: boolean'
       return:
-        type: undefined | false | true
+        type: boolean
         description: ''

@@ -1,0 +1,136 @@
+### YamlMime:TSType
+name: EnrollmentResultDetails
+uid: microsoft-cognitiveservices-speech-sdk.EnrollmentResultDetails
+package: microsoft-cognitiveservices-speech-sdk
+summary: ''
+fullName: EnrollmentResultDetails
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: audioLengthInSec
+    uid: >-
+      microsoft-cognitiveservices-speech-sdk.EnrollmentResultDetails.audioLengthInSec
+    package: microsoft-cognitiveservices-speech-sdk
+    summary: ''
+    fullName: audioLengthInSec
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'audioLengthInSec: number'
+      return:
+        type: number
+        description: ''
+  - name: audioSpeechLengthInSec
+    uid: >-
+      microsoft-cognitiveservices-speech-sdk.EnrollmentResultDetails.audioSpeechLengthInSec
+    package: microsoft-cognitiveservices-speech-sdk
+    summary: ''
+    fullName: audioSpeechLengthInSec
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'audioSpeechLengthInSec: number'
+      return:
+        type: number
+        description: ''
+  - name: enrollmentsCount
+    uid: >-
+      microsoft-cognitiveservices-speech-sdk.EnrollmentResultDetails.enrollmentsCount
+    package: microsoft-cognitiveservices-speech-sdk
+    summary: ''
+    fullName: enrollmentsCount
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'enrollmentsCount: number'
+      return:
+        type: number
+        description: ''
+  - name: enrollmentsLengthInSec
+    uid: >-
+      microsoft-cognitiveservices-speech-sdk.EnrollmentResultDetails.enrollmentsLengthInSec
+    package: microsoft-cognitiveservices-speech-sdk
+    summary: ''
+    fullName: enrollmentsLengthInSec
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'enrollmentsLengthInSec: number'
+      return:
+        type: number
+        description: ''
+  - name: enrollmentsSpeechLengthInSec
+    uid: >-
+      microsoft-cognitiveservices-speech-sdk.EnrollmentResultDetails.enrollmentsSpeechLengthInSec
+    package: microsoft-cognitiveservices-speech-sdk
+    summary: ''
+    fullName: enrollmentsSpeechLengthInSec
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'enrollmentsSpeechLengthInSec: number'
+      return:
+        type: number
+        description: ''
+  - name: enrollmentStatus
+    uid: >-
+      microsoft-cognitiveservices-speech-sdk.EnrollmentResultDetails.enrollmentStatus
+    package: microsoft-cognitiveservices-speech-sdk
+    summary: ''
+    fullName: enrollmentStatus
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'enrollmentStatus: string'
+      return:
+        type: string
+        description: ''
+  - name: profileId
+    uid: microsoft-cognitiveservices-speech-sdk.EnrollmentResultDetails.profileId
+    package: microsoft-cognitiveservices-speech-sdk
+    summary: ''
+    fullName: profileId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'profileId: string'
+      return:
+        type: string
+        description: ''
+  - name: remainingEnrollmentsCount
+    uid: >-
+      microsoft-cognitiveservices-speech-sdk.EnrollmentResultDetails.remainingEnrollmentsCount
+    package: microsoft-cognitiveservices-speech-sdk
+    summary: ''
+    fullName: remainingEnrollmentsCount
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'remainingEnrollmentsCount: number'
+      return:
+        type: number
+        description: ''
+  - name: remainingEnrollmentsSpeechLengthInSec
+    uid: >-
+      microsoft-cognitiveservices-speech-sdk.EnrollmentResultDetails.remainingEnrollmentsSpeechLengthInSec
+    package: microsoft-cognitiveservices-speech-sdk
+    summary: ''
+    fullName: remainingEnrollmentsSpeechLengthInSec
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'remainingEnrollmentsSpeechLengthInSec: number'
+      return:
+        type: number
+        description: ''

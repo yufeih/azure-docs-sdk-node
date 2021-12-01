@@ -13,7 +13,7 @@ properties:
     uid: '@azure/arm-compute.GalleryArtifactPublishingProfileBase.endOfLifeDate'
     package: '@azure/arm-compute'
     summary: >-
-      The end of life date of the gallery Image Version. This property can be
+      The end of life date of the gallery image version. This property can be
       used for
 
       decommissioning purposes. This property is updatable.
@@ -47,7 +47,7 @@ properties:
     uid: '@azure/arm-compute.GalleryArtifactPublishingProfileBase.publishedDate'
     package: '@azure/arm-compute'
     summary: >-
-      The timestamp for when the gallery Image Version is published.
+      The timestamp for when the gallery image version is published.
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -77,6 +77,23 @@ properties:
       content: 'replicaCount?: undefined | number'
       return:
         type: undefined | number
+        description: ''
+  - name: replicationMode
+    uid: '@azure/arm-compute.GalleryArtifactPublishingProfileBase.replicationMode'
+    package: '@azure/arm-compute'
+    summary: >-
+      Optional parameter which specifies the mode to be used for replication.
+      This property is not
+
+      updatable. Possible values include: 'Full', 'Shallow'
+    fullName: replicationMode
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'replicationMode?: ReplicationMode'
+      return:
+        type: <xref uid="@azure/arm-compute.ReplicationMode" />
         description: ''
   - name: storageAccountType
     uid: '@azure/arm-compute.GalleryArtifactPublishingProfileBase.storageAccountType'

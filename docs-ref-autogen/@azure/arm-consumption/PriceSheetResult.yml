@@ -2,17 +2,55 @@
 name: PriceSheetResult
 uid: '@azure/arm-consumption.PriceSheetResult'
 package: '@azure/arm-consumption'
-summary: ''
+summary: An pricesheet resource.
 fullName: PriceSheetResult
 remarks: ''
 isPreview: false
 isDeprecated: false
 type: interface
 properties:
+  - name: download
+    uid: '@azure/arm-consumption.PriceSheetResult.download'
+    package: '@azure/arm-consumption'
+    summary: >-
+      Pricesheet download details.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: download
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'download?: MeterDetails'
+      return:
+        type: <xref uid="@azure/arm-consumption.MeterDetails" />
+        description: ''
+  - name: etag
+    uid: '@azure/arm-consumption.PriceSheetResult.etag'
+    package: '@azure/arm-consumption'
+    summary: >-
+      Resource etag.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: etag
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'etag?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''
   - name: id
     uid: '@azure/arm-consumption.PriceSheetResult.id'
     package: '@azure/arm-consumption'
-    summary: ''
+    summary: >-
+      Resource Id.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: id
     remarks: ''
     isPreview: false
@@ -25,7 +63,11 @@ properties:
   - name: name
     uid: '@azure/arm-consumption.PriceSheetResult.name'
     package: '@azure/arm-consumption'
-    summary: ''
+    summary: >-
+      Resource name.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: name
     remarks: ''
     isPreview: false
@@ -38,7 +80,11 @@ properties:
   - name: nextLink
     uid: '@azure/arm-consumption.PriceSheetResult.nextLink'
     package: '@azure/arm-consumption'
-    summary: ''
+    summary: >-
+      The link (url) to the next page of results.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: nextLink
     remarks: ''
     isPreview: false
@@ -51,7 +97,11 @@ properties:
   - name: pricesheets
     uid: '@azure/arm-consumption.PriceSheetResult.pricesheets'
     package: '@azure/arm-consumption'
-    summary: ''
+    summary: >-
+      Price sheet
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: pricesheets
     remarks: ''
     isPreview: false
@@ -64,7 +114,11 @@ properties:
   - name: tags
     uid: '@azure/arm-consumption.PriceSheetResult.tags'
     package: '@azure/arm-consumption'
-    summary: ''
+    summary: >-
+      Resource tags.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: tags
     remarks: ''
     isPreview: false
@@ -77,7 +131,11 @@ properties:
   - name: type
     uid: '@azure/arm-consumption.PriceSheetResult.type'
     package: '@azure/arm-consumption'
-    summary: ''
+    summary: >-
+      Resource type.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: type
     remarks: ''
     isPreview: false

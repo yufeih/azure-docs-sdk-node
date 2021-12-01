@@ -15,6 +15,7 @@ interfaces:
   - '@azure/arm-iotcentral.AppPatch'
   - '@azure/arm-iotcentral.AppSkuInfo'
   - '@azure/arm-iotcentral.AppTemplate'
+  - '@azure/arm-iotcentral.AppTemplateLocations'
   - '@azure/arm-iotcentral.AppTemplatesResult'
   - '@azure/arm-iotcentral.CloudErrorBody'
   - '@azure/arm-iotcentral.IotCentralClientOptions'
@@ -23,8 +24,10 @@ interfaces:
   - '@azure/arm-iotcentral.OperationInputs'
   - '@azure/arm-iotcentral.OperationListResult'
   - '@azure/arm-iotcentral.Resource'
+  - '@azure/arm-iotcentral.SystemAssignedServiceIdentity'
 typeAliases:
   - '@azure/arm-iotcentral.AppSku'
+  - '@azure/arm-iotcentral.AppState'
   - '@azure/arm-iotcentral.AppsBeginCreateOrUpdateResponse'
   - '@azure/arm-iotcentral.AppsBeginUpdateResponse'
   - '@azure/arm-iotcentral.AppsCheckNameAvailabilityResponse'
@@ -40,3 +43,4 @@ typeAliases:
   - '@azure/arm-iotcentral.AppsUpdateResponse'
   - '@azure/arm-iotcentral.OperationsListNextResponse'
   - '@azure/arm-iotcentral.OperationsListResponse'
+  - '@azure/arm-iotcentral.SystemAssignedServiceIdentityType'

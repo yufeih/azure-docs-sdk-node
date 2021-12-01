@@ -65,31 +65,3 @@ properties:
           undefined | [key: string]: <xref
           uid="@azure/arm-hdinsight.VersionsCapability" />
         description: ''
-  - name: vmSizeFilters
-    uid: '@azure/arm-hdinsight.CapabilitiesResult.vmSizeFilters'
-    package: '@azure/arm-hdinsight'
-    summary: The virtual machine size compatibility filters.
-    fullName: vmSizeFilters
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'vmSizeFilters?: VmSizeCompatibilityFilter[]'
-      return:
-        type: '<xref uid="@azure/arm-hdinsight.VmSizeCompatibilityFilter" />[]'
-        description: ''
-  - name: vmSizes
-    uid: '@azure/arm-hdinsight.CapabilitiesResult.vmSizes'
-    package: '@azure/arm-hdinsight'
-    summary: The virtual machine sizes.
-    fullName: vmSizes
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'vmSizes?: undefined | [key: string]: VmSizesCapability'
-      return:
-        type: >-
-          undefined | [key: string]: <xref
-          uid="@azure/arm-hdinsight.VmSizesCapability" />
-        description: ''

@@ -2,8 +2,8 @@
 name: AuthResponse
 uid: '@azure/ms-rest-nodeauth.AuthResponse'
 package: '@azure/ms-rest-nodeauth'
-summary: ''
-fullName: AuthResponse
+summary: Describes the authentication response.
+fullName: AuthResponse<T>
 remarks: ''
 isPreview: false
 isDeprecated: false
@@ -12,23 +12,23 @@ properties:
   - name: credentials
     uid: '@azure/ms-rest-nodeauth.AuthResponse.credentials'
     package: '@azure/ms-rest-nodeauth'
-    summary: '@property {TokenCredentialsBase} credentials - The credentials object.'
+    summary: The credentials object.
     fullName: credentials
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'credentials: TokenCredentialsBase'
+      content: 'credentials: T'
       return:
-        type: <xref uid="@azure/ms-rest-nodeauth.TokenCredentialsBase" />
+        type: T
         description: ''
   - name: subscriptions
     uid: '@azure/ms-rest-nodeauth.AuthResponse.subscriptions'
     package: '@azure/ms-rest-nodeauth'
     summary: >-
-      {Array<LinkedSubscription>} [subscriptions] List of associated
-      subscriptions. It will be empty for personal accounts, unless the login
-      method is called with a tenant Id sent as the `domain` optional parameter.
+      List of associated subscriptions. It will be empty for personal accounts,
+      unless the login method is called with a tenant Id sent as the `domain`
+      optional parameter.
     fullName: subscriptions
     remarks: ''
     isPreview: false

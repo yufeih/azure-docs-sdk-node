@@ -100,9 +100,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'recurrenceInterval?: undefined | string'
+      content: 'recurrenceInterval?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: startWindow
     uid: '@azure/batch.Schedule.startWindow'
@@ -138,7 +138,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'startWindow?: undefined | string'
+      content: 'startWindow?: string'
       return:
-        type: undefined | string
+        type: string
         description: ''

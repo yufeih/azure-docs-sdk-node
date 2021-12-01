@@ -25,6 +25,20 @@ properties:
       return:
         type: <xref uid="@azure/arm-recoveryservicesbackup.EnhancedSecurityState" />
         description: ''
+  - name: resourceGuardOperationRequests
+    uid: >-
+      @azure/arm-recoveryservicesbackup.BackupResourceVaultConfig.resourceGuardOperationRequests
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: ResourceGuard Operation Requests
+    fullName: resourceGuardOperationRequests
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'resourceGuardOperationRequests?: string[]'
+      return:
+        type: 'string[]'
+        description: ''
   - name: softDeleteFeatureState
     uid: >-
       @azure/arm-recoveryservicesbackup.BackupResourceVaultConfig.softDeleteFeatureState
@@ -49,7 +63,9 @@ properties:
     package: '@azure/arm-recoveryservicesbackup'
     summary: >-
       Storage type. Possible values include: 'Invalid', 'GeoRedundant',
-      'LocallyRedundant'
+      'LocallyRedundant',
+
+      'ZoneRedundant', 'ReadAccessGeoZoneRedundant'
     fullName: storageModelType
     remarks: ''
     isPreview: false
@@ -64,7 +80,9 @@ properties:
     package: '@azure/arm-recoveryservicesbackup'
     summary: >-
       Storage type. Possible values include: 'Invalid', 'GeoRedundant',
-      'LocallyRedundant'
+      'LocallyRedundant',
+
+      'ZoneRedundant', 'ReadAccessGeoZoneRedundant'
     fullName: storageType
     remarks: ''
     isPreview: false
