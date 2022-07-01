@@ -7,6 +7,8 @@ fullName: ScriptPackage
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
-  type ScriptPackage = ProxyResource & { description?: undefined | string,
-  version?: undefined | string }
+syntax: |
+  type ScriptPackage = ProxyResource & {
+    description?: undefined | string,
+    version?: undefined | string,
+  }

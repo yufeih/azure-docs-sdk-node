@@ -7,6 +7,8 @@ fullName: CloudLink
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
-  type CloudLink = Resource & { linkedCloud?: undefined | string, status?:
-  CloudLinkStatus }
+syntax: |
+  type CloudLink = Resource & {
+    linkedCloud?: undefined | string,
+    status?: CloudLinkStatus,
+  }

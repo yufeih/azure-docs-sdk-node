@@ -7,9 +7,14 @@ fullName: WorkloadNetworkDnsService
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
-  type WorkloadNetworkDnsService = ProxyResource & { defaultDnsZone?: undefined
-  | string, displayName?: undefined | string, dnsServiceIp?: undefined | string,
-  fqdnZones?: string[], logLevel?: DnsServiceLogLevelEnum, provisioningState?:
-  WorkloadNetworkDnsServiceProvisioningState, revision?: undefined | number,
-  status?: DnsServiceStatusEnum }
+syntax: |
+  type WorkloadNetworkDnsService = ProxyResource & {
+    defaultDnsZone?: undefined | string,
+    displayName?: undefined | string,
+    dnsServiceIp?: undefined | string,
+    fqdnZones?: string[],
+    logLevel?: DnsServiceLogLevelEnum,
+    provisioningState?: WorkloadNetworkDnsServiceProvisioningState,
+    revision?: undefined | number,
+    status?: DnsServiceStatusEnum,
+  }

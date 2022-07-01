@@ -7,6 +7,8 @@ fullName: ScriptSecureStringExecutionParameter
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
+syntax: |
   type ScriptSecureStringExecutionParameter = ScriptExecutionParameter & {
-  secureValue?: undefined | string, type: "SecureValue" }
+    secureValue?: undefined | string,
+    type: "SecureValue",
+  }

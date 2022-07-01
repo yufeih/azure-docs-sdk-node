@@ -7,6 +7,8 @@ fullName: HcxEnterpriseSite
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
-  type HcxEnterpriseSite = Resource & { activationKey?: undefined | string,
-  status?: HcxEnterpriseSiteStatus }
+syntax: |
+  type HcxEnterpriseSite = Resource & {
+    activationKey?: undefined | string,
+    status?: HcxEnterpriseSiteStatus,
+  }

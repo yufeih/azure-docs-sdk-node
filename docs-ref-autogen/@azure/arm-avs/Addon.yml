@@ -7,4 +7,5 @@ fullName: Addon
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: 'type Addon = Resource & { properties?: AddonPropertiesUnion }'
+syntax: |
+  type Addon = Resource & { properties?: AddonPropertiesUnion }

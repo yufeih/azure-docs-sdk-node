@@ -7,7 +7,10 @@ fullName: JoinRequestDetails
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
-  type JoinRequestDetails = Resource & { email?: undefined | string, firstName?:
-  undefined | string, lastName?: undefined | string, status?: JoinRequestStatus
+syntax: |
+  type JoinRequestDetails = Resource & {
+    email?: undefined | string,
+    firstName?: undefined | string,
+    lastName?: undefined | string,
+    status?: JoinRequestStatus,
   }

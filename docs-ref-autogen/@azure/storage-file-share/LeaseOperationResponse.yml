@@ -11,6 +11,7 @@ fullName: LeaseOperationResponse
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
-  type LeaseOperationResponse = LeaseOperationResponseHeaders & { _response:
-  HttpResponse & { parsedHeaders: LeaseOperationResponseHeaders } }
+syntax: |
+  type LeaseOperationResponse = LeaseOperationResponseHeaders & {
+    _response: HttpResponse & { parsedHeaders: LeaseOperationResponseHeaders },
+  }

@@ -7,7 +7,12 @@ fullName: GrantDetails
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
-  type GrantDetails = Resource & { allocatedBudget?: Amount, effectiveDate?:
-  Date, expirationDate?: Date, offerCap?: Amount, offerType?: GrantType,
-  status?: GrantStatus }
+syntax: |
+  type GrantDetails = Resource & {
+    allocatedBudget?: Amount,
+    effectiveDate?: Date,
+    expirationDate?: Date,
+    offerCap?: Amount,
+    offerType?: GrantType,
+    status?: GrantStatus,
+  }

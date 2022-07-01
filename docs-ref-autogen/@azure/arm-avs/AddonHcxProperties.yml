@@ -7,6 +7,6 @@ fullName: AddonHcxProperties
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
+syntax: >
   type AddonHcxProperties = AddonProperties & { addonType: "HCX", offer: string
   }

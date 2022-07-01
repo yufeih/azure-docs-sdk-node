@@ -7,8 +7,10 @@ fullName: ExpressRouteAuthorization
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
-  type ExpressRouteAuthorization = Resource & { expressRouteAuthorizationId?:
-  undefined | string, expressRouteAuthorizationKey?: undefined | string,
-  expressRouteId?: undefined | string, provisioningState?:
-  ExpressRouteAuthorizationProvisioningState }
+syntax: |
+  type ExpressRouteAuthorization = Resource & {
+    expressRouteAuthorizationId?: undefined | string,
+    expressRouteAuthorizationKey?: undefined | string,
+    expressRouteId?: undefined | string,
+    provisioningState?: ExpressRouteAuthorizationProvisioningState,
+  }

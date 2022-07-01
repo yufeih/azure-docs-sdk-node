@@ -7,7 +7,10 @@ fullName: VirtualMachine
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
-  type VirtualMachine = ProxyResource & { displayName?: undefined | string,
-  folderPath?: undefined | string, moRefId?: undefined | string,
-  restrictMovement?: VirtualMachineRestrictMovementState }
+syntax: |
+  type VirtualMachine = ProxyResource & {
+    displayName?: undefined | string,
+    folderPath?: undefined | string,
+    moRefId?: undefined | string,
+    restrictMovement?: VirtualMachineRestrictMovementState,
+  }

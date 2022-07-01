@@ -7,9 +7,12 @@ fullName: GlobalReachConnection
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
-  type GlobalReachConnection = Resource & { addressPrefix?: undefined | string,
-  authorizationKey?: undefined | string, circuitConnectionStatus?:
-  GlobalReachConnectionStatus, expressRouteId?: undefined | string,
-  peerExpressRouteCircuit?: undefined | string, provisioningState?:
-  GlobalReachConnectionProvisioningState }
+syntax: |
+  type GlobalReachConnection = Resource & {
+    addressPrefix?: undefined | string,
+    authorizationKey?: undefined | string,
+    circuitConnectionStatus?: GlobalReachConnectionStatus,
+    expressRouteId?: undefined | string,
+    peerExpressRouteCircuit?: undefined | string,
+    provisioningState?: GlobalReachConnectionProvisioningState,
+  }
