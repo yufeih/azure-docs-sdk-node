@@ -7,7 +7,6 @@ fullName: MTPDataConnectorProperties
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type MTPDataConnectorProperties = DataConnectorTenantId & {
-    dataTypes: MTPDataConnectorDataTypes,
-  }
+syntax: >-
+  type MTPDataConnectorProperties = DataConnectorTenantId & { dataTypes:
+  MTPDataConnectorDataTypes }

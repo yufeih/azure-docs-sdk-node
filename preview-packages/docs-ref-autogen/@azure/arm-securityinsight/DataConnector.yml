@@ -7,5 +7,4 @@ fullName: DataConnector
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type DataConnector = ResourceWithEtag & { kind: DataConnectorKind }
+syntax: 'type DataConnector = ResourceWithEtag & { kind: DataConnectorKind }'

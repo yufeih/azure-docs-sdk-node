@@ -7,5 +7,4 @@ fullName: ActionRequestProperties
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type ActionRequestProperties = ActionPropertiesBase & { triggerUri: string }
+syntax: 'type ActionRequestProperties = ActionPropertiesBase & { triggerUri: string }'

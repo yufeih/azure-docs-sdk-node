@@ -7,8 +7,6 @@ fullName: AADDataConnector
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type AADDataConnector = DataConnector & {
-    dataTypes?: AlertsDataTypeOfDataConnector,
-    tenantId?: undefined | string,
-  }
+syntax: >-
+  type AADDataConnector = DataConnector & { dataTypes?:
+  AlertsDataTypeOfDataConnector, tenantId?: undefined | string }

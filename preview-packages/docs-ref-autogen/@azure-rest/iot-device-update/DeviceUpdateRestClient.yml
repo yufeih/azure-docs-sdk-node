@@ -7,5 +7,4 @@ fullName: DeviceUpdateRestClient
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type DeviceUpdateRestClient = Client & { path: Routes }
+syntax: 'type DeviceUpdateRestClient = Client & { path: Routes }'

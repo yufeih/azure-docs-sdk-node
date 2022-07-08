@@ -7,8 +7,6 @@ fullName: TiTaxiiCheckRequirements
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type TiTaxiiCheckRequirements = DataConnectorsCheckRequirements & {
-    kind: "ThreatIntelligenceTaxii",
-    tenantId?: undefined | string,
-  }
+syntax: >-
+  type TiTaxiiCheckRequirements = DataConnectorsCheckRequirements & { kind:
+  "ThreatIntelligenceTaxii", tenantId?: undefined | string }

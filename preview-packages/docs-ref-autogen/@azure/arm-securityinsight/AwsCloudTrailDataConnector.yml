@@ -7,8 +7,6 @@ fullName: AwsCloudTrailDataConnector
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type AwsCloudTrailDataConnector = DataConnector & {
-    awsRoleArn?: undefined | string,
-    dataTypes?: AwsCloudTrailDataConnectorDataTypes,
-  }
+syntax: >-
+  type AwsCloudTrailDataConnector = DataConnector & { awsRoleArn?: undefined |
+  string, dataTypes?: AwsCloudTrailDataConnectorDataTypes }

@@ -7,11 +7,8 @@ fullName: WorkloadNetworkVMGroup
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type WorkloadNetworkVMGroup = ProxyResource & {
-    displayName?: undefined | string,
-    members?: string[],
-    provisioningState?: WorkloadNetworkVMGroupProvisioningState,
-    revision?: undefined | number,
-    status?: VMGroupStatusEnum,
-  }
+syntax: >-
+  type WorkloadNetworkVMGroup = ProxyResource & { displayName?: undefined |
+  string, members?: string[], provisioningState?:
+  WorkloadNetworkVMGroupProvisioningState, revision?: undefined | number,
+  status?: VMGroupStatusEnum }

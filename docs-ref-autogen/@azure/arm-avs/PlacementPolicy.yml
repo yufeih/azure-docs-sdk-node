@@ -7,7 +7,6 @@ fullName: PlacementPolicy
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type PlacementPolicy = Resource & {
-    properties?: PlacementPolicyPropertiesUnion,
-  }
+syntax: >-
+  type PlacementPolicy = Resource & { properties?:
+  PlacementPolicyPropertiesUnion }

@@ -7,8 +7,6 @@ fullName: WorkloadNetworkDhcpRelay
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type WorkloadNetworkDhcpRelay = WorkloadNetworkDhcpEntity & {
-    dhcpType: "RELAY",
-    serverAddresses?: string[],
-  }
+syntax: >-
+  type WorkloadNetworkDhcpRelay = WorkloadNetworkDhcpEntity & { dhcpType:
+  "RELAY", serverAddresses?: string[] }

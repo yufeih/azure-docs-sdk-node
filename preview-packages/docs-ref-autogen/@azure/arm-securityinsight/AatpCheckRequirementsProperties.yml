@@ -7,5 +7,4 @@ fullName: AatpCheckRequirementsProperties
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type AatpCheckRequirementsProperties = DataConnectorTenantId & __type
+syntax: type AatpCheckRequirementsProperties = DataConnectorTenantId & __type

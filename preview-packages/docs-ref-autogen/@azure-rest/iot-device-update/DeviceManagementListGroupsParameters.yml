@@ -7,5 +7,4 @@ fullName: DeviceManagementListGroupsParameters
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type DeviceManagementListGroupsParameters = RequestParameters
+syntax: type DeviceManagementListGroupsParameters = RequestParameters

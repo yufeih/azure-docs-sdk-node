@@ -7,5 +7,4 @@ fullName: EntityQuery
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type EntityQuery = ResourceWithEtag & { kind: EntityQueryKind }
+syntax: 'type EntityQuery = ResourceWithEtag & { kind: EntityQueryKind }'

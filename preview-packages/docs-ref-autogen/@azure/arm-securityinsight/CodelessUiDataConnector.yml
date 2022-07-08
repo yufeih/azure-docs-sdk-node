@@ -7,7 +7,6 @@ fullName: CodelessUiDataConnector
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type CodelessUiDataConnector = DataConnector & {
-    connectorUiConfig?: CodelessUiConnectorConfigProperties,
-  }
+syntax: >-
+  type CodelessUiDataConnector = DataConnector & { connectorUiConfig?:
+  CodelessUiConnectorConfigProperties }

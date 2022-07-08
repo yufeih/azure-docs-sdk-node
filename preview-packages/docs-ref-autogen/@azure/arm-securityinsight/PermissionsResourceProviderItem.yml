@@ -7,5 +7,4 @@ fullName: PermissionsResourceProviderItem
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type PermissionsResourceProviderItem = ResourceProvider & __type
+syntax: type PermissionsResourceProviderItem = ResourceProvider & __type

@@ -23,5 +23,4 @@ fullName: KeyCurveName
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type KeyCurveName = string
+syntax: type KeyCurveName = string

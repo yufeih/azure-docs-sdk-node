@@ -7,5 +7,4 @@ fullName: AlertRuleTemplate
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type AlertRuleTemplate = Resource & { kind: AlertRuleKind }
+syntax: 'type AlertRuleTemplate = Resource & { kind: AlertRuleKind }'

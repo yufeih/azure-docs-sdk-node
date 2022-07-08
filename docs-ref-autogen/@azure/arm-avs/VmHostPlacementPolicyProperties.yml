@@ -7,10 +7,7 @@ fullName: VmHostPlacementPolicyProperties
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
+syntax: >-
   type VmHostPlacementPolicyProperties = PlacementPolicyProperties & {
-    affinityType: AffinityType,
-    hostMembers: string[],
-    type: "VmHost",
-    vmMembers: string[],
-  }
+  affinityType: AffinityType, hostMembers: string[], type: "VmHost", vmMembers:
+  string[] }

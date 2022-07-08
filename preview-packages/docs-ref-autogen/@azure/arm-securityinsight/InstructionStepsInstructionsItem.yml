@@ -7,5 +7,4 @@ fullName: InstructionStepsInstructionsItem
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type InstructionStepsInstructionsItem = ConnectorInstructionModelBase & __type
+syntax: type InstructionStepsInstructionsItem = ConnectorInstructionModelBase & __type

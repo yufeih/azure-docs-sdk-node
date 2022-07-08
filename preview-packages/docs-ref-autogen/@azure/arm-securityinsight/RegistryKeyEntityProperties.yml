@@ -7,8 +7,6 @@ fullName: RegistryKeyEntityProperties
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type RegistryKeyEntityProperties = EntityCommonProperties & {
-    hive?: RegistryHive,
-    key?: undefined | string,
-  }
+syntax: >-
+  type RegistryKeyEntityProperties = EntityCommonProperties & { hive?:
+  RegistryHive, key?: undefined | string }

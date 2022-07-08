@@ -7,8 +7,6 @@ fullName: ActionResponse
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type ActionResponse = ResourceWithEtag & {
-    logicAppResourceId?: undefined | string,
-    workflowId?: undefined | string,
-  }
+syntax: >-
+  type ActionResponse = ResourceWithEtag & { logicAppResourceId?: undefined |
+  string, workflowId?: undefined | string }

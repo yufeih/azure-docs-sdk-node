@@ -9,8 +9,6 @@ fullName: OfficeIRMCheckRequirements
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type OfficeIRMCheckRequirements = DataConnectorsCheckRequirements & {
-    kind: "OfficeIRM",
-    tenantId?: undefined | string,
-  }
+syntax: >-
+  type OfficeIRMCheckRequirements = DataConnectorsCheckRequirements & { kind:
+  "OfficeIRM", tenantId?: undefined | string }

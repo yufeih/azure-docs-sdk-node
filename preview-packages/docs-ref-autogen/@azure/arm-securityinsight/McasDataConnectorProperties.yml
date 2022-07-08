@@ -7,7 +7,6 @@ fullName: McasDataConnectorProperties
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type McasDataConnectorProperties = DataConnectorTenantId & {
-    dataTypes: McasDataConnectorDataTypes,
-  }
+syntax: >-
+  type McasDataConnectorProperties = DataConnectorTenantId & { dataTypes:
+  McasDataConnectorDataTypes }

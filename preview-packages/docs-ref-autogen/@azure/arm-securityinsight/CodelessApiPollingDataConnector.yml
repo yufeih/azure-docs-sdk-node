@@ -7,8 +7,7 @@ fullName: CodelessApiPollingDataConnector
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type CodelessApiPollingDataConnector = DataConnector & {
-    connectorUiConfig?: CodelessUiConnectorConfigProperties,
-    pollingConfig?: CodelessConnectorPollingConfigProperties,
-  }
+syntax: >-
+  type CodelessApiPollingDataConnector = DataConnector & { connectorUiConfig?:
+  CodelessUiConnectorConfigProperties, pollingConfig?:
+  CodelessConnectorPollingConfigProperties }

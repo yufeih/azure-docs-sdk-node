@@ -7,13 +7,9 @@ fullName: WorkloadNetworkPortMirroring
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type WorkloadNetworkPortMirroring = ProxyResource & {
-    destination?: undefined | string,
-    direction?: PortMirroringDirectionEnum,
-    displayName?: undefined | string,
-    provisioningState?: WorkloadNetworkPortMirroringProvisioningState,
-    revision?: undefined | number,
-    source?: undefined | string,
-    status?: PortMirroringStatusEnum,
-  }
+syntax: >-
+  type WorkloadNetworkPortMirroring = ProxyResource & { destination?: undefined
+  | string, direction?: PortMirroringDirectionEnum, displayName?: undefined |
+  string, provisioningState?: WorkloadNetworkPortMirroringProvisioningState,
+  revision?: undefined | number, source?: undefined | string, status?:
+  PortMirroringStatusEnum }

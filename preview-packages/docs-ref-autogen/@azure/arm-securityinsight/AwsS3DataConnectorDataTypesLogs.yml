@@ -7,5 +7,4 @@ fullName: AwsS3DataConnectorDataTypesLogs
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type AwsS3DataConnectorDataTypesLogs = DataConnectorDataTypeCommon & __type
+syntax: type AwsS3DataConnectorDataTypesLogs = DataConnectorDataTypeCommon & __type

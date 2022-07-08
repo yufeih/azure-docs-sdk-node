@@ -7,13 +7,9 @@ fullName: WorkloadNetworkSegment
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type WorkloadNetworkSegment = ProxyResource & {
-    connectedGateway?: undefined | string,
-    displayName?: undefined | string,
-    portVif?: WorkloadNetworkSegmentPortVif[],
-    provisioningState?: WorkloadNetworkSegmentProvisioningState,
-    revision?: undefined | number,
-    status?: SegmentStatusEnum,
-    subnet?: WorkloadNetworkSegmentSubnet,
-  }
+syntax: >-
+  type WorkloadNetworkSegment = ProxyResource & { connectedGateway?: undefined |
+  string, displayName?: undefined | string, portVif?:
+  WorkloadNetworkSegmentPortVif[], provisioningState?:
+  WorkloadNetworkSegmentProvisioningState, revision?: undefined | number,
+  status?: SegmentStatusEnum, subnet?: WorkloadNetworkSegmentSubnet }

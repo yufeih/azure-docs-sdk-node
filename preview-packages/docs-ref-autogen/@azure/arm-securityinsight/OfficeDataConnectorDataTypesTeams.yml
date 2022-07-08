@@ -7,5 +7,4 @@ fullName: OfficeDataConnectorDataTypesTeams
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type OfficeDataConnectorDataTypesTeams = DataConnectorDataTypeCommon & __type
+syntax: type OfficeDataConnectorDataTypesTeams = DataConnectorDataTypeCommon & __type

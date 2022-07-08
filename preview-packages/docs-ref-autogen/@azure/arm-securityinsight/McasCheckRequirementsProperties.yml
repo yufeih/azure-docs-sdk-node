@@ -7,5 +7,4 @@ fullName: McasCheckRequirementsProperties
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type McasCheckRequirementsProperties = DataConnectorTenantId & __type
+syntax: type McasCheckRequirementsProperties = DataConnectorTenantId & __type

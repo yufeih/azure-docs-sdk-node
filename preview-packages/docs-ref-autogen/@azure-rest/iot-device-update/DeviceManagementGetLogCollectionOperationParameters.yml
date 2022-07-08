@@ -8,5 +8,4 @@ fullName: DeviceManagementGetLogCollectionOperationParameters
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type DeviceManagementGetLogCollectionOperationParameters = RequestParameters
+syntax: type DeviceManagementGetLogCollectionOperationParameters = RequestParameters

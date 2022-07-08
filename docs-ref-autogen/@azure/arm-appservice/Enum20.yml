@@ -23,5 +23,4 @@ fullName: Enum20
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type Enum20 = string
+syntax: type Enum20 = string

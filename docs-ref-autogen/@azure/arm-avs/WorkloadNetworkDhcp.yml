@@ -7,7 +7,6 @@ fullName: WorkloadNetworkDhcp
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type WorkloadNetworkDhcp = ProxyResource & {
-    properties?: WorkloadNetworkDhcpEntityUnion,
-  }
+syntax: >-
+  type WorkloadNetworkDhcp = ProxyResource & { properties?:
+  WorkloadNetworkDhcpEntityUnion }

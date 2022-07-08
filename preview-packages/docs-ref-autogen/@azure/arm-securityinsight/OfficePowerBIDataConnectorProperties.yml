@@ -7,7 +7,6 @@ fullName: OfficePowerBIDataConnectorProperties
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
+syntax: >-
   type OfficePowerBIDataConnectorProperties = DataConnectorTenantId & {
-    dataTypes: OfficePowerBIConnectorDataTypes,
-  }
+  dataTypes: OfficePowerBIConnectorDataTypes }

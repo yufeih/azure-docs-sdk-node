@@ -7,7 +7,6 @@ fullName: Dynamics365DataConnectorProperties
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type Dynamics365DataConnectorProperties = DataConnectorTenantId & {
-    dataTypes: Dynamics365DataConnectorDataTypes,
-  }
+syntax: >-
+  type Dynamics365DataConnectorProperties = DataConnectorTenantId & { dataTypes:
+  Dynamics365DataConnectorDataTypes }

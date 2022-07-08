@@ -7,5 +7,4 @@ fullName: Ueba
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type Ueba = Settings & { dataSources?: UebaDataSources[] }
+syntax: 'type Ueba = Settings & { dataSources?: UebaDataSources[] }'

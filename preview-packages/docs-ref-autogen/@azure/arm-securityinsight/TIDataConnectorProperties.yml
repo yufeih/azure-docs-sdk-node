@@ -7,8 +7,6 @@ fullName: TIDataConnectorProperties
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type TIDataConnectorProperties = DataConnectorTenantId & {
-    dataTypes: TIDataConnectorDataTypes,
-    tipLookbackPeriod?: Date,
-  }
+syntax: >-
+  type TIDataConnectorProperties = DataConnectorTenantId & { dataTypes:
+  TIDataConnectorDataTypes, tipLookbackPeriod?: Date }

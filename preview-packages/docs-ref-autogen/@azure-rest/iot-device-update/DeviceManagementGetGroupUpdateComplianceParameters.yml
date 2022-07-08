@@ -8,5 +8,4 @@ fullName: DeviceManagementGetGroupUpdateComplianceParameters
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type DeviceManagementGetGroupUpdateComplianceParameters = RequestParameters
+syntax: type DeviceManagementGetGroupUpdateComplianceParameters = RequestParameters

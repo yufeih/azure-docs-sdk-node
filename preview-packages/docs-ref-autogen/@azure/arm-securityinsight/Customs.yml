@@ -7,5 +7,4 @@ fullName: Customs
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type Customs = CustomsPermission & __type
+syntax: type Customs = CustomsPermission & __type

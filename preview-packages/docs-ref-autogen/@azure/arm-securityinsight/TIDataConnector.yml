@@ -7,9 +7,6 @@ fullName: TIDataConnector
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type TIDataConnector = DataConnector & {
-    dataTypes?: TIDataConnectorDataTypes,
-    tenantId?: undefined | string,
-    tipLookbackPeriod?: Date,
-  }
+syntax: >-
+  type TIDataConnector = DataConnector & { dataTypes?: TIDataConnectorDataTypes,
+  tenantId?: undefined | string, tipLookbackPeriod?: Date }

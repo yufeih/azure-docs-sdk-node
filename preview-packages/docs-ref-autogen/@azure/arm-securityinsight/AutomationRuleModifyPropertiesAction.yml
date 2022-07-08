@@ -7,8 +7,7 @@ fullName: AutomationRuleModifyPropertiesAction
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
+syntax: >-
   type AutomationRuleModifyPropertiesAction = AutomationRuleAction & {
-    actionConfiguration?: IncidentPropertiesAction,
-    actionType: "ModifyProperties",
+  actionConfiguration?: IncidentPropertiesAction, actionType: "ModifyProperties"
   }

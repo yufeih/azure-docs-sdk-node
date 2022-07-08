@@ -7,7 +7,6 @@ fullName: Configuration
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type Configuration = ProxyResource & {
-    enforcePrivateMarkdownStorage?: undefined | false | true,
-  }
+syntax: >-
+  type Configuration = ProxyResource & { enforcePrivateMarkdownStorage?:
+  undefined | false | true }

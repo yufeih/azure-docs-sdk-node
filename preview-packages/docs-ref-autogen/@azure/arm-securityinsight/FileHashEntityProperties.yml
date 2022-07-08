@@ -7,8 +7,6 @@ fullName: FileHashEntityProperties
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type FileHashEntityProperties = EntityCommonProperties & {
-    algorithm?: FileHashAlgorithm,
-    hashValue?: undefined | string,
-  }
+syntax: >-
+  type FileHashEntityProperties = EntityCommonProperties & { algorithm?:
+  FileHashAlgorithm, hashValue?: undefined | string }

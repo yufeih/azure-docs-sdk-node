@@ -7,5 +7,4 @@ fullName: Dynamics365CheckRequirementsProperties
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type Dynamics365CheckRequirementsProperties = DataConnectorTenantId & __type
+syntax: type Dynamics365CheckRequirementsProperties = DataConnectorTenantId & __type

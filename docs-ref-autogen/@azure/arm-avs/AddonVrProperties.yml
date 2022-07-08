@@ -7,6 +7,6 @@ fullName: AddonVrProperties
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >
+syntax: >-
   type AddonVrProperties = AddonProperties & { addonType: "VR", vrsCount: number
   }

@@ -7,5 +7,4 @@ fullName: Entity
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type Entity = Resource & { kind: EntityKind }
+syntax: 'type Entity = Resource & { kind: EntityKind }'

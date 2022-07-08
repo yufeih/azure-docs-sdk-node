@@ -7,5 +7,4 @@ fullName: TICheckRequirementsProperties
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type TICheckRequirementsProperties = DataConnectorTenantId & __type
+syntax: type TICheckRequirementsProperties = DataConnectorTenantId & __type

@@ -7,8 +7,6 @@ fullName: OfficeDataConnector
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type OfficeDataConnector = DataConnector & {
-    dataTypes?: OfficeDataConnectorDataTypes,
-    tenantId?: undefined | string,
-  }
+syntax: >-
+  type OfficeDataConnector = DataConnector & { dataTypes?:
+  OfficeDataConnectorDataTypes, tenantId?: undefined | string }

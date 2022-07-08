@@ -7,9 +7,6 @@ fullName: VmPlacementPolicyProperties
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type VmPlacementPolicyProperties = PlacementPolicyProperties & {
-    affinityType: AffinityType,
-    type: "VmVm",
-    vmMembers: string[],
-  }
+syntax: >-
+  type VmPlacementPolicyProperties = PlacementPolicyProperties & { affinityType:
+  AffinityType, type: "VmVm", vmMembers: string[] }

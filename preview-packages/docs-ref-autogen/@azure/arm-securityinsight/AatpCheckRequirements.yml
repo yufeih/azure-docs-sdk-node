@@ -7,8 +7,6 @@ fullName: AatpCheckRequirements
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type AatpCheckRequirements = DataConnectorsCheckRequirements & {
-    kind: "AzureAdvancedThreatProtection",
-    tenantId?: undefined | string,
-  }
+syntax: >-
+  type AatpCheckRequirements = DataConnectorsCheckRequirements & { kind:
+  "AzureAdvancedThreatProtection", tenantId?: undefined | string }

@@ -7,9 +7,6 @@ fullName: ScriptCmdlet
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type ScriptCmdlet = ProxyResource & {
-    description?: undefined | string,
-    parameters?: ScriptParameter[],
-    timeout?: undefined | string,
-  }
+syntax: >-
+  type ScriptCmdlet = ProxyResource & { description?: undefined | string,
+  parameters?: ScriptParameter[], timeout?: undefined | string }

@@ -19,5 +19,4 @@ fullName: EntityTimelineKind
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type EntityTimelineKind = string
+syntax: type EntityTimelineKind = string

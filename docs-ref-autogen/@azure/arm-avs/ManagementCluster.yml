@@ -7,5 +7,4 @@ fullName: ManagementCluster
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: |
-  type ManagementCluster = CommonClusterProperties & __type
+syntax: type ManagementCluster = CommonClusterProperties & __type
