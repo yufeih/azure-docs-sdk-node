@@ -36,6 +36,9 @@ inheritedProperties:
       return:
         description: ''
         type: <xref uid="@azure/arm-machinelearning.DataType" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DataVersionBaseProperties.dataType](xref:@azure/arm-machinelearning.DataVersionBaseProperties.dataType)
   - name: dataUri
     uid: '@azure/arm-machinelearning.MLTableData.dataUri'
     package: '@azure/arm-machinelearning'
@@ -51,6 +54,9 @@ inheritedProperties:
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DataVersionBaseProperties.dataUri](xref:@azure/arm-machinelearning.DataVersionBaseProperties.dataUri)
   - name: description
     uid: '@azure/arm-machinelearning.MLTableData.description'
     package: '@azure/arm-machinelearning'
@@ -64,6 +70,9 @@ inheritedProperties:
       return:
         description: ''
         type: undefined | string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ResourceBase.description](xref:@azure/arm-machinelearning.ResourceBase.description)
   - name: isAnonymous
     uid: '@azure/arm-machinelearning.MLTableData.isAnonymous'
     package: '@azure/arm-machinelearning'
@@ -77,6 +86,9 @@ inheritedProperties:
       return:
         description: ''
         type: undefined | false | true
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AssetBase.isAnonymous](xref:@azure/arm-machinelearning.AssetBase.isAnonymous)
   - name: isArchived
     uid: '@azure/arm-machinelearning.MLTableData.isArchived'
     package: '@azure/arm-machinelearning'
@@ -90,6 +102,9 @@ inheritedProperties:
       return:
         description: ''
         type: undefined | false | true
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AssetBase.isArchived](xref:@azure/arm-machinelearning.AssetBase.isArchived)
   - name: properties
     uid: '@azure/arm-machinelearning.MLTableData.properties'
     package: '@azure/arm-machinelearning'
@@ -103,6 +118,9 @@ inheritedProperties:
       return:
         description: ''
         type: 'undefined | [key: string]: function'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ResourceBase.properties](xref:@azure/arm-machinelearning.ResourceBase.properties)
   - name: tags
     uid: '@azure/arm-machinelearning.MLTableData.tags'
     package: '@azure/arm-machinelearning'
@@ -116,4 +134,7 @@ inheritedProperties:
       return:
         description: ''
         type: 'undefined | [key: string]: function'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ResourceBase.tags](xref:@azure/arm-machinelearning.ResourceBase.tags)
 extends: <xref uid="@azure/arm-machinelearning.DataVersionBaseProperties" />

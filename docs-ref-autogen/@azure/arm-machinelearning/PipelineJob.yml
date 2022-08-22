@@ -75,6 +75,9 @@ inheritedProperties:
       return:
         description: ''
         type: undefined | string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [JobBaseProperties.computeId](xref:@azure/arm-machinelearning.JobBaseProperties.computeId)
   - name: description
     uid: '@azure/arm-machinelearning.PipelineJob.description'
     package: '@azure/arm-machinelearning'
@@ -88,6 +91,9 @@ inheritedProperties:
       return:
         description: ''
         type: undefined | string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ResourceBase.description](xref:@azure/arm-machinelearning.ResourceBase.description)
   - name: displayName
     uid: '@azure/arm-machinelearning.PipelineJob.displayName'
     package: '@azure/arm-machinelearning'
@@ -101,6 +107,9 @@ inheritedProperties:
       return:
         description: ''
         type: undefined | string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [JobBaseProperties.displayName](xref:@azure/arm-machinelearning.JobBaseProperties.displayName)
   - name: experimentName
     uid: '@azure/arm-machinelearning.PipelineJob.experimentName'
     package: '@azure/arm-machinelearning'
@@ -116,6 +125,9 @@ inheritedProperties:
       return:
         description: ''
         type: undefined | string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [JobBaseProperties.experimentName](xref:@azure/arm-machinelearning.JobBaseProperties.experimentName)
   - name: identity
     uid: '@azure/arm-machinelearning.PipelineJob.identity'
     package: '@azure/arm-machinelearning'
@@ -133,6 +145,9 @@ inheritedProperties:
       return:
         description: ''
         type: <xref uid="@azure/arm-machinelearning.IdentityConfigurationUnion" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [JobBaseProperties.identity](xref:@azure/arm-machinelearning.JobBaseProperties.identity)
   - name: isArchived
     uid: '@azure/arm-machinelearning.PipelineJob.isArchived'
     package: '@azure/arm-machinelearning'
@@ -146,6 +161,9 @@ inheritedProperties:
       return:
         description: ''
         type: undefined | false | true
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [JobBaseProperties.isArchived](xref:@azure/arm-machinelearning.JobBaseProperties.isArchived)
   - name: jobType
     uid: '@azure/arm-machinelearning.PipelineJob.jobType'
     package: '@azure/arm-machinelearning'
@@ -159,6 +177,9 @@ inheritedProperties:
       return:
         description: ''
         type: <xref uid="@azure/arm-machinelearning.JobType" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [JobBaseProperties.jobType](xref:@azure/arm-machinelearning.JobBaseProperties.jobType)
   - name: properties
     uid: '@azure/arm-machinelearning.PipelineJob.properties'
     package: '@azure/arm-machinelearning'
@@ -172,6 +193,9 @@ inheritedProperties:
       return:
         description: ''
         type: 'undefined | [key: string]: function'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ResourceBase.properties](xref:@azure/arm-machinelearning.ResourceBase.properties)
   - name: services
     uid: '@azure/arm-machinelearning.PipelineJob.services'
     package: '@azure/arm-machinelearning'
@@ -189,6 +213,9 @@ inheritedProperties:
       return:
         description: ''
         type: 'undefined | [key: string]: function'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [JobBaseProperties.services](xref:@azure/arm-machinelearning.JobBaseProperties.services)
   - name: status
     uid: '@azure/arm-machinelearning.PipelineJob.status'
     package: '@azure/arm-machinelearning'
@@ -206,6 +233,9 @@ inheritedProperties:
       return:
         description: ''
         type: <xref uid="@azure/arm-machinelearning.JobStatus" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [JobBaseProperties.status](xref:@azure/arm-machinelearning.JobBaseProperties.status)
   - name: tags
     uid: '@azure/arm-machinelearning.PipelineJob.tags'
     package: '@azure/arm-machinelearning'
@@ -219,4 +249,7 @@ inheritedProperties:
       return:
         description: ''
         type: 'undefined | [key: string]: function'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ResourceBase.tags](xref:@azure/arm-machinelearning.ResourceBase.tags)
 extends: <xref uid="@azure/arm-machinelearning.JobBaseProperties" />

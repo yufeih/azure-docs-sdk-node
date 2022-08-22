@@ -39,24 +39,6 @@ properties:
         description: ''
         type: ErrorConstructor
 inheritedProperties:
-  - name: cause
-    uid: '@azure/container-registry.DigestMismatchError.cause'
-    package: '@azure/container-registry'
-    summary: >-
-      If present, the `error.cause` property is the underlying cause of the
-      `Error`.
-
-      It is used when catching an error and throwing a new one with a different
-      message or code in order to still have access to the original error.
-    fullName: cause
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'cause?: unknown'
-      return:
-        description: ''
-        type: unknown
   - name: message
     uid: '@azure/container-registry.DigestMismatchError.message'
     package: '@azure/container-registry'
@@ -70,6 +52,7 @@ inheritedProperties:
       return:
         description: ''
         type: string
+    inheritanceDescription: <b>Inherited From</b> Error.message
   - name: name
     uid: '@azure/container-registry.DigestMismatchError.name'
     package: '@azure/container-registry'
@@ -83,6 +66,7 @@ inheritedProperties:
       return:
         description: ''
         type: string
+    inheritanceDescription: <b>Inherited From</b> Error.name
   - name: stack
     uid: '@azure/container-registry.DigestMismatchError.stack'
     package: '@azure/container-registry'
@@ -96,4 +80,5 @@ inheritedProperties:
       return:
         description: ''
         type: string
+    inheritanceDescription: <b>Inherited From</b> Error.stack
 extends: Error
