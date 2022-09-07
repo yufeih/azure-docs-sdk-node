@@ -1,7 +1,7 @@
 {
   "Name": "@azure/search-documents",
-  "Version": "11.3.0-beta.8",
-  "DevVersion": null,
+  "Version": "11.3.0-alpha.20220815.2",
+  "DevVersion": "11.3.0-alpha.20220906.13",
   "DirectoryPath": "sdk/search/search-documents",
   "ServiceDirectory": "search",
   "ReadMePath": "sdk/search/search-documents/README.md",
