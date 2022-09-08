@@ -3,12 +3,12 @@ title: Azure Form Recognizer client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/ai-form-recognizer, formrecognizer
 author: witemple-msft
 ms.author: witemple
-ms.date: 08/09/2022
+ms.date: 09/08/2022
 ms.topic: reference
 ms.devlang: javascript
 ms.service: formrecognizer
 ---
-# Azure Form Recognizer client library for JavaScript - version 4.0.0-beta.6 
+# Azure Form Recognizer client library for JavaScript - version 4.0.0-alpha.20220907.2 
 
 
 Azure Cognitive Services [Form Recognizer](https://azure.microsoft.com/services/cognitive-services/form-recognizer/) is a cloud service that uses machine learning to analyze text and structured data from your documents. It includes the following main features:
@@ -19,15 +19,15 @@ Azure Cognitive Services [Form Recognizer](https://azure.microsoft.com/services/
 - Prebuilt - Analyze data from certain types of common documents (such as receipts, invoices, business cards, or identity documents) using prebuilt models.
 - Custom - Build custom models to extract text, field values, selection marks, and table data from documents. Custom models are built with your own data, so they're tailored to your documents.
 
-[Source code](https://github.com/Azure/azure-sdk-for-js/blob/@azure/ai-form-recognizer_4.0.0-beta.6/sdk/formrecognizer/ai-form-recognizer/) |
+[Source code](https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/formrecognizer/ai-form-recognizer/) |
 [Package (NPM)](https://www.npmjs.com/package/@azure/ai-form-recognizer) |
 [API reference documentation](/javascript/api/@azure/ai-form-recognizer) |
 [Product documentation](/azure/cognitive-services/form-recognizer/) |
-[Samples](https://github.com/Azure/azure-sdk-for-js/tree/@azure/ai-form-recognizer_4.0.0-beta.6/sdk/formrecognizer/ai-form-recognizer/samples)
+[Samples](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/formrecognizer/ai-form-recognizer/samples)
 
 #### **_Breaking change advisory_ ⚠️**
 
-In version 4 (currently beta), this package introduces a full redesign of the Azure Form Recognizer client library. To leverage features of the newest Form Recognizer service API (version "2022-06-30-preview" and newer), the new SDK is required, and application code must be changed to use the new clients. Please see the [Migration Guide](https://github.com/azure/azure-sdk-for-js/blob/@azure/ai-form-recognizer_4.0.0-beta.6/sdk/formrecognizer/ai-form-recognizer/MIGRATION-v3_v4.md) for detailed instructions on how to update application code from version 3.x of the Form Recognizer SDK to the new version (4.x). Additionally, the [CHANGELOG](https://github.com/azure/azure-sdk-for-js/blob/@azure/ai-form-recognizer_4.0.0-beta.6/sdk/formrecognizer/ai-form-recognizer/CHANGELOG.md) contains an outline of the changes since version 3.x. This package targets Azure Form Recognizer service API version `2022-06-30-preview` and newer. To continue to use Form Recognizer API version 2.1, please use major version 3 of the client package (`@azure/ai-form-recognizer@^3.2.0`).
+In version 4 (currently beta), this package introduces a full redesign of the Azure Form Recognizer client library. To leverage features of the newest Form Recognizer service API (version "2022-06-30-preview" and newer), the new SDK is required, and application code must be changed to use the new clients. Please see the [Migration Guide](https://github.com/azure/azure-sdk-for-js/blob/main/sdk/formrecognizer/ai-form-recognizer/MIGRATION-v3_v4.md) for detailed instructions on how to update application code from version 3.x of the Form Recognizer SDK to the new version (4.x). Additionally, the [CHANGELOG](https://github.com/azure/azure-sdk-for-js/blob/main/sdk/formrecognizer/ai-form-recognizer/CHANGELOG.md) contains an outline of the changes since version 3.x. This package targets Azure Form Recognizer service API version `2022-06-30-preview` and newer. To continue to use Form Recognizer API version 2.1, please use major version 3 of the client package (`@azure/ai-form-recognizer@^3.2.0`).
 
 ### Install the `@azure/ai-form-recognizer` package
 
@@ -63,7 +63,7 @@ const { pages, tables, styles, keyValuePairs, entities, documents } = await poll
 - [LTS versions of Node.js](https://nodejs.org/about/releases/)
 - Latest versions of Safari, Chrome, Edge, and Firefox.
 
-See our [support policy](https://github.com/Azure/azure-sdk-for-js/blob/@azure/ai-form-recognizer_4.0.0-beta.6/SUPPORT.md) for more details.
+See our [support policy](https://github.com/Azure/azure-sdk-for-js/blob/main/SUPPORT.md) for more details.
 
 ### Prerequisites
 
@@ -154,11 +154,11 @@ const client = new DocumentAnalysisClient("<endpoint>", new DefaultAzureCredenti
 
 `DocumentModelAdministrationClient` provides operations for managing (creating, reading, listing, and deleting) models in the Form Recognizer resource:
 
-- `beginBuildModel` starts an operation to create a new document model from your own training data set. The created model can extract fields according to a custom schema. The training data are expected to be located in an Azure Storage container and organized according to a particular convention. See the [service's documentation on creating a training data set][fr-build-training-set] for a more detailed explanation of applying labels to a training data set.
-- `beginComposeModel` starts an operation to compose multiple models into a single model. When used for custom form recognition, the new composed model will first perform a classification of the input documents to determine which of its submodels is most appropriate.
+- `beginBuildDocumentModel` starts an operation to create a new document model from your own training data set. The created model can extract fields according to a custom schema. The training data are expected to be located in an Azure Storage container and organized according to a particular convention. See the [service's documentation on creating a training data set][fr-build-training-set] for a more detailed explanation of applying labels to a training data set.
+- `beginComposeDocumentModel` starts an operation to compose multiple models into a single model. When used for custom form recognition, the new composed model will first perform a classification of the input documents to determine which of its submodels is most appropriate.
 - `beginCopyModelTo` starts an operation to copy a custom model from one Form Recognizer resource to another (or even to the same Form Recognizer resource). It requires a `CopyAuthorization` from the target Form Recognizer resource, which can be generated using the `getCopyAuthorization` method.
 - `getResourceDetails` retrieves information about the Form Recognizer resource's limits, such as the number of custom models and the maximum number of models the resource can support.
-- `getModel`, `listModels`, and `deleteModel` enable managing models in the resource.
+- `getDocumentModel`, `listDocumentModels`, and `deleteDocumentModel` enable managing models in the resource.
 - `getOperation` and `listOperations` enable viewing the status of model creation operations, even those operations that are ongoing or that have failed. Operations are retained for 24 hours.
 
 Please note that models can also be created using the Form Recognizer service's graphical user interface: [Form Recognizer Studio (Preview)][fr-studio].
@@ -331,7 +331,7 @@ Each of the above prebuilt models produces `documents` (extracted instances of t
 
 For information about the fields of all of these models, see [the service's documentation of the available prebuilt models](https://aka.ms/azsdk/formrecognizer/models).
 
-The fields of all prebuilt models may also be accessed programmatically using the `getModel` method (by their model IDs) of `DocumentModelAdministrationClient` and inspecting the `docTypes` field in the result.
+The fields of all prebuilt models may also be accessed programmatically using the `getDocumentModel` method (by their model IDs) of `DocumentModelAdministrationClient` and inspecting the `docTypes` field in the result.
 
 ### Use the "layout" prebuilt
 
@@ -529,7 +529,7 @@ async function main() {
   // The second parameter is the SAS-encoded URL to an Azure Storage container with the training documents.
   // The third parameter is the build mode: one of "template" (the only mode prior to 4.0.0-beta.3) or "neural".
   // See https://aka.ms/azsdk/formrecognizer/buildmode for more information about build modes.
-  const poller = await client.beginBuildModel("<model ID>", containerSasUrl, "template", {
+  const poller = await client.beginBuildDocumentModel("<model ID>", containerSasUrl, "template", {
     // The model description is optional and can be any text.
     description: "This is my new model!",
     onProgress: ({ status }) => {
@@ -582,10 +582,10 @@ async function main() {
   const apiKey = "<api key>";
   const client = new DocumentModelAdministrationClient(endpoint, new AzureKeyCredential(apiKey));
 
-  // Produces an async iterable that supports paging (`PagedAsyncIterableIterator`). The `listModels` method will only
+  // Produces an async iterable that supports paging (`PagedAsyncIterableIterator`). The `listDocumentModels` method will only
   // iterate over model summaries, which do not include detailed schema information. Schema information is only returned
-  // from `getModel` as part of the full model information.
-  const models = client.listModels();
+  // from `getDocumentModel` as part of the full model information.
+  const models = client.listDocumentModels();
   let i = 1;
   for await (const summary of models) {
     console.log(`Model ${i++}:`, summary);
@@ -593,23 +593,23 @@ async function main() {
 
   // The iterable is paged, and the application can control the flow of paging if needed
   i = 1;
-  for await (const page of client.listModels().byPage()) {
+  for await (const page of client.listDocumentModels().byPage()) {
     for (const summary of page) {
       console.log(`Model ${i++}`, summary);
     }
   }
 
   // We can also get a full ModelInfo by ID. Here we only show the basic information. See the documentation and the
-  // `getModel` sample program for information about the `docTypes` field, which contains the model's document type
+  // `getDocumentModel` sample program for information about the `docTypes` field, which contains the model's document type
   // schemas.
-  const model = await client.getModel("<model ID>");
+  const model = await client.getDocumentModel("<model ID>");
   console.log("ID", model.modelId);
   console.log("Created:", model.createdDateTime);
   console.log("Description: ", model.description ?? "<none>");
 
   // A model can also be deleted by its model ID. Once it is deleted, it CANNOT be recovered.
   const modelIdToDelete = "<model ID that should be deleted forever>";
-  await client.deleteModel(modelIdToDelete);
+  await client.deleteDocumentModel(modelIdToDelete);
 }
 
 main().catch((err) => {
@@ -633,15 +633,15 @@ const { setLogLevel } = require("@azure/logger");
 setLogLevel("info");
 ```
 
-For more detailed instructions on how to enable logs, you can look at the [@azure/logger package docs](https://github.com/Azure/azure-sdk-for-js/tree/@azure/ai-form-recognizer_4.0.0-beta.6/sdk/core/logger).
+For more detailed instructions on how to enable logs, you can look at the [@azure/logger package docs](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/core/logger).
 
 ## Next steps
 
-Please take a look at the [samples](https://github.com/Azure/azure-sdk-for-js/tree/@azure/ai-form-recognizer_4.0.0-beta.6/sdk/formrecognizer/ai-form-recognizer/samples) directory for detailed code samples that show how to use this library including several features and methods that are not shown in the "Examples" section above, such as copying and composing models, listing model management operations, and deleting models.
+Please take a look at the [samples](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/formrecognizer/ai-form-recognizer/samples) directory for detailed code samples that show how to use this library including several features and methods that are not shown in the "Examples" section above, such as copying and composing models, listing model management operations, and deleting models.
 
 ## Contributing
 
-If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/@azure/ai-form-recognizer_4.0.0-beta.6/CONTRIBUTING.md) to learn more about how to build and test the code.
+If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/main/CONTRIBUTING.md) to learn more about how to build and test the code.
 
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Fformrecognizer%2Fai-form-recognizer%2FREADME.png)
 
@@ -649,11 +649,11 @@ If you'd like to contribute to this library, please read the [contributing guide
 [azure_sub]: https://azure.microsoft.com/free/
 [fr_or_cs_resource]: /azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Cwindows
 [azure_portal]: https://portal.azure.com
-[azure_identity]: https://github.com/Azure/azure-sdk-for-js/tree/@azure/ai-form-recognizer_4.0.0-beta.6/sdk/identity/identity
+[azure_identity]: https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/identity/identity
 [register_aad_app]: /azure/cognitive-services/authentication#assign-a-role-to-a-service-principal
-[defaultazurecredential]: https://github.com/Azure/azure-sdk-for-js/tree/@azure/ai-form-recognizer_4.0.0-beta.6/sdk/identity/identity#defaultazurecredential
+[defaultazurecredential]: https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/identity/identity#defaultazurecredential
 [fr-build-model]: https://aka.ms/azsdk/formrecognizer/buildmodel
-[build_sample]: https://github.com/Azure/azure-sdk-for-js/blob/@azure/ai-form-recognizer_4.0.0-beta.6/sdk/formrecognizer/ai-form-recognizer/samples/v4-beta/typescript/src/buildModel.ts
+[build_sample]: https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/formrecognizer/ai-form-recognizer/samples/v4-beta/typescript/src/buildModel.ts
 [multi_and_single_service]: /azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Cwindows
 [azure_portal_create_fr_resource]: https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesFormRecognizer
 [azure_cli_create_fr_resource]: /azure/cognitive-services/cognitive-services-apis-create-account-cli?tabs=windows
@@ -662,15 +662,15 @@ If you'd like to contribute to this library, please read the [contributing guide
 [fr-build-training-set]: https://aka.ms/azsdk/formrecognizer/buildtrainingset
 [fr-errors]: https://aka.ms/azsdk/formrecognizer/errors
 [fr-models]: https://aka.ms/azsdk/formrecognizer/models
-[samples-prebuilt]: https://github.com/azure/azure-sdk-for-js/tree/@azure/ai-form-recognizer_4.0.0-beta.6/sdk/formrecognizer/ai-form-recognizer/samples-dev/prebuilt/
-[samples-prebuilt-businesscard]: https://github.com/azure/azure-sdk-for-js/blob/@azure/ai-form-recognizer_4.0.0-beta.6/sdk/formrecognizer/ai-form-recognizer/samples-dev/prebuilt/prebuilt-businessCard.ts
-[samples-prebuilt-document]: https://github.com/azure/azure-sdk-for-js/blob/@azure/ai-form-recognizer_4.0.0-beta.6/sdk/formrecognizer/ai-form-recognizer/samples-dev/prebuilt/prebuilt-document.ts
-[samples-prebuilt-healthinsurancecard]: https://github.com/azure/azure-sdk-for-js/blob/@azure/ai-form-recognizer_4.0.0-beta.6/sdk/formrecognizer/ai-form-recognizer/samples-dev/prebuilt/prebuilt-healthInsuranceCard.ts
-[samples-prebuilt-iddocument]: https://github.com/azure/azure-sdk-for-js/blob/@azure/ai-form-recognizer_4.0.0-beta.6/sdk/formrecognizer/ai-form-recognizer/samples-dev/prebuilt/prebuilt-idDocument.ts
-[samples-prebuilt-invoice]: https://github.com/azure/azure-sdk-for-js/blob/@azure/ai-form-recognizer_4.0.0-beta.6/sdk/formrecognizer/ai-form-recognizer/samples-dev/prebuilt/prebuilt-invoice.ts
-[samples-prebuilt-layout]: https://github.com/azure/azure-sdk-for-js/blob/@azure/ai-form-recognizer_4.0.0-beta.6/sdk/formrecognizer/ai-form-recognizer/samples-dev/prebuilt/prebuilt-layout.ts
-[samples-prebuilt-read]: https://github.com/azure/azure-sdk-for-js/blob/@azure/ai-form-recognizer_4.0.0-beta.6/sdk/formrecognizer/ai-form-recognizer/samples-dev/prebuilt/prebuilt-read.ts
-[samples-prebuilt-receipt]: https://github.com/Azure/azure-sdk-for-js/blob/@azure/ai-form-recognizer_4.0.0-beta.6/sdk/formrecognizer/ai-form-recognizer/samples-dev/prebuilt/prebuilt-receipt.ts
-[samples-prebuilt-tax.us.w2]: https://github.com/azure/azure-sdk-for-js/blob/@azure/ai-form-recognizer_4.0.0-beta.6/sdk/formrecognizer/ai-form-recognizer/samples-dev/prebuilt/prebuilt-tax.us.w2.ts
-[samples-prebuilt-vaccinationcard]: https://github.com/azure/azure-sdk-for-js/blob/@azure/ai-form-recognizer_4.0.0-beta.6/sdk/formrecognizer/ai-form-recognizer/samples-dev/prebuilt/prebuilt-vaccinationCard.ts
+[samples-prebuilt]: https://github.com/azure/azure-sdk-for-js/tree/main/sdk/formrecognizer/ai-form-recognizer/samples-dev/prebuilt/
+[samples-prebuilt-businesscard]: https://github.com/azure/azure-sdk-for-js/blob/main/sdk/formrecognizer/ai-form-recognizer/samples-dev/prebuilt/prebuilt-businessCard.ts
+[samples-prebuilt-document]: https://github.com/azure/azure-sdk-for-js/blob/main/sdk/formrecognizer/ai-form-recognizer/samples-dev/prebuilt/prebuilt-document.ts
+[samples-prebuilt-healthinsurancecard]: https://github.com/azure/azure-sdk-for-js/blob/main/sdk/formrecognizer/ai-form-recognizer/samples-dev/prebuilt/prebuilt-healthInsuranceCard.ts
+[samples-prebuilt-iddocument]: https://github.com/azure/azure-sdk-for-js/blob/main/sdk/formrecognizer/ai-form-recognizer/samples-dev/prebuilt/prebuilt-idDocument.ts
+[samples-prebuilt-invoice]: https://github.com/azure/azure-sdk-for-js/blob/main/sdk/formrecognizer/ai-form-recognizer/samples-dev/prebuilt/prebuilt-invoice.ts
+[samples-prebuilt-layout]: https://github.com/azure/azure-sdk-for-js/blob/main/sdk/formrecognizer/ai-form-recognizer/samples-dev/prebuilt/prebuilt-layout.ts
+[samples-prebuilt-read]: https://github.com/azure/azure-sdk-for-js/blob/main/sdk/formrecognizer/ai-form-recognizer/samples-dev/prebuilt/prebuilt-read.ts
+[samples-prebuilt-receipt]: https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/formrecognizer/ai-form-recognizer/samples-dev/prebuilt/prebuilt-receipt.ts
+[samples-prebuilt-tax.us.w2]: https://github.com/azure/azure-sdk-for-js/blob/main/sdk/formrecognizer/ai-form-recognizer/samples-dev/prebuilt/prebuilt-tax.us.w2.ts
+[samples-prebuilt-vaccinationcard]: https://github.com/azure/azure-sdk-for-js/blob/main/sdk/formrecognizer/ai-form-recognizer/samples-dev/prebuilt/prebuilt-vaccinationCard.ts
 
