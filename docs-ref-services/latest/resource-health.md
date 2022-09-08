@@ -1,12 +1,12 @@
 ---
-description: Reference for Azure Resource Health SDK for JavaScript
-ms.service: resourcehealth
 ms.author: jeffish
-author: xirzec
-title: Azure Resource Health SDK for JavaScript
 ms.devlang: javascript
-ms.data: 09/06/2022
+description: Reference for Azure Resource Health SDK for JavaScript
+ms.data: 09/07/2022
+author: xirzec
 ms.topic: reference
+title: Azure Resource Health SDK for JavaScript
+ms.service: resourcehealth
 ---
 # Azure Resource Health SDK for JavaScript - latest
 

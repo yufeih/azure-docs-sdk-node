@@ -1,12 +1,12 @@
 ---
-description: Reference for Azure Dev Spaces SDK for JavaScript
-ms.service: devspaces
 ms.author: jeffish
-author: xirzec
-title: Azure Dev Spaces SDK for JavaScript
 ms.devlang: javascript
-ms.data: 09/06/2022
+description: Reference for Azure Dev Spaces SDK for JavaScript
+ms.data: 09/07/2022
+author: xirzec
 ms.topic: reference
+title: Azure Dev Spaces SDK for JavaScript
+ms.service: devspaces
 ---
 # Azure Dev Spaces SDK for JavaScript - latest
 

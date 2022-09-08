@@ -1,12 +1,12 @@
 ---
-description: Reference for Azure SQL SDK for JavaScript
-ms.service: sql
 ms.author: jeffish
-author: xirzec
-title: Azure SQL SDK for JavaScript
 ms.devlang: javascript
-ms.data: 09/06/2022
+description: Reference for Azure SQL SDK for JavaScript
+ms.data: 09/08/2022
+author: xirzec
 ms.topic: reference
+title: Azure SQL SDK for JavaScript
+ms.service: sql
 ms.date: 06/15/2022
 ---
 # Azure SQL modules for JavaScript
