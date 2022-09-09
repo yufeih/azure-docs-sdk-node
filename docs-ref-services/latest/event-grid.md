@@ -1,12 +1,12 @@
 ---
-ms.author: matell
-author: ellismg
+ms.data: 09/09/2022
 title: Azure Event Grid SDK for JavaScript
-ms.data: 09/07/2022
 description: Reference for Azure Event Grid SDK for JavaScript
-ms.service: eventgrid
 ms.topic: reference
+author: ellismg
 ms.devlang: javascript
+ms.service: eventgrid
+ms.author: matell
 ms.date: 06/15/2022
 ---
 # Azure Event Grid libraries for JavaScript

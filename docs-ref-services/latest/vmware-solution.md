@@ -1,12 +1,12 @@
 ---
-ms.author: jeffish
-author: xirzec
+ms.data: 09/09/2022
 title: Azure VMware Solution SDK for JavaScript
-ms.data: 09/07/2022
 description: Reference for Azure VMware Solution SDK for JavaScript
-ms.service: vmwaresolution
 ms.topic: reference
+author: xirzec
 ms.devlang: javascript
+ms.service: vmwaresolution
+ms.author: jeffish
 ---
 # Azure VMware Solution SDK for JavaScript - latest
 

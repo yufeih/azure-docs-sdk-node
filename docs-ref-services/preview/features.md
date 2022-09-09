@@ -1,12 +1,12 @@
 ---
-ms.author: jeffish
-author: xirzec
+ms.data: 09/09/2022
 title: Azure Features SDK for JavaScript
-ms.data: 09/07/2022
 description: Reference for Azure Features SDK for JavaScript
-ms.service: features
 ms.topic: reference
+author: xirzec
 ms.devlang: javascript
+ms.service: features
+ms.author: jeffish
 ---
 # Azure Features SDK for JavaScript - preview
 

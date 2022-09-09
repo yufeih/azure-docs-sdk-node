@@ -1,12 +1,12 @@
 ---
-ms.author: jeffish
-author: xirzec
+ms.data: 09/09/2022
 title: Azure Education SDK for JavaScript
-ms.data: 09/07/2022
 description: Reference for Azure Education SDK for JavaScript
-ms.service: education
 ms.topic: reference
+author: xirzec
 ms.devlang: javascript
+ms.service: education
+ms.author: jeffish
 ---
 # Azure Education SDK for JavaScript - preview
 
