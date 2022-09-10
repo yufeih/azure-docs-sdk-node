@@ -1,12 +1,12 @@
 ---
-ms.topic: reference
-description: Reference for Azure Postgresql SDK for JavaScript
+ms.data: 09/09/2022
 ms.author: jeffish
-ms.devlang: javascript
-title: Azure Postgresql SDK for JavaScript
-ms.service: postgresql
-ms.data: 09/08/2022
+description: Reference for Azure PostgreSQL SDK for JavaScript
 author: xirzec
+ms.service: postgresql
+ms.topic: reference
+ms.devlang: javascript
+title: Azure PostgreSQL SDK for JavaScript
 ---
 # Azure PostgreSQL SDK for JavaScript - latest
 

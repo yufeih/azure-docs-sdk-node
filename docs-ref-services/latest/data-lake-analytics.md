@@ -1,12 +1,12 @@
 ---
-ms.topic: reference
-description: Reference for Azure Data Lake Analytics SDK for JavaScript
+ms.data: 09/09/2022
 ms.author: jeffish
+description: Reference for Azure Data Lake Analytics SDK for JavaScript
+author: xirzec
+ms.service: datalakeanalytics
+ms.topic: reference
 ms.devlang: javascript
 title: Azure Data Lake Analytics SDK for JavaScript
-ms.service: datalakeanalytics
-ms.data: 09/08/2022
-author: xirzec
 ms.date: 06/15/2022
 ---
 # Azure Data Lake Analytics modules for Node.JS
