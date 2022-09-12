@@ -1,12 +1,12 @@
 ---
-ms.data: 09/09/2022
+description: Reference for Azure Synapse SDK for JavaScript
+ms.author: joheredi
 ms.topic: reference
 ms.devlang: javascript
-ms.service: synapse
-ms.author: joheredi
 title: Azure Synapse SDK for JavaScript
+ms.service: synapse
 author: joheredi
-description: Reference for Azure Synapse SDK for JavaScript
+ms.data: 09/12/2022
 ---
 # Azure Synapse SDK for JavaScript - preview
 

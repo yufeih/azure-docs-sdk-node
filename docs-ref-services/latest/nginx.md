@@ -1,12 +1,12 @@
 ---
-ms.data: 09/09/2022
+description: Reference for Azure Nginx SDK for JavaScript
+ms.author: jeffish
 ms.topic: reference
 ms.devlang: javascript
-ms.service: nginx
-ms.author: jeffish
 title: Azure Nginx SDK for JavaScript
+ms.service: nginx
 author: xirzec
-description: Reference for Azure Nginx SDK for JavaScript
+ms.data: 09/12/2022
 ---
 # Azure Nginx SDK for JavaScript - latest
 
