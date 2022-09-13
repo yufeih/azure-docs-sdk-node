@@ -1,12 +1,12 @@
 ---
+ms.devlang: javascript
 ms.topic: reference
+ms.data: 09/12/2022
+title: Azure Machine Learning SDK for JavaScript
 description: Reference for Azure Machine Learning SDK for JavaScript
 ms.author: jeffish
-ms.devlang: javascript
-title: Azure Machine Learning SDK for JavaScript
-ms.service: machinelearning
-ms.data: 09/08/2022
 author: xirzec
+ms.service: machinelearning
 ---
 # Azure Machine Learning SDK for JavaScript - latest
 

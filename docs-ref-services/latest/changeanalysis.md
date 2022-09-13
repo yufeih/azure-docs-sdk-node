@@ -1,12 +1,12 @@
 ---
+ms.devlang: javascript
 ms.topic: reference
+ms.data: 09/12/2022
+title: Azure Changeanalysis SDK for JavaScript
 description: Reference for Azure Changeanalysis SDK for JavaScript
 ms.author: jeffish
-ms.devlang: javascript
-title: Azure Changeanalysis SDK for JavaScript
-ms.service: changeanalysis
-ms.data: 09/08/2022
 author: xirzec
+ms.service: changeanalysis
 ---
 # Azure Changeanalysis SDK for JavaScript - latest
 
