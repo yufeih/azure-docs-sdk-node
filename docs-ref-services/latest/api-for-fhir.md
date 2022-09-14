@@ -1,12 +1,12 @@
 ---
+ms.service: apiforfhir
+ms.data: 09/14/2022
 ms.devlang: javascript
 ms.topic: reference
-ms.data: 09/12/2022
-title: Azure API for FHIR SDK for JavaScript
-description: Reference for Azure API for FHIR SDK for JavaScript
 ms.author: jeffish
 author: xirzec
-ms.service: apiforfhir
+title: Azure API for FHIR SDK for JavaScript
+description: Reference for Azure API for FHIR SDK for JavaScript
 ---
 # Azure API for FHIR SDK for JavaScript - latest
 

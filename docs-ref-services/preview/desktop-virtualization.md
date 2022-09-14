@@ -1,12 +1,12 @@
 ---
+ms.service: desktopvirtualization
+ms.data: 09/14/2022
 ms.devlang: javascript
 ms.topic: reference
-ms.data: 09/12/2022
-title: Azure Desktop Virtualization SDK for JavaScript
-description: Reference for Azure Desktop Virtualization SDK for JavaScript
 ms.author: jeffish
 author: xirzec
-ms.service: desktopvirtualization
+title: Azure Desktop Virtualization SDK for JavaScript
+description: Reference for Azure Desktop Virtualization SDK for JavaScript
 ---
 # Azure Desktop Virtualization SDK for JavaScript - preview
 
